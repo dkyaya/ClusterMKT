@@ -29,7 +29,10 @@
     "assets:sync": "node scripts/sync-web-brand-assets.mjs",
     "foundation:validate": "node scripts/validate-application-foundation.mjs",
     "sector:validate": "vitest --run --config vitest.workspace.ts --project source-intelligence && node scripts/evaluate-sector-coverage.mjs",
-    "validate": "pnpm assets:sync && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test:run && pnpm sector:validate && pnpm build && pnpm brand:validate && pnpm foundation:validate",
+    "source:validate": "vitest --run --config vitest.workspace.ts --project source-normalization && node scripts/evaluate-source-normalization.mjs",
+    "entities:validate": "vitest --run --config vitest.workspace.ts --project entity-resolution && node scripts/evaluate-entity-resolution.mjs",
+    "events:validate": "vitest --run --config vitest.workspace.ts --project event-boundaries && node scripts/evaluate-event-boundaries.mjs",
+    "validate": "pnpm assets:sync && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test:run && pnpm sector:validate && pnpm source:validate && pnpm entities:validate && pnpm events:validate && pnpm build && pnpm brand:validate && pnpm foundation:validate",
     "clean": "node scripts/clean-generated.mjs"
   },
   "devDependencies": {

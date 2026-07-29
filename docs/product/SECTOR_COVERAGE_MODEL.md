@@ -26,3 +26,5 @@ Uncovered subindustries are reported as gaps. The system never fabricates a lowe
 ## Current boundary
 
 Everything in this phase is offline, fixture-driven, deterministic, and labeled as demonstration data. Live ingestion, publisher connectivity, databases, authentication, AI inference, TTS, price data, and private-market coverage remain unimplemented.
+
+Upstream sector evidence now has a deterministic normalization contract: syndicated copies count once, accepted entities are distinct from candidates, and event signatures prevent unrelated issuer events from merging merely because company and date match. Sector evaluation remains unchanged and consumes no live sources.

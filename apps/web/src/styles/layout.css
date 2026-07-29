@@ -403,6 +403,140 @@
 .coverage-gap-notice {
   border-left: 4px solid var(--color-accent-primary);
 }
+.normalization-labels,
+.normalization-card__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.normalization-labels {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+.rules-version {
+  font-variant-numeric: tabular-nums;
+}
+.normalization-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.normalization-card,
+.normalization-section {
+  padding: 1.5rem;
+}
+.normalization-section {
+  margin-top: 1rem;
+}
+.normalization-card h2,
+.normalization-section h2,
+.normalization-card h3,
+.normalization-section h3 {
+  margin: 0;
+}
+.normalization-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+.normalization-fields > div,
+.url-decision-grid section,
+.entity-decision,
+.quarantine-notice {
+  min-width: 0;
+  padding: 0.85rem;
+  background: var(--color-surface-secondary);
+  border-radius: 0.45rem;
+}
+.normalization-fields dt {
+  color: var(--color-text-secondary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.normalization-fields dd {
+  margin: 0.3rem 0 0;
+  overflow-wrap: anywhere;
+  font-size: 0.86rem;
+}
+.normalization-code,
+.decision-code-list li,
+.decision-trace code,
+.quarantine-notice code {
+  overflow-wrap: anywhere;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.74rem;
+}
+.normalization-code {
+  padding: 0.75rem;
+  background: var(--color-surface-secondary);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 0.4rem;
+}
+.normalization-provenance {
+  font-size: 0.78rem;
+}
+.url-decision-grid,
+.entity-decision-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+.url-decision-grid h3 {
+  font-size: 1rem;
+}
+.entity-decision-list {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.entity-decision p {
+  font-size: 0.8rem;
+}
+.decision-code-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  padding: 0;
+  list-style: none;
+}
+.decision-code-list li {
+  padding: 0.3rem 0.45rem;
+  background: var(--color-edition-wash);
+  border-radius: 0.3rem;
+}
+.decision-trace {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0;
+  list-style: none;
+  counter-reset: trace;
+}
+.decision-trace li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+  counter-increment: trace;
+}
+.decision-trace li > span:first-child {
+  display: grid;
+  gap: 0.3rem;
+}
+.quarantine-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 1.25rem;
+  border-left: 4px solid var(--color-caution);
+}
+.quarantine-notice p {
+  margin: 0.3rem 0;
+}
 .mobile-nav {
   display: none;
 }
@@ -480,7 +614,11 @@
   }
   .sector-index-card,
   .sector-brief-grid,
-  .sector-cluster-grid {
+  .sector-cluster-grid,
+  .normalization-comparison,
+  .normalization-fields,
+  .url-decision-grid,
+  .entity-decision-list {
     grid-template-columns: 1fr;
   }
   .sector-card-heading {

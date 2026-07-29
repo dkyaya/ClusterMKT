@@ -35,3 +35,7 @@ The taxonomy in `@cluster-mkt/config` is owned by Cluster MKT and is not represe
 ## Evaluation and runtime boundary
 
 The 35-case adversarial corpus and `pnpm sector:validate` enforce critical failures individually rather than hiding them inside an aggregate score. The browser consumes static demonstration coverage only. There is no runtime fetch, credential, database client, AI SDK, TTS client, or market-price service in this foundation.
+
+## Normalized evidence boundary
+
+The downstream `normalization-v1` contracts now distinguish raw and normalized records, versions, syndication families, accepted entity mentions, and event signatures. Sector evidence counts an underlying syndicated work once and can retain independent reporting on the same event. These contracts remain offline fixtures and do not change the sector materiality thresholds.

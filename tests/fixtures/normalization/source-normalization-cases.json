@@ -1,0 +1,488 @@
+[
+  {
+    "id": "n001-utm",
+    "category": "url",
+    "inputRecords": [{ "url": "https://www.fixture-financial.test/story?utm_source=x&id=7" }],
+    "expectedNormalizedResult": { "url": "https://www.fixture-financial.test/story?id=7" },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["URL_NORMALIZED_WITHOUT_NETWORK"]
+  },
+  {
+    "id": "n002-fragment",
+    "category": "url",
+    "inputRecords": [{ "url": "https://www.fixture-financial.test/story#section" }],
+    "expectedNormalizedResult": { "url": "https://www.fixture-financial.test/story" },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["URL_FRAGMENT_REMOVED"]
+  },
+  {
+    "id": "n003-significant-id",
+    "category": "url",
+    "inputRecords": [{ "url": "https://www.fixture-financial.test/story?id=42" }],
+    "expectedNormalizedResult": { "preservedParameters": ["id"] },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["URL_NORMALIZED_WITHOUT_NETWORK"]
+  },
+  {
+    "id": "n004-print",
+    "category": "url",
+    "inputRecords": [{ "url": "https://www.fixture-financial.test/story?output=print&id=42" }],
+    "expectedNormalizedResult": { "url": "https://www.fixture-financial.test/story?id=42" },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "format_variant",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["URL_TRACKING_OR_FORMAT_PARAMETER_REMOVED"]
+  },
+  {
+    "id": "n005-amp",
+    "category": "url",
+    "inputRecords": [{ "url": "https://www.fixture-financial.test/story/amp" }],
+    "expectedNormalizedResult": { "url": "https://www.fixture-financial.test/story" },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "format_variant",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["URL_CONFIGURED_AMP_VARIANT"]
+  },
+  {
+    "id": "n006-mobile",
+    "category": "url",
+    "inputRecords": [{ "url": "https://m.fixture-financial.test/story" }],
+    "expectedNormalizedResult": { "url": "https://www.fixture-financial.test/story" },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "format_variant",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["URL_CONFIGURED_MOBILE_HOST_ALIAS"]
+  },
+  {
+    "id": "n007-unknown-query",
+    "category": "url",
+    "inputRecords": [{ "url": "https://www.fixture-financial.test/story?opaque=keep" }],
+    "expectedNormalizedResult": { "preservedParameters": ["opaque"] },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "review_required",
+    "expectedExplanationCodes": ["URL_UNKNOWN_PARAMETER_PRESERVED"]
+  },
+  {
+    "id": "n008-malformed",
+    "category": "url",
+    "inputRecords": [{ "url": "not a url" }],
+    "expectedNormalizedResult": { "quarantined": true },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "not_evaluated",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "quarantined",
+    "expectedExplanationCodes": ["URL_MALFORMED_OR_UNSUPPORTED"]
+  },
+  {
+    "id": "n009-idn",
+    "category": "url",
+    "inputRecords": [{ "url": "https://例え.テスト/story" }],
+    "expectedNormalizedResult": { "hostname": "xn--r8jz45g.xn--zckzah" },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["URL_NORMALIZED_WITHOUT_NETWORK"]
+  },
+  {
+    "id": "n010-path-case",
+    "category": "url",
+    "inputRecords": [
+      { "url": "https://example.test/Story" },
+      { "url": "https://example.test/story" }
+    ],
+    "expectedNormalizedResult": { "remainDistinct": true },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["PATH_CASE_PRESERVED"]
+  },
+  {
+    "id": "n011-same-url-metadata",
+    "category": "exact_duplicate",
+    "inputRecords": [{ "key": "same" }, { "key": "same" }],
+    "expectedNormalizedResult": { "retainedCount": 2 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "exact_duplicate",
+    "expectedEventRelationship": "same_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["DUPLICATE_METADATA"]
+  },
+  {
+    "id": "n012-article-id",
+    "category": "exact_duplicate",
+    "inputRecords": [{ "articleId": "a-12" }, { "articleId": "a-12" }],
+    "expectedNormalizedResult": { "underlyingWorkCount": 1 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "exact_duplicate",
+    "expectedEventRelationship": "same_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["DUPLICATE_SOURCE_ARTICLE_ID"]
+  },
+  {
+    "id": "n013-checksum-tracking",
+    "category": "exact_duplicate",
+    "inputRecords": [
+      { "checksum": "same", "url": "?utm_source=a" },
+      { "checksum": "same", "url": "?utm_source=b" }
+    ],
+    "expectedNormalizedResult": { "exactDuplicateGroupCount": 1 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "exact_duplicate",
+    "expectedEventRelationship": "same_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["DUPLICATE_CONTENT_CHECKSUM"]
+  },
+  {
+    "id": "n014-feed-entry",
+    "category": "exact_duplicate",
+    "inputRecords": [{ "feedId": "f-14" }, { "feedId": "f-14" }],
+    "expectedNormalizedResult": { "retainedCount": 2 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "exact_duplicate",
+    "expectedEventRelationship": "same_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["DUPLICATE_FEED_ENTRY"]
+  },
+  {
+    "id": "n015-reuters-copy",
+    "category": "syndication",
+    "inputRecords": [
+      { "publisher": "Reuters" },
+      { "publisher": "Fixture Daily", "attribution": "Reuters" }
+    ],
+    "expectedNormalizedResult": { "independentSourceCount": 1 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "syndicated_copy",
+    "expectedEventRelationship": "same_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["SYNDICATION_ATTRIBUTED_SIMILAR_COPY"]
+  },
+  {
+    "id": "n016-company-wire",
+    "category": "syndication",
+    "inputRecords": [{ "publisher": "Fixture Company" }, { "publisher": "Fixture Newswire" }],
+    "expectedNormalizedResult": { "independentSourceCount": 1 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "syndicated_copy",
+    "expectedEventRelationship": "same_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["SYNDICATION_IDENTICAL_CONTENT"]
+  },
+  {
+    "id": "n017-quote-original",
+    "category": "syndication",
+    "inputRecords": [
+      { "publisher": "Reuters" },
+      { "publisher": "Independent Desk", "originalReporting": true }
+    ],
+    "expectedNormalizedResult": { "independentSourceCount": 2 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "independent_reporting",
+    "expectedEventRelationship": "same_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["EVENT_SIMILARITY_IS_NOT_SYNDICATION"]
+  },
+  {
+    "id": "n018-independent-event",
+    "category": "syndication",
+    "inputRecords": [{ "publisher": "Desk A" }, { "publisher": "Desk B" }],
+    "expectedNormalizedResult": { "independentSourceCount": 2 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "independent_reporting",
+    "expectedEventRelationship": "same_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["NO_SYNDICATION_SIGNAL"]
+  },
+  {
+    "id": "n019-three-copies",
+    "category": "syndication",
+    "inputRecords": [{ "family": "wire-a" }, { "family": "wire-a" }, { "family": "wire-a" }],
+    "expectedNormalizedResult": { "independentSourceCount": 1 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "syndicated_copy",
+    "expectedEventRelationship": "same_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["SYNDICATION_FAMILY_COUNTS_ONCE"]
+  },
+  {
+    "id": "n020-rewritten-syndicated-headline",
+    "category": "syndication",
+    "inputRecords": [
+      { "headline": "Original headline" },
+      { "headline": "Lightly rewritten headline", "attribution": "Reuters" }
+    ],
+    "expectedNormalizedResult": { "independentSourceCount": 1 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "syndicated_copy",
+    "expectedEventRelationship": "same_event",
+    "expectedReviewStatus": "review_required",
+    "expectedExplanationCodes": ["SYNDICATION_ATTRIBUTED_SIMILAR_COPY"]
+  },
+  {
+    "id": "n021-updated-headline",
+    "category": "version",
+    "inputRecords": [
+      { "articleId": "work-21", "headline": "First" },
+      { "articleId": "work-21", "headline": "Updated" }
+    ],
+    "expectedNormalizedResult": { "versionCount": 2 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "updated_version",
+    "expectedEventRelationship": "same_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["VERSION_STABLE_WORK_IDENTIFIER"]
+  },
+  {
+    "id": "n022-corrected-number",
+    "category": "version",
+    "inputRecords": [
+      { "articleId": "work-22", "number": "10" },
+      { "articleId": "work-22", "number": "12", "correction": true }
+    ],
+    "expectedNormalizedResult": { "versionCount": 2, "materialChange": true },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "materially_revised_version",
+    "expectedEventRelationship": "updated_same_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["VERSION_MATERIAL_CHANGE"]
+  },
+  {
+    "id": "n023-revised-abstract",
+    "category": "version",
+    "inputRecords": [
+      { "articleId": "work-23", "abstract": "A" },
+      { "articleId": "work-23", "abstract": "B" }
+    ],
+    "expectedNormalizedResult": { "versionCount": 2, "materialChange": true },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "materially_revised_version",
+    "expectedEventRelationship": "updated_same_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["VERSION_MATERIAL_CHANGE"]
+  },
+  {
+    "id": "n024-follow-up-analysis",
+    "category": "version",
+    "inputRecords": [{ "url": "/report" }, { "url": "/analysis" }],
+    "expectedNormalizedResult": { "underlyingWorkCount": 2 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "new_article_same_event",
+    "expectedEventRelationship": "same_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["VERSION_DISTINCT_WORK"]
+  },
+  {
+    "id": "n025-new-same-event-article",
+    "category": "version",
+    "inputRecords": [{ "articleId": "a" }, { "articleId": "b" }],
+    "expectedNormalizedResult": { "underlyingWorkCount": 2 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "new_article_same_event",
+    "expectedEventRelationship": "same_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["VERSION_DISTINCT_WORK"]
+  },
+  {
+    "id": "n026-correction-notice",
+    "category": "version",
+    "inputRecords": [{ "articleId": "a" }, { "articleId": "correction" }],
+    "expectedNormalizedResult": { "underlyingWorkCount": 2 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "new_article_same_event",
+    "expectedEventRelationship": "updated_same_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["CORRECTION_NOTICE_LINKED"]
+  },
+  {
+    "id": "n027-rumor-confirmation",
+    "category": "version",
+    "inputRecords": [{ "status": "rumor" }, { "status": "confirmed" }],
+    "expectedNormalizedResult": { "underlyingWorkCount": 2 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "new_article_same_event",
+    "expectedEventRelationship": "related_distinct_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["RUMOR_CONFIRMATION_DISTINCT_CLAIM_STATE"]
+  },
+  {
+    "id": "n066-podcast-no-transcript",
+    "category": "evidence_depth",
+    "inputRecords": [{ "type": "podcast_episode", "transcript": false }],
+    "expectedNormalizedResult": { "factualEvidence": false },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["PODCAST_METADATA_NOT_FACTUAL_EVIDENCE"]
+  },
+  {
+    "id": "n067-podcast-transcript",
+    "category": "evidence_depth",
+    "inputRecords": [{ "type": "podcast_transcript", "transcript": "reviewed_permitted" }],
+    "expectedNormalizedResult": { "factualEvidence": true },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["PODCAST_TRANSCRIPT_REVIEWED"]
+  },
+  {
+    "id": "n068-paywall-headline",
+    "category": "evidence_depth",
+    "inputRecords": [{ "paywall": true, "availability": "headline_only" }],
+    "expectedNormalizedResult": { "evidenceDepth": "metadata-only" },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["HEADLINE_ONLY_LIMITED_EVIDENCE"]
+  },
+  {
+    "id": "n069-public-abstract",
+    "category": "evidence_depth",
+    "inputRecords": [{ "availability": "abstract" }],
+    "expectedNormalizedResult": { "evidenceDepth": "authorized-abstract" },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["ABSTRACT_EVIDENCE_ONLY"]
+  },
+  {
+    "id": "n070-government-full-text",
+    "category": "evidence_depth",
+    "inputRecords": [{ "type": "government_release", "availability": "full_text" }],
+    "expectedNormalizedResult": { "evidenceDepth": "full-text" },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["PUBLIC_PRIMARY_FULL_TEXT"]
+  },
+  {
+    "id": "n071-missing-date",
+    "category": "quarantine",
+    "inputRecords": [{ "publishedAt": null }],
+    "expectedNormalizedResult": { "retained": true },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "not_evaluated",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "review_required",
+    "expectedExplanationCodes": ["PUBLICATION_DATE_MISSING"]
+  },
+  {
+    "id": "n072-missing-publisher",
+    "category": "quarantine",
+    "inputRecords": [{ "publisher": null }],
+    "expectedNormalizedResult": { "retained": true },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "not_evaluated",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "quarantined",
+    "expectedExplanationCodes": ["RAW_RECORD_SCHEMA_INVALID"]
+  },
+  {
+    "id": "n073-invalid-registry",
+    "category": "quarantine",
+    "inputRecords": [{ "sourceRegistryId": "unknown" }],
+    "expectedNormalizedResult": { "retained": true },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "not_evaluated",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "quarantined",
+    "expectedExplanationCodes": ["SOURCE_REGISTRY_ID_UNKNOWN"]
+  },
+  {
+    "id": "n074-conflicting-canonical",
+    "category": "review",
+    "inputRecords": [{ "canonical": "/a" }, { "canonical": "/b" }],
+    "expectedNormalizedResult": { "retained": true },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "review_required",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "review_required",
+    "expectedExplanationCodes": ["CANONICAL_URL_CONFLICT"]
+  },
+  {
+    "id": "n075-ambiguous-alias",
+    "category": "review",
+    "inputRecords": [{ "alias": "shared product" }],
+    "expectedNormalizedResult": { "retained": true },
+    "expectedEntityDecisions": [{ "status": "review_required" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "review_required",
+    "expectedExplanationCodes": ["ENTITY_ALIAS_AMBIGUOUS"]
+  },
+  {
+    "id": "n076-low-confidence-inference",
+    "category": "review",
+    "inputRecords": [{ "relation": "inferred" }],
+    "expectedNormalizedResult": { "retained": true },
+    "expectedEntityDecisions": [{ "status": "review_required" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "review_required",
+    "expectedReviewStatus": "review_required",
+    "expectedExplanationCodes": ["ENTITY_INFERENCE_LOW_CONFIDENCE"]
+  },
+  {
+    "id": "n077-unnamed-rumor",
+    "category": "review",
+    "inputRecords": [{ "attribution": "unnamed sources" }],
+    "expectedNormalizedResult": { "retained": true },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "review_required",
+    "expectedReviewStatus": "review_required",
+    "expectedExplanationCodes": ["RUMOR_UNCORROBORATED"]
+  },
+  {
+    "id": "n078-unknown-content-type",
+    "category": "quarantine",
+    "inputRecords": [{ "type": "mystery" }],
+    "expectedNormalizedResult": { "retained": true },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "not_evaluated",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "quarantined",
+    "expectedExplanationCodes": ["RAW_RECORD_SCHEMA_INVALID"]
+  },
+  {
+    "id": "n079-raw-id-collision",
+    "category": "quarantine",
+    "inputRecords": [{ "rawId": "same" }, { "rawId": "same" }],
+    "expectedNormalizedResult": { "retainedCount": 2 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "exact_duplicate",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "quarantined",
+    "expectedExplanationCodes": ["DUPLICATE_RAW_ID"]
+  },
+  {
+    "id": "n080-unsupported-language",
+    "category": "quarantine",
+    "inputRecords": [{ "language": "zz" }],
+    "expectedNormalizedResult": { "retained": true },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "not_evaluated",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "quarantined",
+    "expectedExplanationCodes": ["LANGUAGE_UNSUPPORTED_V1"]
+  }
+]

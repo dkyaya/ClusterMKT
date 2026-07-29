@@ -1,0 +1,173 @@
+[
+  {
+    "id": "v051-earnings-downgrade",
+    "category": "event",
+    "inputRecords": [{ "type": "earnings" }, { "type": "analyst_action" }],
+    "expectedNormalizedResult": { "eventCount": 2 },
+    "expectedEntityDecisions": [{ "entityId": "company-nvidia", "status": "accepted" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "related_distinct_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["EVENT_TYPE_DIFFERS"]
+  },
+  {
+    "id": "v052-earnings-updates",
+    "category": "event",
+    "inputRecords": [
+      { "type": "earnings", "filing": "q2" },
+      { "type": "earnings", "filing": "q2" }
+    ],
+    "expectedNormalizedResult": { "eventCount": 1 },
+    "expectedEntityDecisions": [{ "entityId": "company-nvidia", "status": "accepted" }],
+    "expectedDuplicateOrVersionRelationship": "new_article_same_event",
+    "expectedEventRelationship": "same_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["POLICY_OR_FILING_ID_MATCH"]
+  },
+  {
+    "id": "v053-export-multi-company",
+    "category": "event",
+    "inputRecords": [{ "type": "export_control", "rule": "x1", "companies": 3 }],
+    "expectedNormalizedResult": { "eventCount": 1 },
+    "expectedEntityDecisions": [{ "entityId": "semiconductors", "status": "accepted" }],
+    "expectedDuplicateOrVersionRelationship": "independent_reporting",
+    "expectedEventRelationship": "same_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["EVENT_BREADTH_SUPPORTS_MERGE"]
+  },
+  {
+    "id": "v054-proposal-final",
+    "category": "event",
+    "inputRecords": [{ "action": "proposal" }, { "action": "final rule" }],
+    "expectedNormalizedResult": { "eventCount": 2 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "related_distinct_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["PROPOSAL_AND_FINAL_RULE_DISTINCT"]
+  },
+  {
+    "id": "v055-capacity-pricing",
+    "category": "event",
+    "inputRecords": [{ "type": "capacity_change" }, { "type": "pricing_change" }],
+    "expectedNormalizedResult": { "eventCount": 2 },
+    "expectedEntityDecisions": [{ "entityId": "company-tsmc", "status": "accepted" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "related_distinct_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["EVENT_TYPE_DIFFERS"]
+  },
+  {
+    "id": "v056-fed-decision-speech",
+    "category": "event",
+    "inputRecords": [
+      { "type": "monetary_policy", "action": "decision" },
+      { "type": "monetary_policy", "action": "speech" }
+    ],
+    "expectedNormalizedResult": { "eventCount": 2 },
+    "expectedEntityDecisions": [{ "entityId": "agency-federal-reserve", "status": "accepted" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "different_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["ENTITY_AND_DATE_NOT_SUFFICIENT"]
+  },
+  {
+    "id": "v057-bls-release-opinion",
+    "category": "event",
+    "inputRecords": [{ "type": "economic_release" }, { "type": "other" }],
+    "expectedNormalizedResult": { "eventCount": 2 },
+    "expectedEntityDecisions": [{ "entityId": "agency-bls", "status": "accepted" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "related_distinct_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["EVENT_TYPE_DIFFERS"]
+  },
+  {
+    "id": "v058-launch-management",
+    "category": "event",
+    "inputRecords": [{ "type": "product_announcement" }, { "type": "management_change" }],
+    "expectedNormalizedResult": { "eventCount": 2 },
+    "expectedEntityDecisions": [{ "entityId": "company-nvidia", "status": "accepted" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "related_distinct_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["EVENT_TYPE_DIFFERS"]
+  },
+  {
+    "id": "v059-rumor-confirmation",
+    "category": "event",
+    "inputRecords": [{ "action": "rumored acquisition" }, { "action": "confirmed acquisition" }],
+    "expectedNormalizedResult": { "eventCount": 2 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "new_article_same_event",
+    "expectedEventRelationship": "related_distinct_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["RUMOR_CONFIRMATION_DISTINCT_CLAIM_STATE"]
+  },
+  {
+    "id": "v060-guidance-market-reaction",
+    "category": "event",
+    "inputRecords": [{ "type": "guidance" }, { "type": "market_reaction" }],
+    "expectedNormalizedResult": { "eventCount": 2 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "related_distinct_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["EVENT_TYPE_DIFFERS"]
+  },
+  {
+    "id": "v061-different-effective-dates",
+    "category": "event",
+    "inputRecords": [{ "effectiveDate": "2026-08-01" }, { "effectiveDate": "2027-01-01" }],
+    "expectedNormalizedResult": { "eventCount": 2 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "review_required",
+    "expectedReviewStatus": "review_required",
+    "expectedExplanationCodes": ["EFFECTIVE_DATE_DIFFERS"]
+  },
+  {
+    "id": "v062-economic-correction",
+    "category": "event",
+    "inputRecords": [{ "release": "jobs-june" }, { "release": "jobs-june", "correction": true }],
+    "expectedNormalizedResult": { "eventCount": 1, "versionCount": 2 },
+    "expectedEntityDecisions": [{ "entityId": "agency-bls", "status": "accepted" }],
+    "expectedDuplicateOrVersionRelationship": "materially_revised_version",
+    "expectedEventRelationship": "updated_same_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["CORRECTION_LINKED_TO_RELEASE"]
+  },
+  {
+    "id": "v063-different-quarter",
+    "category": "event",
+    "inputRecords": [{ "quarter": "Q1" }, { "quarter": "Q2" }],
+    "expectedNormalizedResult": { "eventCount": 2 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "different_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["QUANTITATIVE_PERIOD_DIFFERS"]
+  },
+  {
+    "id": "v064-different-geography",
+    "category": "event",
+    "inputRecords": [{ "geography": "United States" }, { "geography": "Europe" }],
+    "expectedNormalizedResult": { "eventCount": 2 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "different_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["GEOGRAPHY_DIFFERS"]
+  },
+  {
+    "id": "v065-multi-event-article",
+    "category": "event",
+    "inputRecords": [{ "events": ["guidance", "management_change"] }],
+    "expectedNormalizedResult": { "eventCount": 2 },
+    "expectedEntityDecisions": [],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "multi_event",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["MULTI_EVENT_ARTICLE_SPLIT"]
+  }
+]

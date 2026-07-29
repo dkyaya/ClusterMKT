@@ -66,3 +66,5 @@ No Worker deployment is configured or claimed.
 - [Shared agent guidance](AGENTS.md)
 
 The current Semiconductors experience at `/sectors/semiconductors` is an offline, deterministic demonstration. `pnpm sector:validate` runs its 35-case adversarial coverage evaluation; it does not contact publishers or external services.
+
+The repository also includes an offline `normalization-v1` source-normalization, entity-resolution, and event-boundary foundation. `pnpm source:validate`, `pnpm entities:validate`, and `pnpm events:validate` exercise an 80-case adversarial corpus. A direct-only developer fixture inspector is available at `/dev/normalization`; it is not linked from consumer navigation and performs no live ingestion.

@@ -83,6 +83,9 @@ Workspace packages are `@cluster-mkt/web`, `@cluster-mkt/worker`, `@cluster-mkt/
 - For frontend or browser-interaction tasks, use an available controlled browser such as Playwright MCP to inspect the running application, exercise affected flows at desktop and mobile sizes, check console and network failures, and capture validation evidence. Do not claim visual acceptance based only on source review.
 - Interactive descendants inside draggable or swipeable surfaces must be excluded from drag initiation and validated in a real browser.
 - Sector-wide coverage requires breadth evidence; company-led impacts keep their label, and sector feeds must not collapse into the largest constituent.
+- Never count syndicated copies as independent sources; preserve raw evidence and normalization provenance.
+- Candidate entity matches must not be treated as accepted mentions.
+- Event identity must not be reduced to entity plus date.
 - Do not claim completion while required validation fails.
 
 ## Relay requirement

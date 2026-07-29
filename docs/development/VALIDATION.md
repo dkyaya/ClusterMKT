@@ -8,9 +8,12 @@
 4. Strict TypeScript checking across workspaces.
 5. All Vitest behavior tests once.
 6. Offline sector-coverage evaluation, after its exact-case test project.
-7. Web production build and Worker Wrangler dry-run bundle.
-8. Python brand validation.
-9. Application-foundation validation.
+7. Offline source-normalization evaluation.
+8. Offline entity-resolution evaluation.
+9. Offline event-boundary evaluation.
+10. Web production build and Worker Wrangler dry-run bundle.
+11. Python brand validation.
+12. Application-foundation validation.
 
 The brand gate checks production vectors, geometry, transparency, image dimensions, icons, contrast, minimum sizes, motion, and its manifest. The application gate checks required files and scripts, one pnpm lockfile, private package identities, prohibited dependencies, environment/secret hygiene, generated asset hashes, route boundaries, honest demonstration labeling, CI, and the five locked-master hashes.
 
@@ -42,3 +45,9 @@ Generated reports are written beneath ignored `relays/tmp/application-foundation
 `pnpm sector:validate` reruns the source-intelligence test project and writes JSON and Markdown evaluation reports under `relays/tmp/sector-source-intelligence/`. Its gates expose exact failed cases for scope promotion, ticker collisions, podcast transcript rules, provenance, source-family deduplication, brief references, issuer concentration, and coverage gaps. Current results are deterministic fixtures; source capability records do not establish legal authorization unless their review status says so.
 
 Real-browser inspection is required for the sector pages. Verify scope labels, gaps, Story Cluster links, edition and theme behavior, responsive layout, console output, and failed requests. Unit acceptance alone is insufficient.
+
+## Source normalization, entity resolution, and event boundaries
+
+The focused commands are `pnpm source:validate`, `pnpm entities:validate`, and `pnpm events:validate`. Each first runs exact Vitest assertions against production deterministic logic and then writes a corpus-level report with exact critical failures beneath `relays/tmp/source-normalization-entity-resolution/validation/`.
+
+Rule changes must use a stable version such as `normalization-v1` and compare new evaluation results with the prior version rather than silently rewriting history. Real-browser acceptance of the direct-only developer inspector must show raw and derived records, URL decisions, candidate and accepted entities, event signatures, review and quarantine states, console output, and failed requests at desktop and mobile sizes.

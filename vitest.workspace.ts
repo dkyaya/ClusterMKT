@@ -29,6 +29,27 @@ export default defineConfig({
           environment: "node",
         },
       },
+      {
+        test: {
+          name: "source-normalization",
+          root: "tests/source-normalization",
+          environment: "node",
+        },
+      },
+      {
+        test: {
+          name: "entity-resolution",
+          root: "tests/entity-resolution",
+          environment: "node",
+        },
+      },
+      {
+        test: {
+          name: "event-boundaries",
+          root: "tests/event-boundaries",
+          environment: "node",
+        },
+      },
     ],
   },
 });

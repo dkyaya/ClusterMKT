@@ -20,6 +20,7 @@ Cluster MKT uses one private pnpm workspace and lockfile. Applications live in `
 | `/clusters/:clusterId?tab=overview\|read\|listen`                      | URL-addressable tabs with source provenance demonstrations          |
 | `/watchlist`, `/sectors`, `/saved`, `/listen`, `/calendar`, `/profile` | Honest placeholder boundaries                                       |
 | `/settings`                                                            | Disabled future preference sections without persistence             |
+| `/dev/normalization`                                                   | Direct-only offline developer fixture inspector                     |
 
 There are no authentication gates.
 
@@ -54,5 +55,7 @@ Vitest workspaces cover domain validation, evidence flags, edition boundaries, a
 ## Current limitations and next phase
 
 The application now includes offline sector-source-intelligence contracts, deterministic fixture evaluation, shared Sector Brief assembly from accepted Story Clusters, and a responsive Semiconductors demonstration with visible scope labels. Live source ingestion and inference remain outside the foundation.
+
+The direct-only normalization inspector distinguishes preserved raw evidence from derived records, URL rules, duplicate and syndication status, article versions, candidate and accepted entities, event signatures, decision logs, review cases, and quarantined records. It is not exposed in consumer navigation or presented as a production admin tool.
 
 All market stories and controls are static demonstrations. There is no ingestion, live data, account system, persistence, external AI, podcast processing, TTS, or production infrastructure. The next bounded architecture phase should design source metadata, capability matrices, entity dictionaries, relevance fixtures, and adversarial clustering cases without connecting live ingestion.

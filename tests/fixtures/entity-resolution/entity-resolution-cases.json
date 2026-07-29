@@ -1,0 +1,263 @@
+[
+  {
+    "id": "e028-nvidia-name",
+    "category": "entity",
+    "inputRecords": [{ "headline": "Nvidia raises guidance" }],
+    "expectedNormalizedResult": { "acceptedCount": 1 },
+    "expectedEntityDecisions": [{ "entityId": "company-nvidia", "status": "accepted" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["ENTITY_EXPLICIT_CONTEXT_ACCEPTED"]
+  },
+  {
+    "id": "e029-nvda-ticker",
+    "category": "ticker",
+    "inputRecords": [{ "headline": "NVDA shares rise after earnings" }],
+    "expectedNormalizedResult": { "acceptedCount": 1 },
+    "expectedEntityDecisions": [{ "entityId": "company-nvidia", "status": "accepted" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["TICKER_FINANCIAL_CONTEXT_PRESENT"]
+  },
+  {
+    "id": "e030-on-monday",
+    "category": "ticker_collision",
+    "inputRecords": [{ "headline": "Factory restarts on Monday" }],
+    "expectedNormalizedResult": { "acceptedCount": 0 },
+    "expectedEntityDecisions": [{ "entityId": "company-on-semiconductor", "status": "rejected" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["TICKER_CONTEXT_INSUFFICIENT"]
+  },
+  {
+    "id": "e031-ai-demand",
+    "category": "ticker_collision",
+    "inputRecords": [{ "headline": "AI demand grows" }],
+    "expectedNormalizedResult": { "acceptedCount": 0 },
+    "expectedEntityDecisions": [{ "entityId": "company-c3-ai", "status": "rejected" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["TICKER_CONTEXT_INSUFFICIENT"]
+  },
+  {
+    "id": "e032-cat-demand",
+    "category": "ticker_collision",
+    "inputRecords": [{ "headline": "CAT demand appears in a pet survey" }],
+    "expectedNormalizedResult": { "acceptedCount": 0 },
+    "expectedEntityDecisions": [{ "entityId": "company-caterpillar", "status": "rejected" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["TICKER_CONTEXT_INSUFFICIENT"]
+  },
+  {
+    "id": "e033-now-expects",
+    "category": "ticker_collision",
+    "inputRecords": [{ "headline": "NOW expects the work to continue" }],
+    "expectedNormalizedResult": { "acceptedCount": 0 },
+    "expectedEntityDecisions": [{ "entityId": "company-servicenow", "status": "rejected" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["TICKER_CONTEXT_INSUFFICIENT"]
+  },
+  {
+    "id": "e034-meta-analysis",
+    "category": "ticker_collision",
+    "inputRecords": [{ "headline": "META-analysis reviews best practices" }],
+    "expectedNormalizedResult": { "acceptedCount": 0 },
+    "expectedEntityDecisions": [{ "entityId": "company-meta", "status": "rejected" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["ENTITY_FORBIDDEN_CONTEXT"]
+  },
+  {
+    "id": "e035-apple-company-fruit",
+    "category": "entity",
+    "inputRecords": [{ "headline": "Apple company shares rise; apple fruit harvest differs" }],
+    "expectedNormalizedResult": { "acceptedCount": 1 },
+    "expectedEntityDecisions": [{ "entityId": "company-apple", "status": "accepted" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["ENTITY_EXPLICIT_CONTEXT_ACCEPTED"]
+  },
+  {
+    "id": "e036-amazon-region",
+    "category": "entity",
+    "inputRecords": [{ "headline": "Amazon rainforest region faces rain" }],
+    "expectedNormalizedResult": { "acceptedCount": 0 },
+    "expectedEntityDecisions": [{ "entityId": "company-amazon", "status": "rejected" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["ENTITY_FORBIDDEN_CONTEXT"]
+  },
+  {
+    "id": "e037-alphabet-word",
+    "category": "entity",
+    "inputRecords": [{ "headline": "The alphabet contains letters" }],
+    "expectedNormalizedResult": { "acceptedCount": 0 },
+    "expectedEntityDecisions": [{ "entityId": "company-alphabet", "status": "rejected" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["ENTITY_FORBIDDEN_CONTEXT"]
+  },
+  {
+    "id": "e038-broadcom-company-product",
+    "category": "entity",
+    "inputRecords": [{ "headline": "Broadcom introduces a Tomahawk product" }],
+    "expectedNormalizedResult": { "acceptedCount": 1 },
+    "expectedEntityDecisions": [{ "entityId": "company-broadcom", "status": "accepted" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["ENTITY_EXPLICIT_CONTEXT_ACCEPTED"]
+  },
+  {
+    "id": "e039-tsm-tsmc",
+    "category": "entity",
+    "inputRecords": [{ "headline": "TSMC capacity plans move TSM shares" }],
+    "expectedNormalizedResult": { "acceptedCount": 1 },
+    "expectedEntityDecisions": [{ "entityId": "company-tsmc", "status": "accepted" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["ENTITY_EXPLICIT_CONTEXT_ACCEPTED"]
+  },
+  {
+    "id": "e040-asml",
+    "category": "entity",
+    "inputRecords": [{ "headline": "ASML reports equipment orders" }],
+    "expectedNormalizedResult": { "acceptedCount": 1 },
+    "expectedEntityDecisions": [{ "entityId": "company-asml", "status": "accepted" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["ENTITY_EXPLICIT_CONTEXT_ACCEPTED"]
+  },
+  {
+    "id": "e041-executive",
+    "category": "entity",
+    "inputRecords": [{ "headline": "Jensen Huang discusses Nvidia demand" }],
+    "expectedNormalizedResult": { "acceptedCount": 1 },
+    "expectedEntityDecisions": [{ "entityId": "company-nvidia", "status": "accepted" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["ENTITY_ALIAS_CONTEXT_CORROBORATED"]
+  },
+  {
+    "id": "e042-subsidiary-parent",
+    "category": "entity",
+    "inputRecords": [{ "headline": "Fixture subsidiary changes parent guidance" }],
+    "expectedNormalizedResult": { "acceptedCount": 1 },
+    "expectedEntityDecisions": [{ "entityId": "fixture-parent", "status": "accepted" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["ENTITY_ALIAS_CONTEXT_CORROBORATED"]
+  },
+  {
+    "id": "e043-product-strong",
+    "category": "entity",
+    "inputRecords": [{ "headline": "Nvidia Blackwell demand expands" }],
+    "expectedNormalizedResult": { "acceptedCount": 1 },
+    "expectedEntityDecisions": [{ "entityId": "company-nvidia", "status": "accepted" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["ENTITY_ALIAS_CONTEXT_CORROBORATED"]
+  },
+  {
+    "id": "e044-product-shared",
+    "category": "entity",
+    "inputRecords": [{ "headline": "Shared product demand grows" }],
+    "expectedNormalizedResult": { "acceptedCount": 0 },
+    "expectedEntityDecisions": [{ "entityId": "ambiguous-product", "status": "review_required" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "review_required",
+    "expectedExplanationCodes": ["ENTITY_ALIAS_AMBIGUOUS"]
+  },
+  {
+    "id": "e045-tag-contradicted",
+    "category": "entity",
+    "inputRecords": [{ "headline": "Unrelated story", "sourceTag": "NVDA" }],
+    "expectedNormalizedResult": { "acceptedCount": 0 },
+    "expectedEntityDecisions": [{ "entityId": "company-nvidia", "status": "review_required" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "review_required",
+    "expectedExplanationCodes": ["ENTITY_UNTRUSTED_FIELD_ONLY"]
+  },
+  {
+    "id": "e046-url-only",
+    "category": "entity",
+    "inputRecords": [{ "headline": "Unrelated story", "url": "/nvidia/archive" }],
+    "expectedNormalizedResult": { "acceptedCount": 0 },
+    "expectedEntityDecisions": [{ "entityId": "company-nvidia", "status": "review_required" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "review_required",
+    "expectedExplanationCodes": ["ENTITY_UNTRUSTED_FIELD_ONLY"]
+  },
+  {
+    "id": "e047-incidental",
+    "category": "entity",
+    "inputRecords": [
+      { "headline": "Broad industry review", "text": "Incidental Nvidia historical comparison" }
+    ],
+    "expectedNormalizedResult": { "acceptedCount": 0 },
+    "expectedEntityDecisions": [{ "entityId": "company-nvidia", "status": "review_required" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "review_required",
+    "expectedExplanationCodes": ["INCIDENTAL_MENTION_EXCLUDED"]
+  },
+  {
+    "id": "e048-multiple-affected",
+    "category": "entity",
+    "inputRecords": [{ "headline": "Nvidia and TSMC capacity plans change" }],
+    "expectedNormalizedResult": { "acceptedCount": 2 },
+    "expectedEntityDecisions": [
+      { "entityId": "company-nvidia", "status": "accepted" },
+      { "entityId": "company-tsmc", "status": "accepted" }
+    ],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["MULTIPLE_DIRECT_ENTITIES"]
+  },
+  {
+    "id": "e049-sector-only",
+    "category": "entity",
+    "inputRecords": [{ "headline": "Semiconductor sector capacity changes" }],
+    "expectedNormalizedResult": { "acceptedCount": 1 },
+    "expectedEntityDecisions": [{ "entityId": "semiconductors", "status": "accepted" }],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["ENTITY_EXPLICIT_CONTEXT_ACCEPTED"]
+  },
+  {
+    "id": "e050-institution",
+    "category": "entity",
+    "inputRecords": [{ "headline": "Federal Reserve changes monetary policy" }],
+    "expectedNormalizedResult": { "acceptedCount": 2 },
+    "expectedEntityDecisions": [
+      { "entityId": "agency-federal-reserve", "status": "accepted" },
+      { "entityId": "monetary_policy", "status": "accepted" }
+    ],
+    "expectedDuplicateOrVersionRelationship": "distinct",
+    "expectedEventRelationship": "not_evaluated",
+    "expectedReviewStatus": "accepted",
+    "expectedExplanationCodes": ["ENTITY_EXPLICIT_CONTEXT_ACCEPTED"]
+  }
+]

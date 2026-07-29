@@ -1,5 +1,4 @@
 import { Badge } from "@cluster-mkt/ui";
-import { BriefPlayerPreview } from "../components/audio/BriefPlayerPreview";
 import { PageContainer } from "../components/layout/PageContainer";
 import { StoryClusterCard } from "../components/story/StoryClusterCard";
 import { demoClusters } from "../data/demoClusters";
@@ -17,7 +16,7 @@ export function TodayPage() {
           connected services are present.
         </p>
       </header>
-      <section aria-labelledby="brief-heading" className="daily-brief">
+      <section aria-labelledby="brief-heading" className="daily-brief-summary">
         <div>
           <p className="eyebrow">Daily market brief</p>
           <h2 id="brief-heading">A calm view of material developments</h2>
@@ -27,7 +26,6 @@ export function TodayPage() {
             <span>9 min listen preview</span>
           </div>
         </div>
-        <BriefPlayerPreview />
       </section>
       <section aria-labelledby="clusters-heading" className="cluster-list">
         <div className="section-heading">

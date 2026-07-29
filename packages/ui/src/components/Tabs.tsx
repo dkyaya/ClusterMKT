@@ -9,16 +9,18 @@ export interface TabItem {
 export interface TabsProps {
   items: readonly TabItem[];
   label: string;
+  activeTab?: string;
   defaultTab?: string;
   onChange?: (id: string) => void;
 }
 
-export function Tabs({ items, label, defaultTab, onChange }: TabsProps) {
+export function Tabs({ items, label, activeTab, defaultTab, onChange }: TabsProps) {
   const baseId = useId();
-  const [active, setActive] = useState(defaultTab ?? items[0]?.id ?? "");
+  const [internalActive, setInternalActive] = useState(defaultTab ?? items[0]?.id ?? "");
+  const active = activeTab ?? internalActive;
   const refs = useRef<Array<HTMLButtonElement | null>>([]);
   const select = (id: string) => {
-    setActive(id);
+    if (activeTab === undefined) setInternalActive(id);
     onChange?.(id);
   };
   const onKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
@@ -45,7 +47,7 @@ export function Tabs({ items, label, defaultTab, onChange }: TabsProps) {
         className={styles.list}
         onKeyDown={onKeyDown}
         role="tablist"
-        tabIndex={0}
+        tabIndex={-1}
       >
         {items.map((item, index) => (
           <button

@@ -15,6 +15,16 @@ validator. Application development itself remains a pnpm workspace.
 
 `pnpm dev` runs both development processes in parallel. Runtime browser icons are synchronized automatically before root or web development.
 
+Frontend acceptance checks should exercise the typeable-but-disconnected search form, header profile menu, mobile scroll-direction search row, session-scoped Daily Brief dismissal, and direct Story Cluster tab URLs such as:
+
+```text
+/clusters/cluster-grid-review?tab=overview
+/clusters/cluster-grid-review?tab=read
+/clusters/cluster-grid-review?tab=listen
+```
+
+Daily and cluster-specific audio controls are intentionally nonfunctional demonstrations. Clear `sessionStorage` when manually repeating Daily Brief dismissal checks in the same browser session.
+
 Quality commands:
 
 ```sh

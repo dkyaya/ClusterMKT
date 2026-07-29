@@ -14,14 +14,22 @@ Cluster MKT uses one private pnpm workspace and lockfile. Applications live in `
 
 ## Web route map
 
-| Route                                                                  | Foundation behavior                                                   |
-| ---------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `/`                                                                    | Today shell, Daily Brief preview, and labeled static Story Clusters   |
-| `/clusters/:clusterId`                                                 | Overview, Read, and Listen tabs with source provenance demonstrations |
-| `/watchlist`, `/sectors`, `/saved`, `/listen`, `/calendar`, `/profile` | Honest placeholder boundaries                                         |
-| `/settings`                                                            | Disabled future preference sections without persistence               |
+| Route                                                                  | Foundation behavior                                                 |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `/`                                                                    | Today shell, Daily Brief preview, and labeled static Story Clusters |
+| `/clusters/:clusterId?tab=overview\|read\|listen`                      | URL-addressable tabs with source provenance demonstrations          |
+| `/watchlist`, `/sectors`, `/saved`, `/listen`, `/calendar`, `/profile` | Honest placeholder boundaries                                       |
+| `/settings`                                                            | Disabled future preference sections without persistence             |
 
 There are no authentication gates.
+
+## Prototype interactions
+
+Global search is a controlled, accessible form that accepts user input without filtering fixtures or fabricating results. Submissions state that indexing is not connected. A route-aware profile menu provides Profile, Settings, and Appearance access on desktop and mobile without implying authentication.
+
+On mobile, the sticky header keeps its identity and profile row visible while the search row collapses after meaningful downward scrolling and returns on upward movement, near the document top, or while search is focused. The passive listener is isolated in a reusable hook, and reduced-motion styles remove movement transitions.
+
+The global Daily Brief is edition- and New York market-date-specific. Dismissal works by an accessible button, Escape, or horizontal pointer gesture and is retained only in safe `sessionStorage`. Story Cluster cards and tabs use the `tab` query parameter, so refresh and browser history preserve Overview, Read, or Listen. The Listen panel contains a cluster-specific audio preview rather than the global Daily Brief. All audio remains demonstration-only.
 
 ## Worker route map
 

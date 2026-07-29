@@ -13,6 +13,21 @@ describe("StoryClusterCard", () => {
       </MemoryRouter>,
     );
     expect(screen.getByText(/Why it matters:/)).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Overview" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: cluster.title })).toHaveAttribute(
+      "href",
+      `/clusters/${cluster.id}?tab=overview`,
+    );
+    expect(screen.getByRole("link", { name: "Overview" })).toHaveAttribute(
+      "href",
+      `/clusters/${cluster.id}?tab=overview`,
+    );
+    expect(screen.getByRole("link", { name: "Read" })).toHaveAttribute(
+      "href",
+      `/clusters/${cluster.id}?tab=read`,
+    );
+    expect(screen.getByRole("link", { name: "Listen" })).toHaveAttribute(
+      "href",
+      `/clusters/${cluster.id}?tab=listen`,
+    );
   });
 });

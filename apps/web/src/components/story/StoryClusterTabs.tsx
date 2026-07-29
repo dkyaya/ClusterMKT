@@ -1,10 +1,16 @@
 import type { StoryCluster } from "@cluster-mkt/core";
 import { Tabs } from "@cluster-mkt/ui";
-import { BriefPlayerPreview } from "../audio/BriefPlayerPreview";
+import { ClusterAudioBriefPreview } from "../audio/ClusterAudioBriefPreview";
 import { PodcastCard } from "./PodcastCard";
 import { SourceCard } from "./SourceCard";
 
-export function StoryClusterTabs({ cluster }: { cluster: StoryCluster }) {
+export interface StoryClusterTabsProps {
+  activeTab: "overview" | "read" | "listen";
+  cluster: StoryCluster;
+  onTabChange: (id: string) => void;
+}
+
+export function StoryClusterTabs({ activeTab, cluster, onTabChange }: StoryClusterTabsProps) {
   const overview = (
     <div className="cluster-overview">
       {cluster.sections.map((section) => (
@@ -52,7 +58,9 @@ export function StoryClusterTabs({ cluster }: { cluster: StoryCluster }) {
   );
   return (
     <Tabs
+      activeTab={activeTab}
       label="Story Cluster sections"
+      onChange={onTabChange}
       items={[
         { id: "overview", label: "Overview", panel: overview },
         {
@@ -71,7 +79,7 @@ export function StoryClusterTabs({ cluster }: { cluster: StoryCluster }) {
           label: `Listen (${cluster.listenSources.length})`,
           panel: (
             <>
-              <BriefPlayerPreview />
+              <ClusterAudioBriefPreview clusterId={cluster.id} clusterTitle={cluster.title} />
               <div className="source-grid">
                 {cluster.listenSources.map((source) => (
                   <PodcastCard key={source.id} podcast={source} />

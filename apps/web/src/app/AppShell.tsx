@@ -1,6 +1,6 @@
 import { editionDefinition } from "@cluster-mkt/config";
 import type { ReactNode } from "react";
-import { BriefPlayerPreview } from "../components/audio/BriefPlayerPreview";
+import { DailyBriefPlayer } from "../components/audio/DailyBriefPlayer";
 import { EditionHeader } from "../components/layout/EditionHeader";
 import { DesktopSidebar } from "../components/navigation/DesktopSidebar";
 import { MobileBottomNav } from "../components/navigation/MobileBottomNav";
@@ -17,7 +17,7 @@ export function AppShell({ children }: { children: ReactNode }) {
       <div className="app-frame">
         <EditionHeader edition={editionDefinition(edition)} />
         <main id="main-content">{children}</main>
-        <BriefPlayerPreview compact />
+        <DailyBriefPlayer edition={edition} />
       </div>
       <MobileBottomNav />
     </div>

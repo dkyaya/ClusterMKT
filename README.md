@@ -8,6 +8,8 @@ Cluster MKT™ does not tell investors what to buy. It provides a clearer, faste
 
 The application foundation is implemented as a private pnpm TypeScript workspace. The React/Vite web shell uses clearly labeled static demonstration data. The Cloudflare Worker exposes only local health and foundation-status routes. Shared domain, UI, and configuration packages, automated tests, brand integration, linting, formatting, type-checking, builds, and CI are present.
 
+The prototype search accepts text but reports honestly that indexing is not connected. Profile and Settings are available from the header on desktop and mobile, the mobile search row responds to scroll direction, Story Cluster tabs are URL-addressable, and the session-scoped Daily Brief can be dismissed. Daily and cluster-specific audio previews remain separate demonstration concepts with no generated audio.
+
 Live ingestion, authentication, persistent storage, publisher connections, financial-data services, AI, TTS, scheduled workflows, and production deployment are **not connected**.
 
 ## Local development

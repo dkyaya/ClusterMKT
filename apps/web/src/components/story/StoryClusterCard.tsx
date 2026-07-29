@@ -12,16 +12,16 @@ export function StoryClusterCard({ cluster }: { cluster: StoryCluster }) {
         </span>
       </div>
       <h2>
-        <Link to={`/clusters/${cluster.id}`}>{cluster.title}</Link>
+        <Link to={`/clusters/${cluster.id}?tab=overview`}>{cluster.title}</Link>
       </h2>
       <p>{cluster.shortOverview}</p>
       <p>
         <strong>Why it matters:</strong> {cluster.whyItMatters}
       </p>
       <div className="cluster-links">
-        <Link to={`/clusters/${cluster.id}`}>Overview</Link>
-        <Link to={`/clusters/${cluster.id}`}>Read</Link>
-        <Link to={`/clusters/${cluster.id}`}>Listen</Link>
+        <Link to={`/clusters/${cluster.id}?tab=overview`}>Overview</Link>
+        <Link to={`/clusters/${cluster.id}?tab=read`}>Read</Link>
+        <Link to={`/clusters/${cluster.id}?tab=listen`}>Listen</Link>
       </div>
     </Surface>
   );

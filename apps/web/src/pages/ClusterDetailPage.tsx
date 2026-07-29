@@ -28,6 +28,9 @@ export function ClusterDetailPage() {
       <header className="cluster-detail-header">
         <Link to="/">← Today</Link>
         <Badge tone="caution">Demonstration data</Badge>
+        <Badge tone={cluster.reviewStatus === "accepted" ? "accent" : "caution"}>
+          {cluster.reviewStatus.replaceAll("_", " ")}
+        </Badge>
         <h1>{cluster.title}</h1>
         <p>{cluster.shortOverview}</p>
         <div className="tag-row">

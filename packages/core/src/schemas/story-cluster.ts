@@ -22,6 +22,13 @@ export const ClusterUncertaintySchema = z.object({
   evidenceNeeded: z.string().min(1),
 });
 
+export const StoryClusterClaimProvenanceSchema = z.object({
+  claimId: z.string().min(1),
+  evidenceSourceIds: z.array(z.string().min(1)).min(1),
+  rawRecordIds: z.array(z.string().min(1)).min(1),
+  pathSummary: z.string().min(1),
+});
+
 export const StoryClusterSchema = z
   .object({
     id: z.string().regex(/^cluster-[a-z0-9-]+$/),
@@ -35,7 +42,17 @@ export const StoryClusterSchema = z
     lastUpdatedAt: z.iso.datetime(),
     relevance: RelevanceLabelSchema,
     sourceCount: z.number().int().nonnegative(),
+    independentSourceCount: z.number().int().nonnegative(),
     primarySourceCount: z.number().int().nonnegative(),
+    claimIds: z.array(z.string().min(1)).min(1),
+    agreementGroupIds: z.array(z.string().min(1)),
+    disagreementGroupIds: z.array(z.string().min(1)),
+    uncertaintyRecordIds: z.array(z.string().min(1)),
+    claimProvenance: z.array(StoryClusterClaimProvenanceSchema).min(1),
+    reviewStatus: z.enum(["accepted", "review_required", "rejected", "quarantined"]),
+    eligibleForDisplay: z.boolean(),
+    eligibleForSectorBrief: z.boolean(),
+    rulesVersion: z.string().regex(/^normalization-v\d+$/),
     sections: z.array(StoryClusterSectionSchema),
     agreementPoints: z.array(z.string().min(1)),
     competingArguments: z.array(ClusterArgumentSchema),
@@ -63,9 +80,29 @@ export const StoryClusterSchema = z
         message: "Primary-source count must match included sources.",
       });
     }
+    if (cluster.independentSourceCount > cluster.sourceCount) {
+      context.addIssue({
+        code: "custom",
+        path: ["independentSourceCount"],
+        message: "Independent source count cannot exceed raw source count.",
+      });
+    }
+    const evidenceIds = new Set(
+      [...cluster.readSources, ...cluster.listenSources].map((source) => source.id),
+    );
+    for (const trace of cluster.claimProvenance) {
+      if (trace.evidenceSourceIds.some((id) => !evidenceIds.has(id))) {
+        context.addIssue({
+          code: "custom",
+          path: ["claimProvenance"],
+          message: "Visible claim provenance must reference an included source.",
+        });
+      }
+    }
   });
 
 export type StoryCluster = z.infer<typeof StoryClusterSchema>;
 export type StoryClusterSection = z.infer<typeof StoryClusterSectionSchema>;
 export type ClusterArgument = z.infer<typeof ClusterArgumentSchema>;
 export type ClusterUncertainty = z.infer<typeof ClusterUncertaintySchema>;
+export type StoryClusterClaimProvenance = z.infer<typeof StoryClusterClaimProvenanceSchema>;

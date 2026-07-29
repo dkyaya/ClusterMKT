@@ -6,7 +6,20 @@ import {
   type SectorFeedCandidate,
 } from "@cluster-mkt/core";
 
-const candidates: SectorFeedCandidate[] = [
+const acceptedCluster = (candidate: SectorFeedCandidate): SectorFeedCandidate => ({
+  ...candidate,
+  clusterReviewStatus: "accepted",
+  eligibleForDisplay: true,
+  eligibleForSectorBrief: true,
+  claimIds: [`claim-${candidate.id.replace(/^cluster-/u, "")}`],
+  agreementGroupIds: [`agreement-${candidate.id.replace(/^cluster-/u, "")}`],
+  uncertaintyIds: candidate.uncertainty?.length
+    ? [`uncertainty-${candidate.id.replace(/^cluster-/u, "")}`]
+    : [],
+  independentSourceCount: Math.max(1, candidate.sourceCount - 1),
+});
+
+const rawCandidates: SectorFeedCandidate[] = [
   {
     id: "cluster-semiconductor-export-controls",
     title: "Fixture export controls reach equipment, manufacturing, and advanced compute",
@@ -90,6 +103,8 @@ const candidates: SectorFeedCandidate[] = [
     themes: ["Inventory cycle"],
   },
 ];
+
+const candidates = rawCandidates.map(acceptedCluster);
 
 export const sectorRouteByClusterId: Record<string, string> = {
   "cluster-semiconductor-export-controls": "/clusters/cluster-grid-review?tab=overview",

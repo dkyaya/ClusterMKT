@@ -10,7 +10,15 @@ export function assembleSectorFeed(input: {
   expectedSubindustryIds: string[];
 }): SectorFeed {
   const accepted = input.candidates.filter(
-    (candidate) => candidate.active && candidate.whyIncluded.trim().length > 0,
+    (candidate) =>
+      candidate.active &&
+      candidate.whyIncluded.trim().length > 0 &&
+      (candidate.clusterReviewStatus ?? "accepted") === "accepted" &&
+      candidate.eligibleForDisplay !== false &&
+      candidate.eligibleForSectorBrief !== false,
+  );
+  const reviewWatchItems = input.candidates.filter(
+    (candidate) => candidate.active && candidate.clusterReviewStatus === "review_required",
   );
   const ranked = rankWithCoverageDiversity(accepted);
   const covered = new Set(ranked.items.flatMap((item) => item.subindustryIds));
@@ -24,5 +32,6 @@ export function assembleSectorFeed(input: {
     items: ranked.items,
     diversityAdjustments: ranked.adjustments,
     coverageGaps,
+    reviewWatchItems,
   };
 }

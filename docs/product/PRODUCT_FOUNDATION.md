@@ -51,3 +51,7 @@ The initial product will not generate automatic price predictions, buy/sell/hold
 ## Source identity boundary
 
 Raw source records are untrusted and remain preserved. Deterministic normalization creates versioned URLs, work and syndication relationships, accepted or review-required entity mentions, and event signatures without overwriting evidence. Syndicated copies never inflate confirmation, article updates remain linked, and metadata-only records retain limited evidence depth. Live ingestion and AI inference remain unimplemented.
+
+## Claim and cluster boundary
+
+Story Cluster membership is an explicit, reviewable event decision. Claims are separate from presentation text, and every visible factual statement retains a path to raw evidence. Evidence depth controls permitted use: headlines and metadata cannot support detailed summaries, while transcript-free podcast metadata remains related listening only. Agreement is adjusted for source independence; disagreement is represented only when propositions genuinely differ. Review-required candidates remain separate from accepted output, and Sector Briefs consume accepted eligible clusters rather than raw articles.

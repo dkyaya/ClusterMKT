@@ -19,6 +19,18 @@ export const SectorBriefSchema = z.object({
   uncertainty: z.array(z.string().min(1)),
   coverageGaps: z.array(z.string().min(1)),
   whatWouldChangeThePicture: z.array(z.string().min(1)),
+  reviewWatchClusterIds: z.array(z.string().min(1)).default([]),
+  clusterClaimReferences: z
+    .array(
+      z.object({
+        clusterId: z.string().min(1),
+        claimIds: z.array(z.string().min(1)),
+        agreementGroupIds: z.array(z.string().min(1)),
+        uncertaintyIds: z.array(z.string().min(1)),
+        independentSourceCount: z.number().int().nonnegative(),
+      }),
+    )
+    .default([]),
   breadthMetrics: z.object({
     materialDevelopmentCount: z.number().int().nonnegative(),
     issuerCount: z.number().int().nonnegative(),

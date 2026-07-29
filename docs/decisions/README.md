@@ -11,3 +11,6 @@ Architecture decision records capture durable repository and product-engineering
 - [0007 — Preserve raw evidence through normalization](0007-provenance-preserving-normalization.md)
 - [0008 — Separate entity candidates from accepted mentions](0008-deterministic-entity-resolution.md)
 - [0009 — Define event identity with structured signatures](0009-event-signature-boundaries.md)
+- [0010 — Preserve claim-level provenance](0010-claim-level-provenance.md)
+- [0011 — Count independent support by work and source family](0011-independent-support-counting.md)
+- [0012 — Gate Story Clusters through explicit review routing](0012-review-gated-story-clusters.md)

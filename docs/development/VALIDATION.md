@@ -11,9 +11,13 @@
 7. Offline source-normalization evaluation.
 8. Offline entity-resolution evaluation.
 9. Offline event-boundary evaluation.
-10. Web production build and Worker Wrangler dry-run bundle.
-11. Python brand validation.
-12. Application-foundation validation.
+10. Offline Story Cluster candidate and membership evaluation.
+11. Offline claim and evidence-depth evaluation.
+12. Offline agreement and disagreement evaluation.
+13. Offline claim-provenance graph evaluation.
+14. Web production build and Worker Wrangler dry-run bundle.
+15. Python brand validation.
+16. Application-foundation validation.
 
 The brand gate checks production vectors, geometry, transparency, image dimensions, icons, contrast, minimum sizes, motion, and its manifest. The application gate checks required files and scripts, one pnpm lockfile, private package identities, prohibited dependencies, environment/secret hygiene, generated asset hashes, route boundaries, honest demonstration labeling, CI, and the five locked-master hashes.
 
@@ -51,3 +55,11 @@ Real-browser inspection is required for the sector pages. Verify scope labels, g
 The focused commands are `pnpm source:validate`, `pnpm entities:validate`, and `pnpm events:validate`. Each first runs exact Vitest assertions against production deterministic logic and then writes a corpus-level report with exact critical failures beneath `relays/tmp/source-normalization-entity-resolution/validation/`.
 
 Rule changes must use a stable version such as `normalization-v1` and compare new evaluation results with the prior version rather than silently rewriting history. Real-browser acceptance of the direct-only developer inspector must show raw and derived records, URL decisions, candidate and accepted entities, event signatures, review and quarantine states, console output, and failed requests at desktop and mobile sizes.
+
+## Story Clusters, claims, discourse, and provenance
+
+The focused commands are `pnpm clusters:validate`, `pnpm claims:validate`, `pnpm discourse:validate`, and `pnpm provenance:validate`. Together they evaluate all 62 offline adversarial cases and write JSON plus Markdown reports under `relays/tmp/story-cluster-claim-provenance/validation/`.
+
+Critical gates include zero unsupported visible claims, zero metadata-only detailed claims, zero transcript-free podcast evidence, zero syndicated-source inflation, zero false consensus or manufactured disagreement, and complete claim-to-raw plus brief-to-raw provenance. A candidate requiring review must include reasons and cannot masquerade as accepted output.
+
+Real-browser acceptance of `/dev/clusters` must verify membership decisions, evidence depth, independent support, discourse groups, uncertainty, review routing, eligibility, and provenance at desktop and mobile sizes. The route is direct-only and must remain absent from primary consumer navigation.

@@ -31,6 +31,10 @@ See [product foundation](docs/product/PRODUCT_FOUNDATION.md), [planned architect
 - Separate verified facts, interpretation, disagreement, uncertainty, and future evidence.
 - Preserve primary-source and secondary-source distinctions.
 - Material claims require traceable evidence.
+- Every visible factual claim must preserve claim-to-source provenance.
+- Syndicated support must not be counted as independent corroboration.
+- Agreement and disagreement must be evidence-derived, without manufactured balance.
+- Review-required clusters must not masquerade as accepted output.
 - Label podcast metadata-only matches.
 - Distinguish sources used in summaries from related reading or listening.
 - Aggressively stress-test relevance and clustering. Turn failed edge cases into permanent regression tests where practical.
@@ -86,6 +90,7 @@ Workspace packages are `@cluster-mkt/web`, `@cluster-mkt/worker`, `@cluster-mkt/
 - Never count syndicated copies as independent sources; preserve raw evidence and normalization provenance.
 - Candidate entity matches must not be treated as accepted mentions.
 - Event identity must not be reduced to entity plus date.
+- Cluster membership must preserve its event-boundary rationale and rejected or review-required outcomes.
 - Do not claim completion while required validation fails.
 
 ## Relay requirement

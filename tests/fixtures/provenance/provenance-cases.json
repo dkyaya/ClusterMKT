@@ -1,0 +1,531 @@
+[
+  {
+    "id": "56-brief-statement-without-path",
+    "caseNumber": 56,
+    "category": "provenance",
+    "description": "brief statement without path",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-56-brief-statement-without-path-1",
+        "rawRecordIds": ["raw-56-brief-statement-without-path-1"],
+        "underlyingWorkId": "work-56-brief-statement-without-path-1",
+        "sourceFamilyId": "family-56-brief-statement-without-path-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-56-brief-statement-without-path",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "rejected",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-56-brief-statement-without-path-2",
+        "rawRecordIds": ["raw-56-brief-statement-without-path-2"],
+        "underlyingWorkId": "work-56-brief-statement-without-path-2",
+        "sourceFamilyId": "family-56-brief-statement-without-path-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-56-brief-statement-without-path",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "rejected",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-56-brief-statement-without-path",
+        "scope": "sector_wide",
+        "status": "rejected",
+        "outcome": "validation_failure",
+        "eligibleForDisplay": false,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-56-brief-statement-without-path-1",
+        "status": "rejected"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-56-brief-statement-without-path",
+        "status": "unsupported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-56-brief-statement-without-path",
+        "rawRecordIds": ["raw-56-brief-statement-without-path-1"],
+        "independentSupportCount": 2,
+        "accepted": false
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "rejected",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-56-brief-statement-without-path-1",
+        "to": "sector-brief-statement-56-brief-statement-without-path",
+        "valid": false
+      }
+    ],
+    "expectedExplanationCodes": ["ORPHANED_VISIBLE_STATEMENT"]
+  },
+  {
+    "id": "57-complete-raw-to-brief-path",
+    "caseNumber": 57,
+    "category": "provenance",
+    "description": "complete raw to brief path",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-57-complete-raw-to-brief-path-1",
+        "rawRecordIds": ["raw-57-complete-raw-to-brief-path-1"],
+        "underlyingWorkId": "work-57-complete-raw-to-brief-path-1",
+        "sourceFamilyId": "family-57-complete-raw-to-brief-path-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-57-complete-raw-to-brief-path",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-57-complete-raw-to-brief-path-2",
+        "rawRecordIds": ["raw-57-complete-raw-to-brief-path-2"],
+        "underlyingWorkId": "work-57-complete-raw-to-brief-path-2",
+        "sourceFamilyId": "family-57-complete-raw-to-brief-path-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-57-complete-raw-to-brief-path",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-57-complete-raw-to-brief-path-3",
+        "rawRecordIds": ["raw-57-complete-raw-to-brief-path-3"],
+        "underlyingWorkId": "work-57-complete-raw-to-brief-path-3",
+        "sourceFamilyId": "family-57-complete-raw-to-brief-path-3",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-57-complete-raw-to-brief-path",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-57-complete-raw-to-brief-path",
+        "scope": "sector_wide",
+        "status": "accepted",
+        "outcome": "pass",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": true
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-57-complete-raw-to-brief-path-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-57-complete-raw-to-brief-path",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-57-complete-raw-to-brief-path",
+        "rawRecordIds": ["raw-57-complete-raw-to-brief-path-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-57-complete-raw-to-brief-path-1",
+        "to": "sector-brief-statement-57-complete-raw-to-brief-path",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["COMPLETE_RAW_TO_BRIEF_PATH"]
+  },
+  {
+    "id": "58-missing-normalized-node",
+    "caseNumber": 58,
+    "category": "provenance",
+    "description": "missing normalized node",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-58-missing-normalized-node-1",
+        "rawRecordIds": ["raw-58-missing-normalized-node-1"],
+        "underlyingWorkId": "work-58-missing-normalized-node-1",
+        "sourceFamilyId": "family-58-missing-normalized-node-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-58-missing-normalized-node",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "rejected",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-58-missing-normalized-node-2",
+        "rawRecordIds": ["raw-58-missing-normalized-node-2"],
+        "underlyingWorkId": "work-58-missing-normalized-node-2",
+        "sourceFamilyId": "family-58-missing-normalized-node-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-58-missing-normalized-node",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "rejected",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-58-missing-normalized-node",
+        "scope": "company_specific",
+        "status": "rejected",
+        "outcome": "fail",
+        "eligibleForDisplay": false,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-58-missing-normalized-node-1",
+        "status": "rejected"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-58-missing-normalized-node",
+        "status": "unsupported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-58-missing-normalized-node",
+        "rawRecordIds": ["raw-58-missing-normalized-node-1"],
+        "independentSupportCount": 2,
+        "accepted": false
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "rejected",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-58-missing-normalized-node-1",
+        "to": "claim-58-missing-normalized-node",
+        "valid": false
+      }
+    ],
+    "expectedExplanationCodes": ["MISSING_NORMALIZED_NODE"]
+  },
+  {
+    "id": "59-orphaned-accepted-claim",
+    "caseNumber": 59,
+    "category": "provenance",
+    "description": "orphaned accepted claim",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-59-orphaned-accepted-claim-1",
+        "rawRecordIds": ["raw-59-orphaned-accepted-claim-1"],
+        "underlyingWorkId": "work-59-orphaned-accepted-claim-1",
+        "sourceFamilyId": "family-59-orphaned-accepted-claim-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-59-orphaned-accepted-claim",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "rejected",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-59-orphaned-accepted-claim-2",
+        "rawRecordIds": ["raw-59-orphaned-accepted-claim-2"],
+        "underlyingWorkId": "work-59-orphaned-accepted-claim-2",
+        "sourceFamilyId": "family-59-orphaned-accepted-claim-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-59-orphaned-accepted-claim",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "rejected",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-59-orphaned-accepted-claim",
+        "scope": "company_specific",
+        "status": "rejected",
+        "outcome": "fail",
+        "eligibleForDisplay": false,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-59-orphaned-accepted-claim-1",
+        "status": "rejected"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-59-orphaned-accepted-claim",
+        "status": "unsupported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-59-orphaned-accepted-claim",
+        "rawRecordIds": [],
+        "independentSupportCount": 2,
+        "accepted": false
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "rejected",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-59-orphaned-accepted-claim-1",
+        "to": "claim-59-orphaned-accepted-claim",
+        "valid": false
+      }
+    ],
+    "expectedExplanationCodes": ["ORPHANED_ACCEPTED_CLAIM"]
+  },
+  {
+    "id": "60-quarantined-to-accepted",
+    "caseNumber": 60,
+    "category": "provenance",
+    "description": "quarantined to accepted",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-60-quarantined-to-accepted-1",
+        "rawRecordIds": ["raw-60-quarantined-to-accepted-1"],
+        "underlyingWorkId": "work-60-quarantined-to-accepted-1",
+        "sourceFamilyId": "family-60-quarantined-to-accepted-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-60-quarantined-to-accepted",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "quarantined",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-60-quarantined-to-accepted-2",
+        "rawRecordIds": ["raw-60-quarantined-to-accepted-2"],
+        "underlyingWorkId": "work-60-quarantined-to-accepted-2",
+        "sourceFamilyId": "family-60-quarantined-to-accepted-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-60-quarantined-to-accepted",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "quarantined",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-60-quarantined-to-accepted",
+        "scope": "company_specific",
+        "status": "rejected",
+        "outcome": "fail",
+        "eligibleForDisplay": false,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-60-quarantined-to-accepted-1",
+        "status": "rejected"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-60-quarantined-to-accepted",
+        "status": "unsupported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-60-quarantined-to-accepted",
+        "rawRecordIds": ["raw-60-quarantined-to-accepted-1"],
+        "independentSupportCount": 2,
+        "accepted": false
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "rejected",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-60-quarantined-to-accepted-1",
+        "to": "claim-60-quarantined-to-accepted",
+        "valid": false
+      }
+    ],
+    "expectedExplanationCodes": ["QUARANTINED_EVIDENCE_VIOLATION"]
+  },
+  {
+    "id": "61-syndicated-counted-independently",
+    "caseNumber": 61,
+    "category": "provenance",
+    "description": "syndicated counted independently",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-61-syndicated-counted-independently-1",
+        "rawRecordIds": ["raw-61-syndicated-counted-independently-1"],
+        "underlyingWorkId": "work-61-syndicated-counted-independently-shared",
+        "sourceFamilyId": "family-61-syndicated-counted-independently-1",
+        "syndicationFamilyId": "syndication-61-syndicated-counted-independently",
+        "eventSignatureId": "event-61-syndicated-counted-independently",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "rejected",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-61-syndicated-counted-independently-2",
+        "rawRecordIds": ["raw-61-syndicated-counted-independently-2"],
+        "underlyingWorkId": "work-61-syndicated-counted-independently-shared",
+        "sourceFamilyId": "family-61-syndicated-counted-independently-2",
+        "syndicationFamilyId": "syndication-61-syndicated-counted-independently",
+        "eventSignatureId": "event-61-syndicated-counted-independently",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "rejected",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-61-syndicated-counted-independently",
+        "scope": "sector_wide",
+        "status": "rejected",
+        "outcome": "fail",
+        "eligibleForDisplay": false,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-61-syndicated-counted-independently-1",
+        "status": "rejected"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-61-syndicated-counted-independently",
+        "status": "unsupported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-61-syndicated-counted-independently",
+        "rawRecordIds": ["raw-61-syndicated-counted-independently-1"],
+        "independentSupportCount": 2,
+        "accepted": false
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "rejected",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-61-syndicated-counted-independently-1",
+        "to": "claim-61-syndicated-counted-independently",
+        "valid": false
+      }
+    ],
+    "expectedExplanationCodes": ["SYNDICATED_INDEPENDENCE_VIOLATION"]
+  },
+  {
+    "id": "62-missing-rules-version",
+    "caseNumber": 62,
+    "category": "provenance",
+    "description": "missing rules version",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-62-missing-rules-version-1",
+        "rawRecordIds": ["raw-62-missing-rules-version-1"],
+        "underlyingWorkId": "work-62-missing-rules-version-1",
+        "sourceFamilyId": "family-62-missing-rules-version-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-62-missing-rules-version",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "rejected",
+        "rulesVersion": null
+      },
+      {
+        "normalizedRecordId": "norm-62-missing-rules-version-2",
+        "rawRecordIds": ["raw-62-missing-rules-version-2"],
+        "underlyingWorkId": "work-62-missing-rules-version-2",
+        "sourceFamilyId": "family-62-missing-rules-version-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-62-missing-rules-version",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "rejected",
+        "rulesVersion": null
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-62-missing-rules-version",
+        "scope": "company_specific",
+        "status": "rejected",
+        "outcome": "fail",
+        "eligibleForDisplay": false,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-62-missing-rules-version-1",
+        "status": "rejected"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-62-missing-rules-version",
+        "status": "unsupported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-62-missing-rules-version",
+        "rawRecordIds": ["raw-62-missing-rules-version-1"],
+        "independentSupportCount": 2,
+        "accepted": false
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "rejected",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-62-missing-rules-version-1",
+        "to": "claim-62-missing-rules-version",
+        "valid": false
+      }
+    ],
+    "expectedExplanationCodes": ["MISSING_RULES_VERSION"]
+  }
+]

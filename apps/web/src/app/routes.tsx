@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { ClusterDetailPage } from "../pages/ClusterDetailPage";
+import { ClusterInspectorPage } from "../pages/ClusterInspectorPage";
 import { NotFoundPage } from "../pages/NotFoundPage";
 import { NormalizationInspectorPage } from "../pages/NormalizationInspectorPage";
 import { PlaceholderPage } from "../pages/PlaceholderPage";
@@ -16,6 +17,7 @@ export function AppRoutes() {
       <Route path="/sectors" element={<SectorsPage />} />
       <Route path="/sectors/:sectorId" element={<SectorDetailPage />} />
       <Route path="/dev/normalization" element={<NormalizationInspectorPage />} />
+      <Route path="/dev/clusters" element={<ClusterInspectorPage />} />
       {[
         ["/watchlist", "Watchlist"],
         ["/saved", "Saved"],

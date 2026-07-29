@@ -13,6 +13,12 @@ export interface StoryClusterTabsProps {
 export function StoryClusterTabs({ activeTab, cluster, onTabChange }: StoryClusterTabsProps) {
   const overview = (
     <div className="cluster-overview">
+      <p className="cluster-evidence-summary" aria-label="Cluster evidence counts">
+        <span>{cluster.sourceCount} raw sources</span>
+        <span>{cluster.independentSourceCount} independent sources</span>
+        <span>{cluster.primarySourceCount} primary sources</span>
+        <span>{cluster.claimIds.length} supported fixture claims</span>
+      </p>
       {cluster.sections.map((section) => (
         <section key={section.key}>
           <h2>{section.title}</h2>
@@ -53,6 +59,14 @@ export function StoryClusterTabs({ activeTab, cluster, onTabChange }: StoryClust
       <section>
         <h2>Related coverage</h2>
         <p>{[...cluster.stocks, ...cluster.sectors, ...cluster.themes].join(" · ")}</p>
+      </section>
+      <section>
+        <h2>Claim provenance</h2>
+        {cluster.claimProvenance.map((trace) => (
+          <p className="cluster-provenance-note" key={trace.claimId}>
+            <strong>{trace.claimId}:</strong> {trace.pathSummary}
+          </p>
+        ))}
       </section>
     </div>
   );

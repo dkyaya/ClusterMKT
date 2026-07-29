@@ -50,6 +50,34 @@ export default defineConfig({
           environment: "node",
         },
       },
+      {
+        test: {
+          name: "story-clusters",
+          root: "tests/story-clusters",
+          environment: "node",
+        },
+      },
+      {
+        test: {
+          name: "claims",
+          root: "tests/claims",
+          environment: "node",
+        },
+      },
+      {
+        test: {
+          name: "agreement-disagreement",
+          root: "tests/agreement-disagreement",
+          environment: "node",
+        },
+      },
+      {
+        test: {
+          name: "provenance",
+          root: "tests/provenance",
+          environment: "node",
+        },
+      },
     ],
   },
 });

@@ -40,6 +40,14 @@ export function buildSectorBrief(input: {
     whatWouldChangeThePicture: [
       ...new Set(active.flatMap((item) => item.whatWouldChangeThePicture ?? [])),
     ],
+    reviewWatchClusterIds: input.feed.reviewWatchItems.map((item) => item.id),
+    clusterClaimReferences: active.map((item) => ({
+      clusterId: item.id,
+      claimIds: item.claimIds ?? [],
+      agreementGroupIds: item.agreementGroupIds ?? [],
+      uncertaintyIds: item.uncertaintyIds ?? [],
+      independentSourceCount: item.independentSourceCount ?? item.sourceCount,
+    })),
     breadthMetrics: {
       materialDevelopmentCount: active.length,
       issuerCount: issuers.size,

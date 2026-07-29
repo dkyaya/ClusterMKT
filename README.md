@@ -6,7 +6,7 @@ Cluster MKT™ does not tell investors what to buy. It provides a clearer, faste
 
 ## Current status
 
-The application foundation is implemented as a private pnpm TypeScript workspace. The React/Vite web shell uses clearly labeled static demonstration data. The Cloudflare Worker exposes only local health and foundation-status routes. Shared domain, UI, and configuration packages, automated tests, brand integration, linting, formatting, type-checking, builds, and CI are present.
+The application foundation is implemented as a private pnpm TypeScript workspace. The React/Vite web shell uses clearly labeled static demonstration data. The Cloudflare Worker exposes only local health and foundation-status routes. Shared domain, UI, and configuration packages, automated tests, brand integration, linting, formatting, type-checking, builds, and CI are present. Offline Story Cluster candidate, claim, evidence-depth, discourse, review-routing, and provenance-graph contracts now sit downstream of the normalization foundation.
 
 The prototype search accepts text but reports honestly that indexing is not connected. Profile and Settings are available from the header on desktop and mobile, the mobile search row responds to scroll direction, Story Cluster tabs are URL-addressable, and the session-scoped Daily Brief can be dismissed. Daily and cluster-specific audio previews remain separate demonstration concepts with no generated audio.
 
@@ -58,6 +58,10 @@ No Worker deployment is configured or claimed.
 
 - [Product foundation](docs/product/PRODUCT_FOUNDATION.md)
 - [Sector coverage model](docs/product/SECTOR_COVERAGE_MODEL.md)
+- [Story Cluster evidence model](docs/product/STORY_CLUSTER_EVIDENCE_MODEL.md)
+- [Story Cluster construction](docs/architecture/STORY_CLUSTER_CONSTRUCTION.md)
+- [Claim provenance](docs/architecture/CLAIM_PROVENANCE.md)
+- [Agreement and disagreement](docs/architecture/AGREEMENT_AND_DISAGREEMENT.md)
 - [Source intelligence foundation](docs/architecture/SOURCE_INTELLIGENCE_FOUNDATION.md)
 - [Application foundation](docs/architecture/APPLICATION_FOUNDATION.md)
 - [Planned architecture](docs/architecture/PLANNED_ARCHITECTURE.md)
@@ -68,3 +72,5 @@ No Worker deployment is configured or claimed.
 The current Semiconductors experience at `/sectors/semiconductors` is an offline, deterministic demonstration. `pnpm sector:validate` runs its 35-case adversarial coverage evaluation; it does not contact publishers or external services.
 
 The repository also includes an offline `normalization-v1` source-normalization, entity-resolution, and event-boundary foundation. `pnpm source:validate`, `pnpm entities:validate`, and `pnpm events:validate` exercise an 80-case adversarial corpus. A direct-only developer fixture inspector is available at `/dev/normalization`; it is not linked from consumer navigation and performs no live ingestion.
+
+The Story Cluster foundation adds a 62-case claim and provenance corpus. `pnpm clusters:validate`, `pnpm claims:validate`, `pnpm discourse:validate`, and `pnpm provenance:validate` enforce event membership, evidence-depth limits, syndication-adjusted support, genuine agreement and disagreement, review routing, and complete raw-record paths. `/dev/clusters` is a direct-only developer fixture inspector and is absent from consumer navigation.

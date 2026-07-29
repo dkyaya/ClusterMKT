@@ -39,3 +39,7 @@ The 35-case adversarial corpus and `pnpm sector:validate` enforce critical failu
 ## Normalized evidence boundary
 
 The downstream `normalization-v1` contracts now distinguish raw and normalized records, versions, syndication families, accepted entity mentions, and event signatures. Sector evidence counts an underlying syndicated work once and can retain independent reporting on the same event. These contracts remain offline fixtures and do not change the sector materiality thresholds.
+
+## Accepted Story Cluster boundary
+
+Sector feed and brief assembly now consume only accepted clusters that pass display and Sector Brief review routing. Agreement, uncertainty, claim references, and independent-source counts are derived from the cluster evidence model. Review-required candidates remain in a separate watch collection; rejected and quarantined candidates are excluded.

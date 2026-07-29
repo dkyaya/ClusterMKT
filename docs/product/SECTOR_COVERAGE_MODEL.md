@@ -2,6 +2,8 @@
 
 Sector following is a distinct editorial product, not an alias for following the largest constituents. A sector follower receives a shared edition brief plus accepted Story Clusters classified as sector-wide, company-led sector impact, macro-to-sector, or high-materiality company-specific.
 
+The accepted-cluster boundary is enforced before ranking. Review-required candidates may appear only in a separate watch context, while rejected or quarantined candidates never enter an ordinary brief. Brief statements retain cluster and claim references and use syndication-adjusted independent-source counts.
+
 ## Scope labels
 
 - **Sector-wide** requires documented breadth: multiple materially affected constituents or subindustries, a sector-level primary action, or cross-company supply, demand, pricing, capacity, or regulatory evidence.

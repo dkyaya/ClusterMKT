@@ -1,0 +1,735 @@
+[
+  {
+    "id": "30-different-effective-dates",
+    "caseNumber": 30,
+    "category": "disagreement",
+    "description": "different effective dates",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-30-different-effective-dates-1",
+        "rawRecordIds": ["raw-30-different-effective-dates-1"],
+        "underlyingWorkId": "work-30-different-effective-dates-1",
+        "sourceFamilyId": "family-30-different-effective-dates-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-30-different-effective-dates",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "review_required",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-30-different-effective-dates-2",
+        "rawRecordIds": ["raw-30-different-effective-dates-2"],
+        "underlyingWorkId": "work-30-different-effective-dates-2",
+        "sourceFamilyId": "family-30-different-effective-dates-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-30-different-effective-dates",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "review_required",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-30-different-effective-dates-3",
+        "rawRecordIds": ["raw-30-different-effective-dates-3"],
+        "underlyingWorkId": "work-30-different-effective-dates-3",
+        "sourceFamilyId": "family-30-different-effective-dates-3",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-30-different-effective-dates",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "review_required",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-30-different-effective-dates",
+        "scope": "sector_wide",
+        "status": "review_required",
+        "outcome": "temporal",
+        "eligibleForDisplay": false,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-30-different-effective-dates-1",
+        "status": "review_required"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-30-different-effective-dates",
+        "status": "disputed",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-30-different-effective-dates",
+        "rawRecordIds": ["raw-30-different-effective-dates-1"],
+        "independentSupportCount": 2,
+        "accepted": false
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [
+      {
+        "type": "temporal",
+        "falseDisagreement": false
+      }
+    ],
+    "expectedUncertainty": [],
+    "expectedReviewState": "review_required",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-30-different-effective-dates-1",
+        "to": "claim-30-different-effective-dates",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["TIME_SCOPE_DIFFERS"]
+  },
+  {
+    "id": "31-different-geographies",
+    "caseNumber": 31,
+    "category": "disagreement",
+    "description": "different geographies",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-31-different-geographies-1",
+        "rawRecordIds": ["raw-31-different-geographies-1"],
+        "underlyingWorkId": "work-31-different-geographies-1",
+        "sourceFamilyId": "family-31-different-geographies-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-31-different-geographies",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-31-different-geographies-2",
+        "rawRecordIds": ["raw-31-different-geographies-2"],
+        "underlyingWorkId": "work-31-different-geographies-2",
+        "sourceFamilyId": "family-31-different-geographies-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-31-different-geographies",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-31-different-geographies",
+        "scope": "sector_wide",
+        "status": "accepted",
+        "outcome": "apparent_only",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-31-different-geographies-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-31-different-geographies",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-31-different-geographies",
+        "rawRecordIds": ["raw-31-different-geographies-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [
+      {
+        "type": "apparent_only",
+        "falseDisagreement": false
+      }
+    ],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-31-different-geographies-1",
+        "to": "claim-31-different-geographies",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["GEOGRAPHY_DIFFERS"]
+  },
+  {
+    "id": "32-different-causes",
+    "caseNumber": 32,
+    "category": "disagreement",
+    "description": "different causes",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-32-different-causes-1",
+        "rawRecordIds": ["raw-32-different-causes-1"],
+        "underlyingWorkId": "work-32-different-causes-1",
+        "sourceFamilyId": "family-32-different-causes-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-32-different-causes",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-32-different-causes-2",
+        "rawRecordIds": ["raw-32-different-causes-2"],
+        "underlyingWorkId": "work-32-different-causes-2",
+        "sourceFamilyId": "family-32-different-causes-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-32-different-causes",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-32-different-causes",
+        "scope": "company_led_sector_impact",
+        "status": "accepted",
+        "outcome": "causal",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-32-different-causes-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-32-different-causes",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "causal_interpretation"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-32-different-causes",
+        "rawRecordIds": ["raw-32-different-causes-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [
+      {
+        "type": "causal",
+        "falseDisagreement": false
+      }
+    ],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-32-different-causes-1",
+        "to": "claim-32-different-causes",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["CAUSAL_EXPLANATIONS_DIFFER"]
+  },
+  {
+    "id": "33-different-forecasts",
+    "caseNumber": 33,
+    "category": "disagreement",
+    "description": "different forecasts",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-33-different-forecasts-1",
+        "rawRecordIds": ["raw-33-different-forecasts-1"],
+        "underlyingWorkId": "work-33-different-forecasts-1",
+        "sourceFamilyId": "family-33-different-forecasts-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-33-different-forecasts",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-33-different-forecasts-2",
+        "rawRecordIds": ["raw-33-different-forecasts-2"],
+        "underlyingWorkId": "work-33-different-forecasts-2",
+        "sourceFamilyId": "family-33-different-forecasts-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-33-different-forecasts",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-33-different-forecasts",
+        "scope": "company_specific",
+        "status": "accepted",
+        "outcome": "forecast",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-33-different-forecasts-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-33-different-forecasts",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-33-different-forecasts",
+        "rawRecordIds": ["raw-33-different-forecasts-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [
+      {
+        "type": "forecast",
+        "falseDisagreement": false
+      }
+    ],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-33-different-forecasts-1",
+        "to": "claim-33-different-forecasts",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["FORECASTS_DIFFER"]
+  },
+  {
+    "id": "34-superseded-correction",
+    "caseNumber": 34,
+    "category": "disagreement",
+    "description": "superseded correction",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-34-superseded-correction-1",
+        "rawRecordIds": ["raw-34-superseded-correction-1"],
+        "underlyingWorkId": "work-34-superseded-correction-1",
+        "sourceFamilyId": "family-34-superseded-correction-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-34-superseded-correction",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-34-superseded-correction-2",
+        "rawRecordIds": ["raw-34-superseded-correction-2"],
+        "underlyingWorkId": "work-34-superseded-correction-2",
+        "sourceFamilyId": "family-34-superseded-correction-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-34-superseded-correction",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-34-superseded-correction",
+        "scope": "macro_to_sector",
+        "status": "accepted",
+        "outcome": "source_update",
+        "eligibleForDisplay": false,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-34-superseded-correction-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-34-superseded-correction",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-34-superseded-correction",
+        "rawRecordIds": ["raw-34-superseded-correction-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [
+      {
+        "type": "source_update",
+        "falseDisagreement": false
+      }
+    ],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-34-superseded-correction-1",
+        "to": "claim-34-superseded-correction",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["SUPERSEDED_SOURCE_UPDATE"]
+  },
+  {
+    "id": "35-different-wording-same-proposition",
+    "caseNumber": 35,
+    "category": "disagreement",
+    "description": "different wording same proposition",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-35-different-wording-same-proposition-1",
+        "rawRecordIds": ["raw-35-different-wording-same-proposition-1"],
+        "underlyingWorkId": "work-35-different-wording-same-proposition-1",
+        "sourceFamilyId": "family-35-different-wording-same-proposition-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-35-different-wording-same-proposition",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-35-different-wording-same-proposition-2",
+        "rawRecordIds": ["raw-35-different-wording-same-proposition-2"],
+        "underlyingWorkId": "work-35-different-wording-same-proposition-2",
+        "sourceFamilyId": "family-35-different-wording-same-proposition-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-35-different-wording-same-proposition",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-35-different-wording-same-proposition",
+        "scope": "company_specific",
+        "status": "accepted",
+        "outcome": "none",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-35-different-wording-same-proposition-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-35-different-wording-same-proposition",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-35-different-wording-same-proposition",
+        "rawRecordIds": ["raw-35-different-wording-same-proposition-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [
+      {
+        "type": "none",
+        "falseDisagreement": false
+      }
+    ],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-35-different-wording-same-proposition-1",
+        "to": "claim-35-different-wording-same-proposition",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["NO_SUBSTANTIVE_DISAGREEMENT"]
+  },
+  {
+    "id": "36-different-time-periods",
+    "caseNumber": 36,
+    "category": "disagreement",
+    "description": "different time periods",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-36-different-time-periods-1",
+        "rawRecordIds": ["raw-36-different-time-periods-1"],
+        "underlyingWorkId": "work-36-different-time-periods-1",
+        "sourceFamilyId": "family-36-different-time-periods-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-36-different-time-periods",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-36-different-time-periods-2",
+        "rawRecordIds": ["raw-36-different-time-periods-2"],
+        "underlyingWorkId": "work-36-different-time-periods-2",
+        "sourceFamilyId": "family-36-different-time-periods-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-36-different-time-periods",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-36-different-time-periods",
+        "scope": "company_specific",
+        "status": "accepted",
+        "outcome": "apparent_only",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-36-different-time-periods-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-36-different-time-periods",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-36-different-time-periods",
+        "rawRecordIds": ["raw-36-different-time-periods-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [
+      {
+        "type": "apparent_only",
+        "falseDisagreement": false
+      }
+    ],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-36-different-time-periods-1",
+        "to": "claim-36-different-time-periods",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["TIME_PERIODS_DIFFER"]
+  },
+  {
+    "id": "37-filing-versus-secondary",
+    "caseNumber": 37,
+    "category": "disagreement",
+    "description": "filing versus secondary",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-37-filing-versus-secondary-1",
+        "rawRecordIds": ["raw-37-filing-versus-secondary-1"],
+        "underlyingWorkId": "work-37-filing-versus-secondary-1",
+        "sourceFamilyId": "family-37-filing-versus-secondary-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-37-filing-versus-secondary",
+        "evidenceDepth": "regulatory_filing",
+        "reviewStatus": "review_required",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-37-filing-versus-secondary-2",
+        "rawRecordIds": ["raw-37-filing-versus-secondary-2"],
+        "underlyingWorkId": "work-37-filing-versus-secondary-2",
+        "sourceFamilyId": "family-37-filing-versus-secondary-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-37-filing-versus-secondary",
+        "evidenceDepth": "regulatory_filing",
+        "reviewStatus": "review_required",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-37-filing-versus-secondary-3",
+        "rawRecordIds": ["raw-37-filing-versus-secondary-3"],
+        "underlyingWorkId": "work-37-filing-versus-secondary-3",
+        "sourceFamilyId": "family-37-filing-versus-secondary-3",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-37-filing-versus-secondary",
+        "evidenceDepth": "regulatory_filing",
+        "reviewStatus": "review_required",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-37-filing-versus-secondary",
+        "scope": "company_specific",
+        "status": "review_required",
+        "outcome": "factual",
+        "eligibleForDisplay": false,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-37-filing-versus-secondary-1",
+        "status": "review_required"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-37-filing-versus-secondary",
+        "status": "disputed",
+        "evidenceDepth": "regulatory_filing",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-37-filing-versus-secondary",
+        "rawRecordIds": ["raw-37-filing-versus-secondary-1"],
+        "independentSupportCount": 2,
+        "accepted": false
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [
+      {
+        "type": "factual",
+        "falseDisagreement": false
+      }
+    ],
+    "expectedUncertainty": [],
+    "expectedReviewState": "review_required",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-37-filing-versus-secondary-1",
+        "to": "claim-37-filing-versus-secondary",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["PRIMARY_EVIDENCE_STRENGTH_PRESERVED"]
+  },
+  {
+    "id": "38-company-versus-analyst",
+    "caseNumber": 38,
+    "category": "disagreement",
+    "description": "company versus analyst",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-38-company-versus-analyst-1",
+        "rawRecordIds": ["raw-38-company-versus-analyst-1"],
+        "underlyingWorkId": "work-38-company-versus-analyst-1",
+        "sourceFamilyId": "family-38-company-versus-analyst-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-38-company-versus-analyst",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-38-company-versus-analyst-2",
+        "rawRecordIds": ["raw-38-company-versus-analyst-2"],
+        "underlyingWorkId": "work-38-company-versus-analyst-2",
+        "sourceFamilyId": "family-38-company-versus-analyst-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-38-company-versus-analyst",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-38-company-versus-analyst",
+        "scope": "company_led_sector_impact",
+        "status": "accepted",
+        "outcome": "interpretive",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-38-company-versus-analyst-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-38-company-versus-analyst",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "causal_interpretation"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-38-company-versus-analyst",
+        "rawRecordIds": ["raw-38-company-versus-analyst-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [
+      {
+        "type": "interpretive",
+        "falseDisagreement": false
+      }
+    ],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-38-company-versus-analyst-1",
+        "to": "claim-38-company-versus-analyst",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["COMPANY_STATEMENT_VERSUS_ANALYSIS"]
+  }
+]

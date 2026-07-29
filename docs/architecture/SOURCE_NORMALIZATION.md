@@ -15,3 +15,5 @@ Full text is optional. Headline-only, abstract, full-text, and reviewed-transcri
 Publisher, source family, distribution platform, syndication family, and underlying work are separate concepts. Syndicated copies count as one source family, while independent reporting on the same event remains independent. Updated headlines or corrected facts can form new versions of one underlying work; follow-up analysis remains a distinct work.
 
 This is an offline fixture foundation. Redirect resolution, live collection, publisher APIs, persistence, and AI inference are not implemented.
+
+Normalized records feed candidate Story Cluster construction without losing their raw-record, work, family, version, syndication, entity, event, review, or rules-version decisions. Downstream claim provenance references these identities rather than copying untraceable presentation text.

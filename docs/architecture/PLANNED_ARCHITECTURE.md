@@ -4,7 +4,7 @@
 
 The repository now implements the application foundation: pnpm workspace, React/Vite web shell, plain Cloudflare Worker boundary, shared core/UI/config packages, canonical brand integration, Vitest, ESLint, Prettier, and non-deploying GitHub Actions CI.
 
-The demonstration shell is not a connected production system. Offline contracts now cover source normalization, source families, duplicate and syndication decisions, article versioning, entity resolution, and event boundaries. Live ingestion, Story Cluster generation, claim extraction, persistent storage, Supabase authentication, user preferences, scheduled workflows, Kokoro TTS, and deployment remain planned.
+The demonstration shell is not a connected production system. Offline contracts now cover source normalization, source families, duplicate and syndication decisions, article versioning, entity resolution, event boundaries, Story Cluster candidates, fixture-annotated claims, discourse, review routing, and provenance. Live ingestion, production claim extraction, persistent storage, Supabase authentication, user preferences, scheduled workflows, Kokoro TTS, and deployment remain planned.
 
 ## Planned information flow
 
@@ -50,3 +50,5 @@ The offline source-intelligence foundation now defines validated entities, a pro
 All future transformations must validate external data, preserve source provenance, distinguish unavailable content, and expose explicit failure states. See [application foundation](APPLICATION_FOUNDATION.md) for the implemented route and package map.
 
 The current `normalization-v1` foundation remains fixture-only. It preserves raw evidence, safely normalizes URLs, separates syndication from independent reporting, links article versions, adjudicates entity aliases, and compares event signatures. No runtime publisher request, database, AI service, or private-market entity is present.
+
+The downstream offline Story Cluster foundation now turns accepted normalized records and event signatures into review-gated candidates, structured claims, evidence-depth decisions, agreement and disagreement groups, uncertainty, and validated provenance paths. Sector Briefs consume accepted eligible clusters. Claim extraction and presentation remain deterministic fixtures rather than model inference.

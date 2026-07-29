@@ -57,6 +57,13 @@ export interface SectorFeedCandidate {
   competingArguments?: string[];
   uncertainty?: string[];
   whatWouldChangeThePicture?: string[];
+  clusterReviewStatus?: "accepted" | "review_required" | "rejected" | "quarantined";
+  eligibleForDisplay?: boolean;
+  eligibleForSectorBrief?: boolean;
+  claimIds?: string[];
+  agreementGroupIds?: string[];
+  uncertaintyIds?: string[];
+  independentSourceCount?: number;
 }
 
 export interface SectorFeedItem extends SectorFeedCandidate {
@@ -72,4 +79,5 @@ export interface SectorFeed {
   items: SectorFeedItem[];
   diversityAdjustments: string[];
   coverageGaps: string[];
+  reviewWatchItems: SectorFeedCandidate[];
 }

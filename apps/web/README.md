@@ -7,3 +7,5 @@ The shell is implemented but has no live feeds, persistence, authentication, AI,
 `/sectors` and `/sectors/semiconductors` demonstrate scope-aware sector coverage and a shared edition brief using deterministic fixtures. Frontend acceptance requires controlled-browser checks at desktop and mobile sizes, including console and network inspection.
 
 `/dev/normalization` is a direct-only developer fixture inspector for raw and normalized source records, URL decisions, duplicate/syndication and version state, entity adjudication, event signatures, and decision traces. It is deliberately absent from primary consumer navigation and makes no publisher request.
+
+`/dev/clusters` is a second direct-only developer fixture inspector. It exposes candidate membership, evidence-depth-qualified claims, independent support, agreement, disagreement, uncertainty, review routing, and claim-to-source paths using offline demonstration data. Consumer cluster pages use validated supported-claim fixtures while preserving their existing navigation and visual hierarchy.

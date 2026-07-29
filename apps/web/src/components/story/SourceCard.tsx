@@ -10,6 +10,7 @@ export function SourceCard({ source }: { source: ArticleSource }) {
           {source.evidenceRole} source
         </Badge>
         <Badge>{source.relevance} relevance</Badge>
+        <Badge>{source.evidenceDepth}</Badge>
       </div>
       <p className="source-publisher">{source.publisher.name}</p>
       <h3>{source.title}</h3>

@@ -7,3 +7,5 @@ Do not place meaningless snapshots, generated coverage, live-service tests, publ
 `fixtures/source-intelligence/` contains 35 machine-testable adversarial cases. `source-intelligence/` exercises the production evaluator, anti-concentration, coverage gaps, podcast and headline evidence boundaries, ticker collisions, and shared Sector Brief references.
 
 `source-normalization/`, `entity-resolution/`, and `event-boundaries/` exercise the production normalization foundation against 80 machine-readable fixture cases. The suites enforce URL safety, duplicate and syndication distinctions, version chains, ambiguous ticker defenses, provenance completeness, quarantine retention, and event separation.
+
+`story-clusters/`, `claims/`, `agreement-disagreement/`, and `provenance/` exercise 62 adversarial cases. They enforce candidate membership, evidence-depth limits, quantitative distinctions, independent support, genuine discourse, review routing, accepted Sector Brief boundaries, and complete raw-to-visible provenance paths.

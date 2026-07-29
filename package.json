@@ -32,7 +32,11 @@
     "source:validate": "vitest --run --config vitest.workspace.ts --project source-normalization && node scripts/evaluate-source-normalization.mjs",
     "entities:validate": "vitest --run --config vitest.workspace.ts --project entity-resolution && node scripts/evaluate-entity-resolution.mjs",
     "events:validate": "vitest --run --config vitest.workspace.ts --project event-boundaries && node scripts/evaluate-event-boundaries.mjs",
-    "validate": "pnpm assets:sync && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test:run && pnpm sector:validate && pnpm source:validate && pnpm entities:validate && pnpm events:validate && pnpm build && pnpm brand:validate && pnpm foundation:validate",
+    "clusters:validate": "vitest --run --config vitest.workspace.ts --project story-clusters && node scripts/evaluate-story-clusters.mjs",
+    "claims:validate": "vitest --run --config vitest.workspace.ts --project claims && node scripts/evaluate-claims.mjs",
+    "discourse:validate": "vitest --run --config vitest.workspace.ts --project agreement-disagreement && node scripts/evaluate-agreement-disagreement.mjs",
+    "provenance:validate": "vitest --run --config vitest.workspace.ts --project provenance && node scripts/evaluate-provenance.mjs",
+    "validate": "pnpm assets:sync && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test:run && pnpm sector:validate && pnpm source:validate && pnpm entities:validate && pnpm events:validate && pnpm clusters:validate && pnpm claims:validate && pnpm discourse:validate && pnpm provenance:validate && pnpm build && pnpm brand:validate && pnpm foundation:validate",
     "clean": "node scripts/clean-generated.mjs"
   },
   "devDependencies": {

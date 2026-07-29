@@ -537,6 +537,173 @@
 .quarantine-notice p {
   margin: 0.3rem 0;
 }
+.cluster-inspector-intro {
+  max-width: 54rem;
+}
+.cluster-inspector-card,
+.cluster-inspector-section {
+  padding: 1.5rem;
+}
+.cluster-inspector-section {
+  margin-top: 1rem;
+}
+.cluster-inspector-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.cluster-inspector-heading h2,
+.cluster-inspector-heading h3,
+.cluster-inspector-section > h2,
+.cluster-inspector-card > h2 {
+  margin-top: 0;
+}
+.cluster-inspector-card code,
+.membership-row code,
+.claim-card code,
+.provenance-path-list code {
+  overflow-wrap: anywhere;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.72rem;
+}
+.cluster-inspector-metrics {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin: 1.5rem 0;
+}
+.cluster-inspector-metrics > div {
+  min-width: 0;
+  padding: 0.75rem;
+  background: var(--color-surface-secondary);
+  border-radius: 0.45rem;
+}
+.cluster-inspector-metrics dt {
+  color: var(--color-text-secondary);
+  font-size: 0.67rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.cluster-inspector-metrics dd {
+  margin: 0.35rem 0 0;
+  overflow-wrap: anywhere;
+  font-size: 0.86rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+.membership-table {
+  display: grid;
+  margin-top: 1.25rem;
+  padding: 0;
+  border-top: 1px solid var(--color-border-subtle);
+  list-style: none;
+}
+.membership-row {
+  display: grid;
+  grid-template-columns: minmax(12rem, 1.1fr) minmax(9rem, 0.75fr) minmax(13rem, 1fr);
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+.membership-row > div {
+  display: grid;
+  gap: 0.35rem;
+}
+.membership-row > div:nth-child(2) {
+  justify-items: start;
+}
+.claim-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+.claim-card {
+  min-width: 0;
+  padding: 1.25rem;
+}
+.claim-card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.15rem;
+}
+.claim-evidence-list {
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-border-subtle);
+}
+.claim-evidence-list p {
+  margin: 0.3rem 0;
+  font-size: 0.78rem;
+}
+.claim-evidence-list ul {
+  padding-left: 1.1rem;
+}
+.discourse-inspector-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.disagreement-side {
+  padding: 0.8rem;
+  background: var(--color-surface-secondary);
+  border-left: 3px solid var(--color-accent-primary);
+}
+.disagreement-side + .disagreement-side {
+  margin-top: 0.65rem;
+}
+.disagreement-side p {
+  margin: 0 0 0.35rem;
+}
+.inspector-qualification {
+  color: var(--color-text-secondary);
+  font-size: 0.8rem;
+}
+.uncertainty-card {
+  border-left: 4px solid var(--color-caution);
+}
+.review-routing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+.review-routing-grid article {
+  min-width: 0;
+  padding: 1rem;
+  background: var(--color-surface-secondary);
+  border-radius: 0.45rem;
+}
+.review-routing-grid h3 {
+  overflow-wrap: anywhere;
+  font-size: 1rem;
+}
+.provenance-path-list {
+  display: grid;
+  gap: 0.75rem;
+  padding-left: 1.25rem;
+}
+.provenance-path-list li {
+  padding: 0.85rem;
+  background: var(--color-edition-wash);
+  border-radius: 0.4rem;
+}
+.cluster-evidence-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin: 0;
+  padding: 0.9rem;
+  background: var(--color-surface-secondary);
+  border-radius: 0.45rem;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+}
+.cluster-provenance-note {
+  color: var(--color-text-secondary);
+  font-size: 0.78rem;
+}
 .mobile-nav {
   display: none;
 }
@@ -618,7 +785,12 @@
   .normalization-comparison,
   .normalization-fields,
   .url-decision-grid,
-  .entity-decision-list {
+  .entity-decision-list,
+  .cluster-inspector-metrics,
+  .claim-card-grid,
+  .discourse-inspector-grid,
+  .review-routing-grid,
+  .membership-row {
     grid-template-columns: 1fr;
   }
   .sector-card-heading {

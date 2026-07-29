@@ -1,0 +1,1615 @@
+[
+  {
+    "id": "01-one-export-rule",
+    "caseNumber": 1,
+    "category": "story-clusters",
+    "description": "one export rule",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-01-one-export-rule-1",
+        "rawRecordIds": ["raw-01-one-export-rule-1"],
+        "underlyingWorkId": "work-01-one-export-rule-1",
+        "sourceFamilyId": "family-01-one-export-rule-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-01-one-export-rule",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-01-one-export-rule-2",
+        "rawRecordIds": ["raw-01-one-export-rule-2"],
+        "underlyingWorkId": "work-01-one-export-rule-2",
+        "sourceFamilyId": "family-01-one-export-rule-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-01-one-export-rule",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-01-one-export-rule-3",
+        "rawRecordIds": ["raw-01-one-export-rule-3"],
+        "underlyingWorkId": "work-01-one-export-rule-3",
+        "sourceFamilyId": "family-01-one-export-rule-3",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-01-one-export-rule",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-01-one-export-rule",
+        "scope": "sector_wide",
+        "status": "accepted",
+        "outcome": "one_candidate",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": true
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-01-one-export-rule-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-01-one-export-rule",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-01-one-export-rule",
+        "rawRecordIds": ["raw-01-one-export-rule-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-01-one-export-rule-1",
+        "to": "claim-01-one-export-rule",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["same_event_signature"]
+  },
+  {
+    "id": "02-proposal-and-final-rule",
+    "caseNumber": 2,
+    "category": "story-clusters",
+    "description": "proposal and final rule",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-02-proposal-and-final-rule-1",
+        "rawRecordIds": ["raw-02-proposal-and-final-rule-1"],
+        "underlyingWorkId": "work-02-proposal-and-final-rule-1",
+        "sourceFamilyId": "family-02-proposal-and-final-rule-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-02-proposal-and-final-rule-1",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-02-proposal-and-final-rule-2",
+        "rawRecordIds": ["raw-02-proposal-and-final-rule-2"],
+        "underlyingWorkId": "work-02-proposal-and-final-rule-2",
+        "sourceFamilyId": "family-02-proposal-and-final-rule-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-02-proposal-and-final-rule-2",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-02-proposal-and-final-rule",
+        "scope": "sector_wide",
+        "status": "accepted",
+        "outcome": "separate_related",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-02-proposal-and-final-rule-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-02-proposal-and-final-rule",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-02-proposal-and-final-rule",
+        "rawRecordIds": ["raw-02-proposal-and-final-rule-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-02-proposal-and-final-rule-1",
+        "to": "claim-02-proposal-and-final-rule",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["different_effective_period"]
+  },
+  {
+    "id": "03-earnings-and-downgrade",
+    "caseNumber": 3,
+    "category": "story-clusters",
+    "description": "earnings and downgrade",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-03-earnings-and-downgrade-1",
+        "rawRecordIds": ["raw-03-earnings-and-downgrade-1"],
+        "underlyingWorkId": "work-03-earnings-and-downgrade-1",
+        "sourceFamilyId": "family-03-earnings-and-downgrade-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-03-earnings-and-downgrade-1",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-03-earnings-and-downgrade-2",
+        "rawRecordIds": ["raw-03-earnings-and-downgrade-2"],
+        "underlyingWorkId": "work-03-earnings-and-downgrade-2",
+        "sourceFamilyId": "family-03-earnings-and-downgrade-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-03-earnings-and-downgrade-2",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-03-earnings-and-downgrade",
+        "scope": "company_specific",
+        "status": "accepted",
+        "outcome": "separate",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-03-earnings-and-downgrade-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-03-earnings-and-downgrade",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-03-earnings-and-downgrade",
+        "rawRecordIds": ["raw-03-earnings-and-downgrade-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-03-earnings-and-downgrade-1",
+        "to": "claim-03-earnings-and-downgrade",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["different_event_type"]
+  },
+  {
+    "id": "04-earnings-and-market-reaction",
+    "caseNumber": 4,
+    "category": "story-clusters",
+    "description": "earnings and market reaction",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-04-earnings-and-market-reaction-1",
+        "rawRecordIds": ["raw-04-earnings-and-market-reaction-1"],
+        "underlyingWorkId": "work-04-earnings-and-market-reaction-1",
+        "sourceFamilyId": "family-04-earnings-and-market-reaction-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-04-earnings-and-market-reaction",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-04-earnings-and-market-reaction-2",
+        "rawRecordIds": ["raw-04-earnings-and-market-reaction-2"],
+        "underlyingWorkId": "work-04-earnings-and-market-reaction-2",
+        "sourceFamilyId": "family-04-earnings-and-market-reaction-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-04-earnings-and-market-reaction",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-04-earnings-and-market-reaction-3",
+        "rawRecordIds": ["raw-04-earnings-and-market-reaction-3"],
+        "underlyingWorkId": "work-04-earnings-and-market-reaction-3",
+        "sourceFamilyId": "family-04-earnings-and-market-reaction-3",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-04-earnings-and-market-reaction",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-04-earnings-and-market-reaction",
+        "scope": "company_specific",
+        "status": "accepted",
+        "outcome": "one_candidate",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-04-earnings-and-market-reaction-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-04-earnings-and-market-reaction",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-04-earnings-and-market-reaction",
+        "rawRecordIds": ["raw-04-earnings-and-market-reaction-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-04-earnings-and-market-reaction-1",
+        "to": "claim-04-earnings-and-market-reaction",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["market_reaction_to_event"]
+  },
+  {
+    "id": "05-article-updates-one-event",
+    "caseNumber": 5,
+    "category": "story-clusters",
+    "description": "article updates one event",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-05-article-updates-one-event-1",
+        "rawRecordIds": ["raw-05-article-updates-one-event-1"],
+        "underlyingWorkId": "work-05-article-updates-one-event-1",
+        "sourceFamilyId": "family-05-article-updates-one-event-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-05-article-updates-one-event",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-05-article-updates-one-event-2",
+        "rawRecordIds": ["raw-05-article-updates-one-event-2"],
+        "underlyingWorkId": "work-05-article-updates-one-event-2",
+        "sourceFamilyId": "family-05-article-updates-one-event-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-05-article-updates-one-event",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-05-article-updates-one-event",
+        "scope": "company_specific",
+        "status": "accepted",
+        "outcome": "one_candidate",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-05-article-updates-one-event-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-05-article-updates-one-event",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-05-article-updates-one-event",
+        "rawRecordIds": ["raw-05-article-updates-one-event-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-05-article-updates-one-event-1",
+        "to": "claim-05-article-updates-one-event",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["compatible_update"]
+  },
+  {
+    "id": "06-product-and-management-events",
+    "caseNumber": 6,
+    "category": "story-clusters",
+    "description": "product and management events",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-06-product-and-management-events-1",
+        "rawRecordIds": ["raw-06-product-and-management-events-1"],
+        "underlyingWorkId": "work-06-product-and-management-events-1",
+        "sourceFamilyId": "family-06-product-and-management-events-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-06-product-and-management-events-1",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-06-product-and-management-events-2",
+        "rawRecordIds": ["raw-06-product-and-management-events-2"],
+        "underlyingWorkId": "work-06-product-and-management-events-2",
+        "sourceFamilyId": "family-06-product-and-management-events-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-06-product-and-management-events-2",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-06-product-and-management-events",
+        "scope": "company_specific",
+        "status": "accepted",
+        "outcome": "separate",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-06-product-and-management-events-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-06-product-and-management-events",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-06-product-and-management-events",
+        "rawRecordIds": ["raw-06-product-and-management-events-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-06-product-and-management-events-1",
+        "to": "claim-06-product-and-management-events",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["different_event_type"]
+  },
+  {
+    "id": "07-multi-event-record",
+    "caseNumber": 7,
+    "category": "story-clusters",
+    "description": "multi event record",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-07-multi-event-record-1",
+        "rawRecordIds": ["raw-07-multi-event-record-1"],
+        "underlyingWorkId": "work-07-multi-event-record-1",
+        "sourceFamilyId": "family-07-multi-event-record-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-07-multi-event-record",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "review_required",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-07-multi-event-record-2",
+        "rawRecordIds": ["raw-07-multi-event-record-2"],
+        "underlyingWorkId": "work-07-multi-event-record-2",
+        "sourceFamilyId": "family-07-multi-event-record-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-07-multi-event-record",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "review_required",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-07-multi-event-record",
+        "scope": "company_specific",
+        "status": "review_required",
+        "outcome": "review_or_split",
+        "eligibleForDisplay": false,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-07-multi-event-record-1",
+        "status": "review_required"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-07-multi-event-record",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-07-multi-event-record",
+        "rawRecordIds": ["raw-07-multi-event-record-1"],
+        "independentSupportCount": 2,
+        "accepted": false
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "review_required",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-07-multi-event-record-1",
+        "to": "claim-07-multi-event-record",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["multi_event_record"]
+  },
+  {
+    "id": "08-background-sector-analysis",
+    "caseNumber": 8,
+    "category": "story-clusters",
+    "description": "background sector analysis",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-08-background-sector-analysis-1",
+        "rawRecordIds": ["raw-08-background-sector-analysis-1"],
+        "underlyingWorkId": "work-08-background-sector-analysis-1",
+        "sourceFamilyId": "family-08-background-sector-analysis-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-08-background-sector-analysis",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-08-background-sector-analysis-2",
+        "rawRecordIds": ["raw-08-background-sector-analysis-2"],
+        "underlyingWorkId": "work-08-background-sector-analysis-2",
+        "sourceFamilyId": "family-08-background-sector-analysis-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-08-background-sector-analysis",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-08-background-sector-analysis",
+        "scope": "sector_wide",
+        "status": "accepted",
+        "outcome": "related_context",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-08-background-sector-analysis-1",
+        "status": "related_context"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-08-background-sector-analysis",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-08-background-sector-analysis",
+        "rawRecordIds": ["raw-08-background-sector-analysis-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-08-background-sector-analysis-1",
+        "to": "claim-08-background-sector-analysis",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["background_context_only"]
+  },
+  {
+    "id": "09-metadata-only-membership",
+    "caseNumber": 9,
+    "category": "story-clusters",
+    "description": "metadata only membership",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-09-metadata-only-membership-1",
+        "rawRecordIds": ["raw-09-metadata-only-membership-1"],
+        "underlyingWorkId": "work-09-metadata-only-membership-1",
+        "sourceFamilyId": "family-09-metadata-only-membership-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-09-metadata-only-membership",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "review_required",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-09-metadata-only-membership-2",
+        "rawRecordIds": ["raw-09-metadata-only-membership-2"],
+        "underlyingWorkId": "work-09-metadata-only-membership-2",
+        "sourceFamilyId": "family-09-metadata-only-membership-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-09-metadata-only-membership",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "review_required",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-09-metadata-only-membership",
+        "scope": "company_specific",
+        "status": "review_required",
+        "outcome": "limited_membership",
+        "eligibleForDisplay": false,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-09-metadata-only-membership-1",
+        "status": "review_required"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-09-metadata-only-membership",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-09-metadata-only-membership",
+        "rawRecordIds": ["raw-09-metadata-only-membership-1"],
+        "independentSupportCount": 2,
+        "accepted": false
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "review_required",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-09-metadata-only-membership-1",
+        "to": "claim-09-metadata-only-membership",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["metadata_insufficient"]
+  },
+  {
+    "id": "10-syndicated-copies",
+    "caseNumber": 10,
+    "category": "story-clusters",
+    "description": "syndicated copies",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-10-syndicated-copies-1",
+        "rawRecordIds": ["raw-10-syndicated-copies-1"],
+        "underlyingWorkId": "work-10-syndicated-copies-shared",
+        "sourceFamilyId": "family-10-syndicated-copies-1",
+        "syndicationFamilyId": "syndication-10-syndicated-copies",
+        "eventSignatureId": "event-10-syndicated-copies",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-10-syndicated-copies-2",
+        "rawRecordIds": ["raw-10-syndicated-copies-2"],
+        "underlyingWorkId": "work-10-syndicated-copies-shared",
+        "sourceFamilyId": "family-10-syndicated-copies-2",
+        "syndicationFamilyId": "syndication-10-syndicated-copies",
+        "eventSignatureId": "event-10-syndicated-copies",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-10-syndicated-copies-3",
+        "rawRecordIds": ["raw-10-syndicated-copies-3"],
+        "underlyingWorkId": "work-10-syndicated-copies-shared",
+        "sourceFamilyId": "family-10-syndicated-copies-3",
+        "syndicationFamilyId": "syndication-10-syndicated-copies",
+        "eventSignatureId": "event-10-syndicated-copies",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-10-syndicated-copies",
+        "scope": "sector_wide",
+        "status": "accepted",
+        "outcome": "one_work",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-10-syndicated-copies-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-10-syndicated-copies",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-10-syndicated-copies",
+        "rawRecordIds": ["raw-10-syndicated-copies-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-10-syndicated-copies-1",
+        "to": "claim-10-syndicated-copies",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["syndicated_duplicate"]
+  },
+  {
+    "id": "45-missing-provenance",
+    "caseNumber": 45,
+    "category": "story-clusters",
+    "description": "missing provenance",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-45-missing-provenance-1",
+        "rawRecordIds": ["raw-45-missing-provenance-1"],
+        "underlyingWorkId": "work-45-missing-provenance-1",
+        "sourceFamilyId": "family-45-missing-provenance-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-45-missing-provenance",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "rejected",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-45-missing-provenance-2",
+        "rawRecordIds": ["raw-45-missing-provenance-2"],
+        "underlyingWorkId": "work-45-missing-provenance-2",
+        "sourceFamilyId": "family-45-missing-provenance-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-45-missing-provenance",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "rejected",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-45-missing-provenance",
+        "scope": "company_specific",
+        "status": "rejected",
+        "outcome": "blocked",
+        "eligibleForDisplay": false,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-45-missing-provenance-1",
+        "status": "rejected"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-45-missing-provenance",
+        "status": "unsupported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-45-missing-provenance",
+        "rawRecordIds": [],
+        "independentSupportCount": 2,
+        "accepted": false
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "rejected",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-45-missing-provenance-1",
+        "to": "claim-45-missing-provenance",
+        "valid": false
+      }
+    ],
+    "expectedExplanationCodes": ["MISSING_CLAIM_PROVENANCE"]
+  },
+  {
+    "id": "46-quarantined-support",
+    "caseNumber": 46,
+    "category": "story-clusters",
+    "description": "quarantined support",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-46-quarantined-support-1",
+        "rawRecordIds": ["raw-46-quarantined-support-1"],
+        "underlyingWorkId": "work-46-quarantined-support-1",
+        "sourceFamilyId": "family-46-quarantined-support-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-46-quarantined-support",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "quarantined",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-46-quarantined-support-2",
+        "rawRecordIds": ["raw-46-quarantined-support-2"],
+        "underlyingWorkId": "work-46-quarantined-support-2",
+        "sourceFamilyId": "family-46-quarantined-support-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-46-quarantined-support",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "quarantined",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-46-quarantined-support",
+        "scope": "company_specific",
+        "status": "rejected",
+        "outcome": "blocked",
+        "eligibleForDisplay": false,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-46-quarantined-support-1",
+        "status": "rejected"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-46-quarantined-support",
+        "status": "unsupported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-46-quarantined-support",
+        "rawRecordIds": ["raw-46-quarantined-support-1"],
+        "independentSupportCount": 2,
+        "accepted": false
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "rejected",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-46-quarantined-support-1",
+        "to": "claim-46-quarantined-support",
+        "valid": false
+      }
+    ],
+    "expectedExplanationCodes": ["QUARANTINED_EVIDENCE_SUPPORT"]
+  },
+  {
+    "id": "47-ambiguous-ticker",
+    "caseNumber": 47,
+    "category": "story-clusters",
+    "description": "ambiguous ticker",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-47-ambiguous-ticker-1",
+        "rawRecordIds": ["raw-47-ambiguous-ticker-1"],
+        "underlyingWorkId": "work-47-ambiguous-ticker-1",
+        "sourceFamilyId": "family-47-ambiguous-ticker-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-47-ambiguous-ticker",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "review_required",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-47-ambiguous-ticker-2",
+        "rawRecordIds": ["raw-47-ambiguous-ticker-2"],
+        "underlyingWorkId": "work-47-ambiguous-ticker-2",
+        "sourceFamilyId": "family-47-ambiguous-ticker-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-47-ambiguous-ticker",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "review_required",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-47-ambiguous-ticker",
+        "scope": "company_specific",
+        "status": "review_required",
+        "outcome": "review_required",
+        "eligibleForDisplay": false,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-47-ambiguous-ticker-1",
+        "status": "review_required"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-47-ambiguous-ticker",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-47-ambiguous-ticker",
+        "rawRecordIds": ["raw-47-ambiguous-ticker-1"],
+        "independentSupportCount": 2,
+        "accepted": false
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [
+      {
+        "type": "review_required",
+        "resolutionConditionRequired": true
+      }
+    ],
+    "expectedReviewState": "review_required",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-47-ambiguous-ticker-1",
+        "to": "claim-47-ambiguous-ticker",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["UNRESOLVED_ENTITY_AMBIGUITY"]
+  },
+  {
+    "id": "48-mixed-event-unsplittable",
+    "caseNumber": 48,
+    "category": "story-clusters",
+    "description": "mixed event unsplittable",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-48-mixed-event-unsplittable-1",
+        "rawRecordIds": ["raw-48-mixed-event-unsplittable-1"],
+        "underlyingWorkId": "work-48-mixed-event-unsplittable-1",
+        "sourceFamilyId": "family-48-mixed-event-unsplittable-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-48-mixed-event-unsplittable",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "review_required",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-48-mixed-event-unsplittable-2",
+        "rawRecordIds": ["raw-48-mixed-event-unsplittable-2"],
+        "underlyingWorkId": "work-48-mixed-event-unsplittable-2",
+        "sourceFamilyId": "family-48-mixed-event-unsplittable-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-48-mixed-event-unsplittable",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "review_required",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-48-mixed-event-unsplittable",
+        "scope": "company_specific",
+        "status": "review_required",
+        "outcome": "review_required",
+        "eligibleForDisplay": false,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-48-mixed-event-unsplittable-1",
+        "status": "review_required"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-48-mixed-event-unsplittable",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-48-mixed-event-unsplittable",
+        "rawRecordIds": ["raw-48-mixed-event-unsplittable-1"],
+        "independentSupportCount": 2,
+        "accepted": false
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [
+      {
+        "type": "review_required",
+        "resolutionConditionRequired": true
+      }
+    ],
+    "expectedReviewState": "review_required",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-48-mixed-event-unsplittable-1",
+        "to": "claim-48-mixed-event-unsplittable",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["AMBIGUOUS_CLUSTER_MEMBERSHIP"]
+  },
+  {
+    "id": "49-syndicated-only-cluster",
+    "caseNumber": 49,
+    "category": "story-clusters",
+    "description": "syndicated only cluster",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-49-syndicated-only-cluster-1",
+        "rawRecordIds": ["raw-49-syndicated-only-cluster-1"],
+        "underlyingWorkId": "work-49-syndicated-only-cluster-shared",
+        "sourceFamilyId": "family-49-syndicated-only-cluster-shared",
+        "syndicationFamilyId": "syndication-49-syndicated-only-cluster",
+        "eventSignatureId": "event-49-syndicated-only-cluster",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "review_required",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-49-syndicated-only-cluster-2",
+        "rawRecordIds": ["raw-49-syndicated-only-cluster-2"],
+        "underlyingWorkId": "work-49-syndicated-only-cluster-shared",
+        "sourceFamilyId": "family-49-syndicated-only-cluster-shared",
+        "syndicationFamilyId": "syndication-49-syndicated-only-cluster",
+        "eventSignatureId": "event-49-syndicated-only-cluster",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "review_required",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-49-syndicated-only-cluster",
+        "scope": "sector_wide",
+        "status": "review_required",
+        "outcome": "limited_support",
+        "eligibleForDisplay": false,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-49-syndicated-only-cluster-1",
+        "status": "review_required"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-49-syndicated-only-cluster",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-49-syndicated-only-cluster",
+        "rawRecordIds": ["raw-49-syndicated-only-cluster-1"],
+        "independentSupportCount": 1,
+        "accepted": false
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [
+      {
+        "type": "limited_support",
+        "resolutionConditionRequired": true
+      }
+    ],
+    "expectedReviewState": "review_required",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-49-syndicated-only-cluster-1",
+        "to": "claim-49-syndicated-only-cluster",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["SYNDICATION_ADJUSTED_SUPPORT"]
+  },
+  {
+    "id": "50-fully-supported-cluster",
+    "caseNumber": 50,
+    "category": "story-clusters",
+    "description": "fully supported cluster",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-50-fully-supported-cluster-1",
+        "rawRecordIds": ["raw-50-fully-supported-cluster-1"],
+        "underlyingWorkId": "work-50-fully-supported-cluster-1",
+        "sourceFamilyId": "family-50-fully-supported-cluster-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-50-fully-supported-cluster",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-50-fully-supported-cluster-2",
+        "rawRecordIds": ["raw-50-fully-supported-cluster-2"],
+        "underlyingWorkId": "work-50-fully-supported-cluster-2",
+        "sourceFamilyId": "family-50-fully-supported-cluster-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-50-fully-supported-cluster",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-50-fully-supported-cluster-3",
+        "rawRecordIds": ["raw-50-fully-supported-cluster-3"],
+        "underlyingWorkId": "work-50-fully-supported-cluster-3",
+        "sourceFamilyId": "family-50-fully-supported-cluster-3",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-50-fully-supported-cluster",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-50-fully-supported-cluster",
+        "scope": "sector_wide",
+        "status": "accepted",
+        "outcome": "display_eligible",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": true
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-50-fully-supported-cluster-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-50-fully-supported-cluster",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-50-fully-supported-cluster",
+        "rawRecordIds": ["raw-50-fully-supported-cluster-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-50-fully-supported-cluster-1",
+        "to": "claim-50-fully-supported-cluster",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["ELIGIBLE_FOR_DISPLAY"]
+  },
+  {
+    "id": "51-sector-brief-sector-wide",
+    "caseNumber": 51,
+    "category": "story-clusters",
+    "description": "sector brief sector wide",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-51-sector-brief-sector-wide-1",
+        "rawRecordIds": ["raw-51-sector-brief-sector-wide-1"],
+        "underlyingWorkId": "work-51-sector-brief-sector-wide-1",
+        "sourceFamilyId": "family-51-sector-brief-sector-wide-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-51-sector-brief-sector-wide",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-51-sector-brief-sector-wide-2",
+        "rawRecordIds": ["raw-51-sector-brief-sector-wide-2"],
+        "underlyingWorkId": "work-51-sector-brief-sector-wide-2",
+        "sourceFamilyId": "family-51-sector-brief-sector-wide-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-51-sector-brief-sector-wide",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-51-sector-brief-sector-wide",
+        "scope": "sector_wide",
+        "status": "accepted",
+        "outcome": "brief_included",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": true
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-51-sector-brief-sector-wide-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-51-sector-brief-sector-wide",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-51-sector-brief-sector-wide",
+        "rawRecordIds": ["raw-51-sector-brief-sector-wide-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-51-sector-brief-sector-wide-1",
+        "to": "sector-brief-statement-51-sector-brief-sector-wide",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["ELIGIBLE_FOR_SECTOR_BRIEF"]
+  },
+  {
+    "id": "52-sector-brief-rumor",
+    "caseNumber": 52,
+    "category": "story-clusters",
+    "description": "sector brief rumor",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-52-sector-brief-rumor-1",
+        "rawRecordIds": ["raw-52-sector-brief-rumor-1"],
+        "underlyingWorkId": "work-52-sector-brief-rumor-1",
+        "sourceFamilyId": "family-52-sector-brief-rumor-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-52-sector-brief-rumor",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "review_required",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-52-sector-brief-rumor-2",
+        "rawRecordIds": ["raw-52-sector-brief-rumor-2"],
+        "underlyingWorkId": "work-52-sector-brief-rumor-2",
+        "sourceFamilyId": "family-52-sector-brief-rumor-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-52-sector-brief-rumor",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "review_required",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-52-sector-brief-rumor",
+        "scope": "sector_wide",
+        "status": "review_required",
+        "outcome": "brief_excluded",
+        "eligibleForDisplay": false,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-52-sector-brief-rumor-1",
+        "status": "review_required"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-52-sector-brief-rumor",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-52-sector-brief-rumor",
+        "rawRecordIds": ["raw-52-sector-brief-rumor-1"],
+        "independentSupportCount": 2,
+        "accepted": false
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "review_required",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-52-sector-brief-rumor-1",
+        "to": "claim-52-sector-brief-rumor",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["REVIEW_WATCH_ONLY"]
+  },
+  {
+    "id": "53-sector-brief-rejected-company",
+    "caseNumber": 53,
+    "category": "story-clusters",
+    "description": "sector brief rejected company",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-53-sector-brief-rejected-company-1",
+        "rawRecordIds": ["raw-53-sector-brief-rejected-company-1"],
+        "underlyingWorkId": "work-53-sector-brief-rejected-company-1",
+        "sourceFamilyId": "family-53-sector-brief-rejected-company-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-53-sector-brief-rejected-company",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "rejected",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-53-sector-brief-rejected-company-2",
+        "rawRecordIds": ["raw-53-sector-brief-rejected-company-2"],
+        "underlyingWorkId": "work-53-sector-brief-rejected-company-2",
+        "sourceFamilyId": "family-53-sector-brief-rejected-company-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-53-sector-brief-rejected-company",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "rejected",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-53-sector-brief-rejected-company",
+        "scope": "company_specific",
+        "status": "rejected",
+        "outcome": "brief_excluded",
+        "eligibleForDisplay": false,
+        "eligibleForSectorBrief": false
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-53-sector-brief-rejected-company-1",
+        "status": "rejected"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-53-sector-brief-rejected-company",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-53-sector-brief-rejected-company",
+        "rawRecordIds": ["raw-53-sector-brief-rejected-company-1"],
+        "independentSupportCount": 2,
+        "accepted": false
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "rejected",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-53-sector-brief-rejected-company-1",
+        "to": "claim-53-sector-brief-rejected-company",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["REJECTED_CLUSTER_EXCLUDED"]
+  },
+  {
+    "id": "54-sector-brief-company-led",
+    "caseNumber": 54,
+    "category": "story-clusters",
+    "description": "sector brief company led",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-54-sector-brief-company-led-1",
+        "rawRecordIds": ["raw-54-sector-brief-company-led-1"],
+        "underlyingWorkId": "work-54-sector-brief-company-led-1",
+        "sourceFamilyId": "family-54-sector-brief-company-led-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-54-sector-brief-company-led",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-54-sector-brief-company-led-2",
+        "rawRecordIds": ["raw-54-sector-brief-company-led-2"],
+        "underlyingWorkId": "work-54-sector-brief-company-led-2",
+        "sourceFamilyId": "family-54-sector-brief-company-led-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-54-sector-brief-company-led",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-54-sector-brief-company-led",
+        "scope": "company_led_sector_impact",
+        "status": "accepted",
+        "outcome": "brief_included",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": true
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-54-sector-brief-company-led-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-54-sector-brief-company-led",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-54-sector-brief-company-led",
+        "rawRecordIds": ["raw-54-sector-brief-company-led-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-54-sector-brief-company-led-1",
+        "to": "sector-brief-statement-54-sector-brief-company-led",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["SCOPE_PRESERVED"]
+  },
+  {
+    "id": "55-sector-brief-macro",
+    "caseNumber": 55,
+    "category": "story-clusters",
+    "description": "sector brief macro",
+    "inputNormalizedRecords": [
+      {
+        "normalizedRecordId": "norm-55-sector-brief-macro-1",
+        "rawRecordIds": ["raw-55-sector-brief-macro-1"],
+        "underlyingWorkId": "work-55-sector-brief-macro-1",
+        "sourceFamilyId": "family-55-sector-brief-macro-1",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-55-sector-brief-macro",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      },
+      {
+        "normalizedRecordId": "norm-55-sector-brief-macro-2",
+        "rawRecordIds": ["raw-55-sector-brief-macro-2"],
+        "underlyingWorkId": "work-55-sector-brief-macro-2",
+        "sourceFamilyId": "family-55-sector-brief-macro-2",
+        "syndicationFamilyId": null,
+        "eventSignatureId": "event-55-sector-brief-macro",
+        "evidenceDepth": "full_fixture_text",
+        "reviewStatus": "accepted",
+        "rulesVersion": "normalization-v1"
+      }
+    ],
+    "expectedCandidateClusters": [
+      {
+        "candidateClusterId": "candidate-55-sector-brief-macro",
+        "scope": "macro_to_sector",
+        "status": "accepted",
+        "outcome": "brief_included",
+        "eligibleForDisplay": true,
+        "eligibleForSectorBrief": true
+      }
+    ],
+    "expectedMembershipDecisions": [
+      {
+        "normalizedRecordId": "norm-55-sector-brief-macro-1",
+        "status": "accepted"
+      }
+    ],
+    "expectedClaims": [
+      {
+        "claimId": "claim-55-sector-brief-macro",
+        "status": "supported",
+        "evidenceDepth": "full_fixture_text",
+        "claimType": "event_fact"
+      }
+    ],
+    "expectedEvidenceLinks": [
+      {
+        "claimId": "claim-55-sector-brief-macro",
+        "rawRecordIds": ["raw-55-sector-brief-macro-1"],
+        "independentSupportCount": 2,
+        "accepted": true
+      }
+    ],
+    "expectedAgreementGroups": [],
+    "expectedDisagreementGroups": [],
+    "expectedUncertainty": [],
+    "expectedReviewState": "accepted",
+    "expectedProvenancePaths": [
+      {
+        "from": "raw-55-sector-brief-macro-1",
+        "to": "sector-brief-statement-55-sector-brief-macro",
+        "valid": true
+      }
+    ],
+    "expectedExplanationCodes": ["SCOPE_PRESERVED"]
+  }
+]

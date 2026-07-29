@@ -9,6 +9,7 @@ export function PodcastCard({ podcast }: { podcast: PodcastSource }) {
           {podcast.transcriptReviewed ? "Transcript reviewed" : "Transcript not reviewed"}
         </Badge>
         {podcast.relatedListeningOnly && <Badge tone="caution">Related listening only</Badge>}
+        <Badge>{podcast.evidenceDepth}</Badge>
       </div>
       <p className="source-publisher">{podcast.publisher.name}</p>
       <h3>{podcast.episodeTitle}</h3>

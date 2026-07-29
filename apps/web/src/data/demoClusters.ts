@@ -30,7 +30,31 @@ export const demoClusters = StoryClusterSchema.array().parse([
     lastUpdatedAt: "2026-07-28T13:30:00.000Z",
     relevance: "high",
     sourceCount: 3,
+    independentSourceCount: 2,
     primarySourceCount: 1,
+    claimIds: ["claim-grid-review-active", "claim-grid-schedule-unknown"],
+    agreementGroupIds: ["agreement-grid-review-status"],
+    disagreementGroupIds: ["disagreement-grid-timing-interpretation"],
+    uncertaintyRecordIds: ["uncertainty-grid-final-timing"],
+    claimProvenance: [
+      {
+        claimId: "claim-grid-review-active",
+        evidenceSourceIds: ["grid-filing"],
+        rawRecordIds: ["raw-grid-filing"],
+        pathSummary: "Primary fixture record → accepted event fact → Story Cluster overview.",
+      },
+      {
+        claimId: "claim-grid-schedule-unknown",
+        evidenceSourceIds: ["grid-filing", "grid-analysis"],
+        rawRecordIds: ["raw-grid-filing", "raw-grid-analysis"],
+        pathSummary:
+          "Primary record plus independent abstract → uncertainty → future evidence condition.",
+      },
+    ],
+    reviewStatus: "accepted",
+    eligibleForDisplay: true,
+    eligibleForSectorBrief: true,
+    rulesVersion: "normalization-v1",
     sections: [
       {
         key: "what-happened",
@@ -129,7 +153,30 @@ export const demoClusters = StoryClusterSchema.array().parse([
     lastUpdatedAt: "2026-07-28T15:15:00.000Z",
     relevance: "moderate",
     sourceCount: 2,
+    independentSourceCount: 1,
     primarySourceCount: 1,
+    claimIds: ["claim-supply-planning-changed", "claim-supply-execution-unverified"],
+    agreementGroupIds: ["agreement-supply-planning-change"],
+    disagreementGroupIds: [],
+    uncertaintyRecordIds: ["uncertainty-supply-execution"],
+    claimProvenance: [
+      {
+        claimId: "claim-supply-planning-changed",
+        evidenceSourceIds: ["supply-update"],
+        rawRecordIds: ["raw-supply-update"],
+        pathSummary: "Company fixture update → attributed company statement → Story Cluster.",
+      },
+      {
+        claimId: "claim-supply-execution-unverified",
+        evidenceSourceIds: ["supply-update"],
+        rawRecordIds: ["raw-supply-update"],
+        pathSummary: "Primary fixture limits → uncertainty → subsequent disclosure condition.",
+      },
+    ],
+    reviewStatus: "accepted",
+    eligibleForDisplay: true,
+    eligibleForSectorBrief: false,
+    rulesVersion: "normalization-v1",
     sections: [
       {
         key: "what-happened",

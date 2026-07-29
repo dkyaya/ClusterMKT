@@ -45,7 +45,24 @@ const validCluster = {
   lastUpdatedAt: "2026-07-28T13:00:00.000Z",
   relevance: "high",
   sourceCount: 2,
+  independentSourceCount: 1,
   primarySourceCount: 1,
+  claimIds: ["claim-review-published"],
+  agreementGroupIds: ["agreement-review-status"],
+  disagreementGroupIds: [],
+  uncertaintyRecordIds: ["uncertainty-date"],
+  claimProvenance: [
+    {
+      claimId: "claim-review-published",
+      evidenceSourceIds: ["source-filing"],
+      rawRecordIds: ["raw-source-filing"],
+      pathSummary: "Primary fixture record → supported claim → Story Cluster.",
+    },
+  ],
+  reviewStatus: "accepted",
+  eligibleForDisplay: true,
+  eligibleForSectorBrief: true,
+  rulesVersion: "normalization-v1",
   sections: [
     {
       key: "what-happened",
@@ -84,6 +101,20 @@ describe("StoryClusterSchema", () => {
 
   it("rejects invalid source evidence", () => {
     expect(() => StoryClusterSchema.parse({ ...validCluster, sourceCount: 99 })).toThrow();
+  });
+
+  it("rejects claim provenance that references an unknown source", () => {
+    expect(() =>
+      StoryClusterSchema.parse({
+        ...validCluster,
+        claimProvenance: [
+          {
+            ...validCluster.claimProvenance[0],
+            evidenceSourceIds: ["source-missing"],
+          },
+        ],
+      }),
+    ).toThrow();
   });
 
   it("rejects podcast evidence without a reviewed transcript", () => {

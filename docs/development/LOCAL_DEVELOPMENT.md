@@ -4,9 +4,14 @@ Use Node.js 22–24 LTS-compatible behavior and pnpm 10. The current build also 
 
 ```sh
 pnpm install
+python -m pip install --requirement brand/validation/requirements.txt
+python -m playwright install chromium
 pnpm dev:web
 pnpm dev:worker
 ```
+
+The Python packages and Chromium runtime are required only by the existing brand
+validator. Application development itself remains a pnpm workspace.
 
 `pnpm dev` runs both development processes in parallel. Runtime browser icons are synchronized automatically before root or web development.
 

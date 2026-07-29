@@ -13,6 +13,17 @@
 
 The brand gate checks production vectors, geometry, transparency, image dimensions, icons, contrast, minimum sizes, motion, and its manifest. The application gate checks required files and scripts, one pnpm lockfile, private package identities, prohibited dependencies, environment/secret hygiene, generated asset hashes, route boundaries, honest demonstration labeling, CI, and the five locked-master hashes.
 
+On a new machine, install the brand validator's pinned Python requirements and
+Chromium runtime before running the suite:
+
+```sh
+python -m pip install --requirement brand/validation/requirements.txt
+python -m playwright install chromium
+```
+
+CI performs the same setup, including Playwright's system-dependency installer
+for the ephemeral Ubuntu runner.
+
 CI repeats the same stages on pull requests and pushes to `main` using a frozen lockfile. Common failures are unsynchronized icons, unformatted authored files, invalid evidence fixtures, edition-boundary regressions, a changed locked master, or a prohibited connection/dependency. Fix the underlying cause, rerun the narrow gate, then rerun `pnpm validate`.
 
 Generated reports are written beneath ignored `relays/tmp/application-foundation/` for relay construction.

@@ -48,6 +48,7 @@ ROOT_CREATED = {
     "tsconfig.base.json",
     "tsconfig.json",
     "vitest.workspace.ts",
+    "brand/validation/requirements.txt",
 }
 NEW_DOCS = {
     "docs/architecture/APPLICATION_FOUNDATION.md",
@@ -251,7 +252,7 @@ Vitest executed 25 behavior tests across 8 files: schema acceptance/rejection, e
 
 ## CI configuration
 
-GitHub Actions runs on pull requests and pushes to `main` using Node 24 LTS, pnpm 10.26.2, Python 3.12, a frozen lockfile, asset sync, formatting, lint, type-checking, tests, builds, brand validation, and foundation validation. It has read-only repository permission and no deploy step.
+GitHub Actions runs on pull requests and pushes to `main` using Node 24 LTS, pnpm 10.26.2, Python 3.12, pinned Pillow/Playwright validator dependencies, a Chromium runtime, a frozen pnpm lockfile, asset sync, formatting, lint, type-checking, tests, builds, brand validation, and foundation validation. It has read-only repository permission and no deploy step.
 
 ## Validation commands
 
@@ -292,6 +293,7 @@ One workspace lockfile supports all boundaries, source schemas reject unsafe pod
 - Vitest 4 removed the old workspace flag and projects were moved into the supported configuration. Explicit cleanup fixed test isolation.
 - The sandbox blocked Wrangler's user-level log path; the authorized dry-run succeeded. Metrics are now explicitly disabled.
 - Optional screenshot capture was attempted with the available browser control surface, but no controllable browser instance was available. No browser dependency was added; `previews/README.md` records this.
+- The first two public CI runs exposed missing Python brand-validator dependencies on clean Ubuntu runners. Pillow and Playwright are now pinned in `brand/validation/requirements.txt`, CI installs Chromium with its system dependencies, and the repaired remote run is recorded in `validation/ci-remote-results.md`.
 
 ## Remaining uncertainties
 
@@ -339,13 +341,19 @@ The brand is used directly from its locked masters and canonical tokens; browser
 
 def main() -> None:
     TMP.mkdir(parents=True, exist_ok=True)
-    code, commit = run(["git", "rev-parse", "HEAD"])
-    commit = commit.strip()
-    if code or len(commit) != 40:
-        raise RuntimeError("A committed implementation state is required")
-    _, message = run(["git", "log", "-1", "--format=%s"])
-    if message.strip() != "Initialize Cluster MKT application foundation":
-        raise RuntimeError("Relay must document the exact implementation commit")
+    code, history = run(["git", "log", "--format=%H%x09%s"])
+    if code:
+        raise RuntimeError("Committed repository history is required")
+    commit = next(
+        (
+            line.split("\t", 1)[0]
+            for line in history.splitlines()
+            if line.endswith("\tInitialize Cluster MKT application foundation")
+        ),
+        "",
+    )
+    if len(commit) != 40:
+        raise RuntimeError("The application-foundation implementation commit is missing")
 
     require(["pnpm", "install", "--frozen-lockfile", "--offline"], "install-log.txt")
     require(["pnpm", "format:check"], "format-check.txt")
@@ -384,7 +392,7 @@ def main() -> None:
     _, tree = run(["find", ".", "-maxdepth", "4", "-type", "f"])
     (TMP / "repo-tree-after.txt").write_text("\n".join(sorted(tree.splitlines())) + "\n", encoding="utf-8")
     (TMP / "ci-workflow-review.md").write_text(
-        "# CI workflow review\n\nPASS. The workflow triggers on pull requests and pushes to `main`, uses maintained official checkout/pnpm/Node/Python actions, installs the frozen lockfile, runs all requested gates, has read-only contents permission, declares no secrets, and contains no deployment step.\n",
+        "# CI workflow review\n\nPASS. The workflow triggers on pull requests and pushes to `main`, uses maintained official checkout/pnpm/Node/Python actions, installs pinned Python brand-validator dependencies and Chromium, installs the frozen pnpm lockfile, runs all requested gates, has read-only contents permission, declares no secrets, and contains no deployment step.\n",
         encoding="utf-8",
     )
     preview_note = (
@@ -413,7 +421,7 @@ def main() -> None:
         "cluster-mkt-brand-validation-report.json", "cluster-mkt-brand-validation-summary.md",
         "application-foundation-validation-report.json", "application-foundation-validation-summary.md",
         "locked-master-hashes-before.json", "locked-master-hashes-after.json", "ci-workflow-review.md",
-        "push-result.txt",
+        "ci-remote-results.md", "push-result.txt",
     }
     missing = sorted(name for name in required_validation if not (TMP / name).is_file())
     if missing:

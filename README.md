@@ -16,6 +16,8 @@ Requirements: Node.js 22–24 LTS-compatible runtime and pnpm 10.
 
 ```sh
 pnpm install
+python -m pip install --requirement brand/validation/requirements.txt
+python -m playwright install chromium
 pnpm dev:web
 pnpm dev:worker
 ```

@@ -10,7 +10,7 @@ The application foundation is implemented as a private pnpm TypeScript workspace
 
 The prototype search accepts text but reports honestly that indexing is not connected. Profile and Settings are available from the header on desktop and mobile, the mobile search row responds to scroll direction, Story Cluster tabs are URL-addressable, and the session-scoped Daily Brief can be dismissed. Daily and cluster-specific audio previews remain separate demonstration concepts with no generated audio.
 
-Live ingestion, authentication, persistent storage, publisher connections, financial-data services, AI, TTS, scheduled workflows, and production deployment are **not connected**.
+Live ingestion, authentication, persistent storage, publisher connections, financial-data services, AI, TTS, production scheduling, and production deployment are **not connected**. A fixture-only operational registry, mock adapter boundary, idempotent ledger, bounded retry and quarantine model, resumable edition simulation, CLI, and direct-only ingestion inspector are implemented without network access.
 
 ## Local development
 
@@ -40,7 +40,7 @@ See [local development](docs/development/LOCAL_DEVELOPMENT.md) and [validation](
 - `packages/ui` — accessible brand-token-driven UI primitives.
 - `packages/config` — non-secret identity, navigation, route, and edition configuration.
 - `brand` — authoritative locked masters, runtime tokens, production assets, and validation.
-- `pipelines` — documented boundary for future collection and clustering; not implemented.
+- `pipelines` — offline fixture adapters and the `@cluster-mkt/ingestion` dry-run orchestration boundary.
 - `scripts` — asset sync, validation, cleanup, and relay automation.
 - `tests` — future cross-workspace regression fixtures.
 - `relays` — auditable phase handoffs.
@@ -74,3 +74,5 @@ The current Semiconductors experience at `/sectors/semiconductors` is an offline
 The repository also includes an offline `normalization-v1` source-normalization, entity-resolution, and event-boundary foundation. `pnpm source:validate`, `pnpm entities:validate`, and `pnpm events:validate` exercise an 80-case adversarial corpus. A direct-only developer fixture inspector is available at `/dev/normalization`; it is not linked from consumer navigation and performs no live ingestion.
 
 The Story Cluster foundation adds a 62-case claim and provenance corpus. `pnpm clusters:validate`, `pnpm claims:validate`, `pnpm discourse:validate`, and `pnpm provenance:validate` enforce event membership, evidence-depth limits, syndication-adjusted support, genuine agreement and disagreement, review routing, and complete raw-record paths. `/dev/clusters` is a direct-only developer fixture inspector and is absent from consumer navigation.
+
+The ingestion foundation adds a 50-case dry-run corpus and `pnpm ingestion:validate`. No registry source is live-ready; all adapters load local fixtures and return raw records; exact replay, version updates, retry, circuit breaking, quarantine, reconciliation, and resume remain deterministic. Use `pnpm ingestion:simulate` or the direct-only `/dev/ingestion` inspector. `.tmp/ingestion-dry-run/` is disposable local output.

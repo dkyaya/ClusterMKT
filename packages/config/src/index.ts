@@ -13,5 +13,8 @@ export * from "./normalization/url-rules";
 export * from "./normalization/version";
 export * from "./sectors/semiconductors";
 export * from "./sources/demo-source-registry";
+export * from "./sources/index";
+export * from "./ingestion/retry-policies";
+export * from "./ingestion/schedule";
 export * from "./navigation";
 export * from "./routes";

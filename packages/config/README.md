@@ -9,3 +9,5 @@ It includes the Cluster MKT-owned Semiconductors editorial taxonomy, public-comp
 `src/normalization/` owns the stable `normalization-v1` policy data for URL handling, entity context, and duplicate thresholds. `src/entities/` provides the bounded public-company, security, macro, institution, sector, and subindustry alias registry used by fixtures. Duplicate aliases are surfaced for explicit adjudication; no private-market universe is present.
 
 The same stable rules version is attached to downstream Story Cluster, claim, discourse, and provenance decisions. Configuration supplies transparent policy inputs; it does not contain source credentials, generated conclusions, or runtime network behavior.
+
+`src/sources/` now contains the operational fixture registry, source families, and retrieval policies; `src/ingestion/` contains retry and edition-schedule fixtures. Every source is `fixture_only`, future live eligibility is false, and no endpoint or credential is configured.

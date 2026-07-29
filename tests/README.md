@@ -9,3 +9,5 @@ Do not place meaningless snapshots, generated coverage, live-service tests, publ
 `source-normalization/`, `entity-resolution/`, and `event-boundaries/` exercise the production normalization foundation against 80 machine-readable fixture cases. The suites enforce URL safety, duplicate and syndication distinctions, version chains, ambiguous ticker defenses, provenance completeness, quarantine retention, and event separation.
 
 `story-clusters/`, `claims/`, `agreement-disagreement/`, and `provenance/` exercise 62 adversarial cases. They enforce candidate membership, evidence-depth limits, quantitative distinctions, independent support, genuine discourse, review routing, accepted Sector Brief boundaries, and complete raw-to-visible provenance paths.
+
+The ingestion suites exercise 50 registry, adapter, duplicate, version, policy, failure, retry, cursor, checkpoint, edition, quarantine, cluster, brief, rules-version, and resume fixtures. Seven focused projects require local-only adapters, zero live-ready sources, stable replay behavior, bounded retry, complete raw-record accounting, resume equivalence, and a provenance-complete fixture-to-brief path.

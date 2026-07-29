@@ -43,7 +43,7 @@ See [product foundation](docs/product/PRODUCT_FOUNDATION.md), [planned architect
 
 Planned choices are React, Vite, TypeScript, Cloudflare Pages and Workers, Supabase authentication and PostgreSQL, scheduled collection workflows, shared Story Cluster generation, Kokoro for initial TTS experimentation, and user-specific assembly from reusable summary and audio modules.
 
-The pnpm TypeScript workspace, React/Vite shell, Worker boundary, and shared packages are implemented. Supabase, ingestion, scheduled workflows, TTS, external AI, and production deployment remain planned and unconnected.
+The pnpm TypeScript workspace, React/Vite shell, Worker boundary, shared packages, and an offline fixture-only ingestion dry run are implemented. Supabase, live ingestion, production scheduling, TTS, external AI, and production deployment remain planned and unconnected.
 
 Workspace packages are `@cluster-mkt/web`, `@cluster-mkt/worker`, `@cluster-mkt/core`, `@cluster-mkt/ui`, and `@cluster-mkt/config`. Use pnpm exclusively. Run `pnpm validate` as the full gate; narrow gates include `pnpm lint`, `pnpm typecheck`, `pnpm test:run`, `pnpm build`, `pnpm brand:validate`, and `pnpm foundation:validate`.
 
@@ -91,6 +91,9 @@ Workspace packages are `@cluster-mkt/web`, `@cluster-mkt/worker`, `@cluster-mkt/
 - Candidate entity matches must not be treated as accepted mentions.
 - Event identity must not be reduced to entity plus date.
 - Cluster membership must preserve its event-boundary rationale and rejected or review-required outcomes.
+- No live source may be activated without explicit terms, legal, and capability review.
+- Every retrieval attempt must preserve provenance; ingestion must be idempotent, resumable, and fully reconciled.
+- Quarantine, review, retry, and dead-letter states must remain distinct and cannot silently enter accepted output.
 - Do not claim completion while required validation fails.
 
 ## Relay requirement

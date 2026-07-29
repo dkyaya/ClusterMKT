@@ -11,6 +11,7 @@ coverage/
 .cache/
 .tmp/playwright-mcp/
 .tmp/playwright/
+.tmp/ingestion-dry-run/
 .tmp/
 temp/
 *.log

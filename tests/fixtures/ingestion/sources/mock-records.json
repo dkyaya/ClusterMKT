@@ -1,0 +1,27 @@
+[
+  {
+    "rawRecordId": "raw-news-analysis",
+    "sourceRegistryId": "fixture-financial-news-rss",
+    "sourceFamilyId": "fixture-news-family",
+    "originalUrl": "https://fixture.invalid/export-controls?utm_source=fixture",
+    "headline": "Fixture export controls span equipment and advanced compute",
+    "publisherAbstract": "The offline fixture describes a rule affecting several semiconductor subindustries.",
+    "authorNames": ["Fixture Desk"],
+    "publishedAt": "2026-07-29T10:00:00.000Z",
+    "retrievedAt": "2026-07-29T10:07:00.000Z",
+    "language": "en",
+    "contentType": "article",
+    "accessType": "public",
+    "paywallStatus": "none",
+    "sourceRole": "secondary",
+    "transcriptStatus": "not_applicable",
+    "metadataChecksum": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "sourceProvidedArticleId": "fixture-article-1",
+    "feedEntryId": "fixture-feed-1",
+    "originalMetadataPayloadRef": "tests/fixtures/ingestion/sources/mock-records.json#1",
+    "termsReviewStatus": "authorized_feed",
+    "textAvailable": false,
+    "metadataOnly": false,
+    "fixtureStatus": "fixture"
+  }
+]

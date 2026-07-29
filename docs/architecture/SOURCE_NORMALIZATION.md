@@ -17,3 +17,5 @@ Publisher, source family, distribution platform, syndication family, and underly
 This is an offline fixture foundation. Redirect resolution, live collection, publisher APIs, persistence, and AI inference are not implemented.
 
 Normalized records feed candidate Story Cluster construction without losing their raw-record, work, family, version, syndication, entity, event, review, or rules-version decisions. Downstream claim provenance references these identities rather than copying untraceable presentation text.
+
+Upstream dry-run adapters never bypass this boundary: they emit raw records only. Retrieval-attempt IDs, fixture references, adapter and registry versions, cursors, checkpoints, and fingerprints are attached before normalization, so a normalized record can be traced back to both source evidence and the retrieval decision.

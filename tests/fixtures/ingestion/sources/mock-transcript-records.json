@@ -1,0 +1,26 @@
+[
+  {
+    "rawRecordId": "raw-official-transcript",
+    "sourceRegistryId": "fixture-official-transcript",
+    "sourceFamilyId": "fixture-podcast-family",
+    "originalUrl": "https://fixture.invalid/transcript/episode-1",
+    "headline": "Fixture official transcript",
+    "publishedAt": "2026-07-29T08:00:00.000Z",
+    "retrievedAt": "2026-07-29T08:09:00.000Z",
+    "language": "en",
+    "contentType": "podcast_transcript",
+    "accessType": "public",
+    "paywallStatus": "none",
+    "sourceRole": "primary",
+    "transcriptStatus": "reviewed_permitted",
+    "contentChecksum": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+    "metadataChecksum": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "sourceProvidedArticleId": "transcript-1",
+    "originalMetadataPayloadRef": "tests/fixtures/ingestion/sources/mock-transcript-records.json#1",
+    "termsReviewStatus": "public_primary_source",
+    "textAvailable": true,
+    "metadataOnly": false,
+    "fixtureStatus": "fixture",
+    "fixtureText": "The reviewed fixture transcript states that capacity planning remains unchanged."
+  }
+]

@@ -18,3 +18,5 @@ Every accepted evidence use names the normalized record, raw record, underlying 
 The graph models raw record → normalized record → underlying work → claim evidence → claim → discourse/uncertainty → Story Cluster → Sector Brief. Validation rejects missing nodes, broken references, orphaned visible claims, forbidden cycles, quarantined support, syndicated-count inflation, and missing rule versions. Every visible factual claim and every accepted Sector Brief statement must have a complete path to raw evidence.
 
 `pnpm claims:validate` and `pnpm provenance:validate` enforce these boundaries with fixture-level failure reporting.
+
+Retrieval provenance extends the graph upstream without replacing raw evidence. An accepted dry-run path records registry source → adapter attempt → raw record → normalized record → underlying work → evidence → claim → cluster → Sector Brief. Missing retrieval or claim provenance is reconciled as a failure and blocks accepted output.

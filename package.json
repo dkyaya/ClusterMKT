@@ -36,7 +36,17 @@
     "claims:validate": "vitest --run --config vitest.workspace.ts --project claims && node scripts/evaluate-claims.mjs",
     "discourse:validate": "vitest --run --config vitest.workspace.ts --project agreement-disagreement && node scripts/evaluate-agreement-disagreement.mjs",
     "provenance:validate": "vitest --run --config vitest.workspace.ts --project provenance && node scripts/evaluate-provenance.mjs",
-    "validate": "pnpm assets:sync && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test:run && pnpm sector:validate && pnpm source:validate && pnpm entities:validate && pnpm events:validate && pnpm clusters:validate && pnpm claims:validate && pnpm discourse:validate && pnpm provenance:validate && pnpm build && pnpm brand:validate && pnpm foundation:validate",
+    "registry:validate": "vitest --run --config vitest.workspace.ts --project source-registry && node scripts/evaluate-source-registry.mjs",
+    "adapters:validate": "vitest --run --config vitest.workspace.ts --project adapters && node scripts/evaluate-adapter-contracts.mjs",
+    "ingestion:idempotency": "vitest --run --config vitest.workspace.ts --project ingestion-idempotency && node scripts/evaluate-ingestion-idempotency.mjs",
+    "ingestion:retries": "vitest --run --config vitest.workspace.ts --project ingestion-retries && node scripts/evaluate-ingestion-retries.mjs",
+    "ingestion:reconcile": "vitest --run --config vitest.workspace.ts --project ingestion-reconciliation && node scripts/evaluate-ingestion-reconciliation.mjs",
+    "ingestion:resume": "vitest --run --config vitest.workspace.ts --project ingestion-resume && node scripts/evaluate-ingestion-resume.mjs",
+    "ingestion:simulate": "vitest --run --config vitest.workspace.ts --project ingestion-end-to-end && node scripts/run-offline-ingestion-simulation.mjs",
+    "ingestion:validate": "pnpm registry:validate && pnpm adapters:validate && pnpm ingestion:idempotency && pnpm ingestion:retries && pnpm ingestion:reconcile && pnpm ingestion:resume && pnpm ingestion:simulate",
+    "ingestion:run": "node scripts/cluster-mkt-ingestion.mjs run",
+    "ingestion:inspect": "node scripts/cluster-mkt-ingestion.mjs inspect",
+    "validate": "pnpm assets:sync && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test:run && pnpm sector:validate && pnpm source:validate && pnpm entities:validate && pnpm events:validate && pnpm clusters:validate && pnpm claims:validate && pnpm discourse:validate && pnpm provenance:validate && pnpm ingestion:validate && pnpm build && pnpm brand:validate && pnpm foundation:validate",
     "clean": "node scripts/clean-generated.mjs"
   },
   "devDependencies": {

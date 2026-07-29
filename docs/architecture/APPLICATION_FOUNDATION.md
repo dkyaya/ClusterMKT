@@ -22,6 +22,7 @@ Cluster MKT uses one private pnpm workspace and lockfile. Applications live in `
 | `/settings`                                                            | Disabled future preference sections without persistence             |
 | `/dev/normalization`                                                   | Direct-only offline developer fixture inspector                     |
 | `/dev/clusters`                                                        | Direct-only cluster, claim, review, and provenance inspector        |
+| `/dev/ingestion`                                                       | Direct-only offline ingestion and reconciliation inspector          |
 
 There are no authentication gates.
 
@@ -61,4 +62,4 @@ The direct-only normalization inspector distinguishes preserved raw evidence fro
 
 The direct-only cluster inspector shows candidate membership, accepted and rejected claims, evidence depth, independent support, agreement, disagreement, uncertainty, review routing, and claim-to-source provenance. Consumer demonstration clusters conform to the same supported-claim and provenance contracts without materially changing the approved interface.
 
-All market stories and controls are static demonstrations. There is no ingestion, live data, account system, persistence, external AI, podcast processing, TTS, or production infrastructure. The next bounded architecture phase should design source metadata, capability matrices, entity dictionaries, relevance fixtures, and adversarial clustering cases without connecting live ingestion.
+All market stories and controls are static demonstrations. The `/dev/ingestion` route shows a fixture-only dry-run ledger, mock retrieval provenance, retry, quarantine, checkpoint, resume, and reconciliation state without consumer navigation exposure. There is no live ingestion, live data, account system, production persistence, external AI, podcast processing, TTS, or production infrastructure.

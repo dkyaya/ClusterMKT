@@ -78,6 +78,43 @@ export default defineConfig({
           environment: "node",
         },
       },
+      { test: { name: "source-registry", root: "tests/source-registry", environment: "node" } },
+      { test: { name: "adapters", root: "tests/adapters", environment: "node" } },
+      {
+        test: {
+          name: "ingestion-idempotency",
+          root: "tests/ingestion-idempotency",
+          environment: "node",
+        },
+      },
+      {
+        test: {
+          name: "ingestion-retries",
+          root: "tests/ingestion-retries",
+          environment: "node",
+        },
+      },
+      {
+        test: {
+          name: "ingestion-reconciliation",
+          root: "tests/ingestion-reconciliation",
+          environment: "node",
+        },
+      },
+      {
+        test: {
+          name: "ingestion-resume",
+          root: "tests/ingestion-resume",
+          environment: "node",
+        },
+      },
+      {
+        test: {
+          name: "ingestion-end-to-end",
+          root: "tests/ingestion-end-to-end",
+          environment: "node",
+        },
+      },
     ],
   },
 });

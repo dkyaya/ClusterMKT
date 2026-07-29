@@ -1,0 +1,29 @@
+[
+  {
+    "rawRecordId": "raw-podcast-metadata",
+    "sourceRegistryId": "fixture-podcast-rss",
+    "sourceFamilyId": "fixture-podcast-family",
+    "originalUrl": "https://fixture.invalid/podcast/episode-1",
+    "headline": "Fixture semiconductor discussion",
+    "publishedAt": "2026-07-29T08:00:00.000Z",
+    "retrievedAt": "2026-07-29T08:07:00.000Z",
+    "language": "en",
+    "contentType": "podcast_episode",
+    "accessType": "public",
+    "paywallStatus": "none",
+    "sourceRole": "secondary",
+    "podcastMetadata": {
+      "showName": "Fixture Markets",
+      "episodeId": "episode-1",
+      "durationSeconds": 1200
+    },
+    "transcriptStatus": "unavailable",
+    "metadataChecksum": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "feedEntryId": "podcast-feed-1",
+    "originalMetadataPayloadRef": "tests/fixtures/ingestion/sources/mock-podcast-records.json#1",
+    "termsReviewStatus": "metadata_only",
+    "textAvailable": false,
+    "metadataOnly": true,
+    "fixtureStatus": "fixture"
+  }
+]

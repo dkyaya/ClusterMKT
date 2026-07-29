@@ -1,0 +1,135 @@
+export const demoIngestionInspection = {
+  rules: {
+    registry: "source-registry-v1",
+    normalization: "normalization-v1",
+    ingestion: "ingestion-v1",
+    schedule: "ingestion-schedule-v1",
+  },
+  status: {
+    liveSources: 0,
+    credentialsConfigured: false,
+    realNetworkCalls: 0,
+    fixtureSourcesSelected: 9,
+  },
+  run: {
+    id: "run-fixture-2026-07-29-midday",
+    edition: "Midday",
+    marketDate: "2026-07-29",
+    slot: "12:07 p.m. ET",
+    status: "completed with warnings",
+    attempt: 1,
+  },
+  adapters: [
+    {
+      id: "mock-rss",
+      source: "Generic financial-news RSS fixture",
+      records: 2,
+      status: "accepted",
+    },
+    {
+      id: "mock-filing",
+      source: "Generic regulatory filing fixture",
+      records: 1,
+      status: "accepted",
+    },
+    {
+      id: "mock-podcast",
+      source: "Generic podcast metadata fixture",
+      records: 1,
+      status: "review required",
+    },
+    { id: "mock-failure", source: "Simulated rate-limit fixture", records: 0, status: "retried" },
+  ],
+  retrievals: [
+    {
+      attempt: "retrieval-rss-01",
+      source: "fixture-financial-news-rss",
+      cursor: "start → exhausted",
+      checkpoint: "rss:2",
+      provenance: "84a9…51fd",
+      result: "2 raw records",
+    },
+    {
+      attempt: "retrieval-filing-01",
+      source: "fixture-regulatory-filing",
+      cursor: "none",
+      checkpoint: "filing:1",
+      provenance: "b7c0…8ae2",
+      result: "1 raw record",
+    },
+  ],
+  retries: [
+    {
+      attempt: 1,
+      event: "Fixture 429 rate limit",
+      decision: "retry after 30 simulated seconds",
+      circuit: "closed",
+    },
+    {
+      attempt: 2,
+      event: "Fixture timeout",
+      decision: "bounded deterministic backoff",
+      circuit: "closed",
+    },
+    {
+      attempt: 3,
+      event: "Threshold reached",
+      decision: "circuit opens; no infinite retry",
+      circuit: "open",
+    },
+  ],
+  quarantine: [
+    {
+      id: "quarantine-malformed-url",
+      reason: "malformed_url",
+      state: "pending review",
+      next: "Correct fixture URL and revalidate provenance",
+    },
+    {
+      id: "quarantine-checksum-collision",
+      reason: "content_checksum_conflict",
+      state: "isolated",
+      next: "Adjudicate source identity",
+    },
+  ],
+  idempotency: [
+    {
+      item: "Repeated adapter page",
+      decision: "skip exact duplicate",
+      code: "EXACT_REPLAY_SKIPPED",
+    },
+    {
+      item: "Corrected article",
+      decision: "link version",
+      code: "ARTICLE_VERSION_CONTENT_CHANGED",
+    },
+    {
+      item: "Morning replay",
+      decision: "reuse completed slot",
+      code: "SCHEDULED_SLOT_REPLAY_SKIPPED",
+    },
+  ],
+  counts: {
+    raw: 5,
+    normalized: 3,
+    duplicates: 0,
+    reviewRequired: 1,
+    rejected: 1,
+    quarantined: 1,
+    acceptedClusters: 1,
+    sectorBriefs: 1,
+  },
+  checkpoints: [
+    "retrieval complete",
+    "raw records persisted",
+    "normalization complete",
+    "cluster write complete",
+    "reconciliation complete",
+  ],
+  resume: {
+    interruption: "after normalization",
+    token: "62ce…0a39",
+    preserved: "retrieval and normalized records",
+    result: "same accepted cluster and Sector Brief; zero duplicate output",
+  },
+} as const;

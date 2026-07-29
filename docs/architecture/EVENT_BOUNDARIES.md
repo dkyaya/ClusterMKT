@@ -16,3 +16,5 @@ Deterministic boundary rules distinguish:
 Event similarity is evidence for a decision, not the decision itself. Publisher or headline differences do not automatically split an event, and entity/date overlap does not automatically merge one. Ambiguous boundaries remain review-required and countable.
 
 Candidate Story Cluster membership records the boundary rationale for every normalized record, including market reaction, related context, versions, syndication, mixed-event records, and conflicting fields. This prevents presentation or source count from silently overriding event identity.
+
+An ambiguous event boundary is an ingestion review state rather than an adapter failure. Checkpoints preserve completed upstream work, while resume keeps the same run identity and avoids duplicating a later accepted boundary decision.

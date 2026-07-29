@@ -17,3 +17,5 @@ Current extraction and presentation are fixture-annotated and template-based. Th
 ## Evaluation
 
 `pnpm clusters:validate` evaluates grouping, event separation, membership roles, review routing, and display eligibility against adversarial offline fixtures. Exact failed cases remain visible; aggregate scores cannot override a critical gate.
+
+The ingestion simulation calls this boundary only after raw validation, idempotency, normalization, entity resolution, and event signatures. Replayed runs reuse stable candidate identity; review-required, rejected, and quarantined candidates remain distinct ledger counts and cannot enter ordinary Sector Brief assembly.

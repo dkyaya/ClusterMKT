@@ -9,3 +9,5 @@ Ticker-like words require exact case and financial or entity-specific context. `
 Accepted decisions retain the matched alias, source field, character span where available, direct or inferred status, confidence, explanation codes, review status, and supporting raw fields. Private-market entities and fuzzy or embedding-based matching are absent.
 
 Story Cluster membership and claims consume accepted mentions only. An unresolved candidate cannot silently become a subject entity: it routes the cluster for review or rejection and remains visible in the decision trace.
+
+The dry-run ingestion workflow preserves this routing. Ambiguous entity output becomes a human-review queue item with retrieval provenance; it is not retried as a transport failure and cannot silently proceed to an accepted cluster.

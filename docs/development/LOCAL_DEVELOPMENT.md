@@ -51,3 +51,14 @@ pnpm clean
 ```
 
 The Worker commands are local only. Do not add deployment flags, credentials, or service bindings during foundation work.
+
+## Offline ingestion dry run
+
+```sh
+pnpm ingestion:simulate
+pnpm ingestion:run --edition morning --market-date 2026-07-29
+pnpm ingestion:inspect --run-id run-2026-07-29-morning-<fixture-hash>
+node scripts/cluster-mkt-ingestion.mjs list-sources
+```
+
+The CLI accepts fixtures only, refuses live mode and credential arguments, and writes only beneath ignored `.tmp/ingestion-dry-run/`. `pnpm ingestion:validate` exercises registry, adapter, idempotency, retry, reconciliation, resume, and end-to-end gates. `/dev/ingestion` is a direct-only developer inspector.

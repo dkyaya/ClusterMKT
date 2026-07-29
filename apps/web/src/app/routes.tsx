@@ -3,6 +3,7 @@ import { ClusterDetailPage } from "../pages/ClusterDetailPage";
 import { ClusterInspectorPage } from "../pages/ClusterInspectorPage";
 import { NotFoundPage } from "../pages/NotFoundPage";
 import { NormalizationInspectorPage } from "../pages/NormalizationInspectorPage";
+import { IngestionInspectorPage } from "../pages/IngestionInspectorPage";
 import { PlaceholderPage } from "../pages/PlaceholderPage";
 import { SettingsPage } from "../pages/SettingsPage";
 import { SectorDetailPage } from "../pages/SectorDetailPage";
@@ -18,6 +19,7 @@ export function AppRoutes() {
       <Route path="/sectors/:sectorId" element={<SectorDetailPage />} />
       <Route path="/dev/normalization" element={<NormalizationInspectorPage />} />
       <Route path="/dev/clusters" element={<ClusterInspectorPage />} />
+      <Route path="/dev/ingestion" element={<IngestionInspectorPage />} />
       {[
         ["/watchlist", "Watchlist"],
         ["/saved", "Saved"],

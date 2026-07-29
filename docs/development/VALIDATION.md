@@ -63,3 +63,9 @@ The focused commands are `pnpm clusters:validate`, `pnpm claims:validate`, `pnpm
 Critical gates include zero unsupported visible claims, zero metadata-only detailed claims, zero transcript-free podcast evidence, zero syndicated-source inflation, zero false consensus or manufactured disagreement, and complete claim-to-raw plus brief-to-raw provenance. A candidate requiring review must include reasons and cannot masquerade as accepted output.
 
 Real-browser acceptance of `/dev/clusters` must verify membership decisions, evidence depth, independent support, discourse groups, uncertainty, review routing, eligibility, and provenance at desktop and mobile sizes. The route is direct-only and must remain absent from primary consumer navigation.
+
+## Offline ingestion
+
+`pnpm ingestion:validate` runs seven fixture projects and evaluation reports: source registry, adapter contract, idempotency, retries, reconciliation, resume, and end-to-end simulation. Critical gates require zero live-ready sources, real network calls, unreviewed or prohibited retrieval, infinite retry, unexplained loss, duplicate accepted output, quarantine leakage, podcast-metadata claims, syndication inflation, and broken provenance.
+
+Browser acceptance of `/dev/ingestion` must inspect source selection, adapter results, retrieval provenance, rate-limit and circuit state, quarantine, ledger, checkpoints, resume, reconciliation, status counts, and offline boundary labels at desktop and mobile sizes. It remains absent from consumer navigation.

@@ -11,3 +11,5 @@ An exact duplicate is the same received record or work representation. A format 
 Metadata-only evidence has limited depth. A headline does not prove detailed claims, a public webpage does not imply authorization, and podcast metadata without a reviewed permitted transcript is related listening rather than factual summary evidence.
 
 The current system is deterministic demonstration infrastructure only. It does not collect live publisher content, bypass access controls, store credentials, or claim complete coverage.
+
+The dry-run ledger extends this guarantee back to retrieval. Each adapter attempt records its source, method, fixture, time window, cursor, checkpoint, versions, request and response fingerprints, warnings, failures, and checksum. Exact adapter-page replay creates no duplicate raw record, cluster, or Sector Brief; corrections remain linked as versions.

@@ -14,3 +14,6 @@ Architecture decision records capture durable repository and product-engineering
 - [0010 — Preserve claim-level provenance](0010-claim-level-provenance.md)
 - [0011 — Count independent support by work and source family](0011-independent-support-counting.md)
 - [0012 — Gate Story Clusters through explicit review routing](0012-review-gated-story-clusters.md)
+- [0013 — Gate live access through the source registry](0013-source-registry-gates-live-access.md)
+- [0014 — Use an idempotent ingestion ledger](0014-idempotent-ingestion-ledger.md)
+- [0015 — Separate retry, quarantine, review, and resume](0015-retry-quarantine-and-resume.md)

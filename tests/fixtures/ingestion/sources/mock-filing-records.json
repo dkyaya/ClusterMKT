@@ -1,0 +1,26 @@
+[
+  {
+    "rawRecordId": "raw-regulatory-filing",
+    "sourceRegistryId": "fixture-regulatory-filing",
+    "sourceFamilyId": "fixture-regulatory-family",
+    "originalUrl": "https://fixture.invalid/filing/0001",
+    "headline": "Fixture filing reports capacity commitment",
+    "publishedAt": "2026-07-29T09:00:00.000Z",
+    "retrievedAt": "2026-07-29T09:07:00.000Z",
+    "language": "en",
+    "contentType": "regulatory_filing",
+    "accessType": "public",
+    "paywallStatus": "none",
+    "sourceRole": "primary",
+    "transcriptStatus": "not_applicable",
+    "contentChecksum": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "metadataChecksum": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "sourceProvidedArticleId": "fixture-filing-1",
+    "originalMetadataPayloadRef": "tests/fixtures/ingestion/sources/mock-filing-records.json#1",
+    "termsReviewStatus": "public_primary_source",
+    "textAvailable": true,
+    "metadataOnly": false,
+    "fixtureStatus": "fixture",
+    "fixtureText": "The issuer fixture records a capacity commitment for the next reporting period."
+  }
+]

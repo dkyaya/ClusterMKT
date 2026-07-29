@@ -11,3 +11,5 @@ Review-required candidates do not masquerade as accepted Story Clusters. Missing
 Sector Briefs consume only accepted, display-eligible, sector-brief-eligible clusters. Their statements retain cluster and claim references, use independent-source counts, preserve scope labels and uncertainty, and do not regenerate per user.
 
 All current behavior is deterministic and fixture-driven. Live ingestion, model inference, private-market coverage, recommendations, and price predictions remain outside this foundation.
+
+The ingestion dry run routes only validated, policy-eligible fixture records into this evidence model. Quarantined records and unresolved review items are isolated before claims; reconciliation accounts for their existence without promoting them. Accepted fixture clusters and briefs retain the complete retrieval-to-claim provenance chain.

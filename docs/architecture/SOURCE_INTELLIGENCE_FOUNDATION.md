@@ -43,3 +43,5 @@ The downstream `normalization-v1` contracts now distinguish raw and normalized r
 ## Accepted Story Cluster boundary
 
 Sector feed and brief assembly now consume only accepted clusters that pass display and Sector Brief review routing. Agreement, uncertainty, claim references, and independent-source counts are derived from the cluster evidence model. Review-required candidates remain in a separate watch collection; rejected and quarantined candidates are excluded.
+
+The offline ingestion simulation feeds these contracts only from registry-approved local fixtures. Registration and source authorization remain separate; no live-ready source or runtime publisher request exists. Run reconciliation verifies that every raw record is accepted, duplicated, versioned, reviewed, rejected, quarantined, dead-lettered, or pending bounded retry.

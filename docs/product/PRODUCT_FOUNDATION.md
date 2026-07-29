@@ -55,3 +55,7 @@ Raw source records are untrusted and remain preserved. Deterministic normalizati
 ## Claim and cluster boundary
 
 Story Cluster membership is an explicit, reviewable event decision. Claims are separate from presentation text, and every visible factual statement retains a path to raw evidence. Evidence depth controls permitted use: headlines and metadata cannot support detailed summaries, while transcript-free podcast metadata remains related listening only. Agreement is adjusted for source independence; disagreement is represented only when propositions genuinely differ. Review-required candidates remain separate from accepted output, and Sector Briefs consume accepted eligible clusters rather than raw articles.
+
+## Offline ingestion boundary
+
+The operational source registry does not authorize live access. Current adapters load reviewed repository fixtures only and emit raw records with retrieval provenance. Deterministic edition runs are idempotent, bounded in retry, resumable from checkpoints, and fully reconciled. Quarantine, review, retry, and dead-letter states remain separate and cannot support accepted product output. No credential, network collector, database, production scheduler, or live-ready source exists.

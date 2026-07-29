@@ -13,6 +13,12 @@ pnpm dev:worker
 The Python packages and Chromium runtime are required only by the existing brand
 validator. Application development itself remains a pnpm workspace.
 
+## Controlled browser tooling
+
+Playwright MCP is an optional local developer and agent tool, not an application dependency. Claude Code and Codex maintain separate local MCP registrations; configuring one client does not configure the other. Codex may display `Auth: Unsupported` for a local stdio MCP server because that transport does not use OAuth. `Status: enabled`, successful tool discovery in a new Codex session, and actual browser invocation are the meaningful checks.
+
+After changing local MCP configuration, fully restart the active client or start a new Codex session before testing tool discovery. Keep user-specific configuration paths, browser profiles, caches, and credentials outside the repository. Store browser screenshots, logs, and supported traces beneath the phase-specific `relays/tmp/` directory used to build the task relay.
+
 `pnpm dev` runs both development processes in parallel. Runtime browser icons are synchronized automatically before root or web development.
 
 Frontend acceptance checks should exercise the typeable-but-disconnected search form, header profile menu, mobile scroll-direction search row, session-scoped Daily Brief dismissal, and direct Story Cluster tab URLs such as:

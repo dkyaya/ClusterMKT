@@ -9,6 +9,8 @@ coverage/
 .wrangler/
 .turbo/
 .cache/
+.tmp/playwright-mcp/
+.tmp/playwright/
 .tmp/
 temp/
 *.log

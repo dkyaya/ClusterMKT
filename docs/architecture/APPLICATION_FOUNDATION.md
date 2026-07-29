@@ -29,7 +29,7 @@ Global search is a controlled, accessible form that accepts user input without f
 
 On mobile, the sticky header keeps its identity and profile row visible while the search row collapses after meaningful downward scrolling and returns on upward movement, near the document top, or while search is focused. The passive listener is isolated in a reusable hook, and reduced-motion styles remove movement transitions.
 
-The global Daily Brief is edition- and New York market-date-specific. Dismissal works by an accessible button, Escape, or horizontal pointer gesture and is retained only in safe `sessionStorage`. Story Cluster cards and tabs use the `tab` query parameter, so refresh and browser history preserve Overview, Read, or Listen. The Listen panel contains a cluster-specific audio preview rather than the global Daily Brief. All audio remains demonstration-only.
+The global Daily Brief is edition- and New York market-date-specific. Dismissal works by an accessible button, Escape, or horizontal pointer gesture and is retained only in safe `sessionStorage`. Drag initiation excludes interactive descendants and explicit `data-no-drag` regions, while pointer capture begins only after horizontal intent is established so nested controls and vertical scrolling retain normal browser behavior. Story Cluster cards and tabs use the `tab` query parameter, so refresh and browser history preserve Overview, Read, or Listen. The Listen panel contains a cluster-specific audio preview rather than the global Daily Brief. All audio remains demonstration-only.
 
 ## Worker route map
 

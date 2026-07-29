@@ -3,6 +3,35 @@ import { Button, Surface } from "@cluster-mkt/ui";
 import { useMemo, useRef, useState, type PointerEvent } from "react";
 import { dailyBriefStorageKey } from "../../lib/dailyBrief";
 
+const DRAG_EXCLUDED_SELECTOR = [
+  "button",
+  "a",
+  "input",
+  "select",
+  "textarea",
+  "summary",
+  '[role="button"]',
+  '[role="link"]',
+  '[contenteditable="true"]',
+  "[data-no-drag]",
+].join(",");
+
+function dragStartsOnInteractiveDescendant(target: EventTarget | null, surface: HTMLElement) {
+  if (!(target instanceof Element)) return false;
+  const excludedAncestor = target.closest(DRAG_EXCLUDED_SELECTOR);
+  return excludedAncestor !== null && surface.contains(excludedAncestor);
+}
+
+function releasePointerCaptureSafely(element: HTMLElement, pointerId: number) {
+  try {
+    if (!element.hasPointerCapture || element.hasPointerCapture(pointerId)) {
+      element.releasePointerCapture?.(pointerId);
+    }
+  } catch {
+    // Capture can already be released by the browser during cancellation or unmount.
+  }
+}
+
 function sessionStorageSafe(): Storage | undefined {
   try {
     return typeof window === "undefined" ? undefined : window.sessionStorage;
@@ -32,10 +61,11 @@ export function DailyBriefPlayer({ edition, now = new Date() }: DailyBriefPlayer
   const [dismissedKeys, setDismissedKeys] = useState<ReadonlySet<string>>(() => new Set());
   const [offset, setOffset] = useState(0);
   const gesture = useRef<{
+    axis: "pending" | "horizontal" | "vertical";
+    captured: boolean;
     pointerId: number;
     startX: number;
     startY: number;
-    horizontal: boolean;
     width: number;
   } | null>(null);
 
@@ -50,14 +80,15 @@ export function DailyBriefPlayer({ edition, now = new Date() }: DailyBriefPlayer
 
   const onPointerDown = (event: PointerEvent<HTMLElement>) => {
     if (event.pointerType === "mouse" && event.button !== 0) return;
+    if (dragStartsOnInteractiveDescendant(event.target, event.currentTarget)) return;
     gesture.current = {
+      axis: "pending",
+      captured: false,
       pointerId: event.pointerId,
       startX: event.clientX,
       startY: event.clientY,
-      horizontal: false,
       width: event.currentTarget.getBoundingClientRect().width,
     };
-    event.currentTarget.setPointerCapture?.(event.pointerId);
   };
 
   const onPointerMove = (event: PointerEvent<HTMLElement>) => {
@@ -65,10 +96,20 @@ export function DailyBriefPlayer({ edition, now = new Date() }: DailyBriefPlayer
     if (!active || active.pointerId !== event.pointerId) return;
     const deltaX = event.clientX - active.startX;
     const deltaY = event.clientY - active.startY;
-    if (!active.horizontal && Math.abs(deltaX) > 8 && Math.abs(deltaX) > Math.abs(deltaY)) {
-      active.horizontal = true;
+    if (active.axis === "pending" && Math.max(Math.abs(deltaX), Math.abs(deltaY)) > 8) {
+      active.axis = Math.abs(deltaX) > Math.abs(deltaY) ? "horizontal" : "vertical";
+      if (active.axis === "horizontal") {
+        try {
+          if (typeof event.currentTarget.setPointerCapture === "function") {
+            event.currentTarget.setPointerCapture(event.pointerId);
+            active.captured = true;
+          }
+        } catch {
+          active.captured = false;
+        }
+      }
     }
-    if (active.horizontal) setOffset(deltaX);
+    if (active.axis === "horizontal") setOffset(deltaX);
   };
 
   const finishPointer = (event: PointerEvent<HTMLElement>) => {
@@ -77,8 +118,8 @@ export function DailyBriefPlayer({ edition, now = new Date() }: DailyBriefPlayer
     const threshold = Math.min(96, Math.max(72, active.width * 0.3));
     const finalOffset = event.clientX - active.startX;
     gesture.current = null;
-    event.currentTarget.releasePointerCapture?.(event.pointerId);
-    if (Math.abs(finalOffset) >= threshold) dismiss();
+    if (active.captured) releasePointerCaptureSafely(event.currentTarget, event.pointerId);
+    if (active.axis === "horizontal" && Math.abs(finalOffset) >= threshold) dismiss();
     else setOffset(0);
   };
 
@@ -93,9 +134,10 @@ export function DailyBriefPlayer({ edition, now = new Date() }: DailyBriefPlayer
         if (event.key === "Escape") dismiss();
       }}
       onPointerCancel={(event) => {
+        const active = gesture.current;
         gesture.current = null;
         setOffset(0);
-        event.currentTarget.releasePointerCapture?.(event.pointerId);
+        if (active?.captured) releasePointerCaptureSafely(event.currentTarget, event.pointerId);
       }}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
@@ -110,7 +152,7 @@ export function DailyBriefPlayer({ edition, now = new Date() }: DailyBriefPlayer
         <strong>{label}</strong>
         <p>Your followed-market audio briefing is demonstration-only; no generated audio exists.</p>
       </div>
-      <div className="daily-brief-player__actions">
+      <div className="daily-brief-player__actions" data-no-drag>
         <Button
           aria-label="Daily Brief playback unavailable in demonstration"
           disabled
@@ -124,7 +166,7 @@ export function DailyBriefPlayer({ edition, now = new Date() }: DailyBriefPlayer
           onClick={dismiss}
           type="button"
         >
-          ×
+          <span aria-hidden="true">×</span>
         </button>
       </div>
     </Surface>

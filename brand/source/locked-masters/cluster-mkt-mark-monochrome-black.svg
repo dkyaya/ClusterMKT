@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100" role="img" aria-labelledby="cluster-mkt-black-title cluster-mkt-black-description">
+  <title id="cluster-mkt-black-title">Cluster MKT monochrome black mark</title>
+  <desc id="cluster-mkt-black-description">The eight-sphere Cluster MKT mark in solid black.</desc>
+  <circle id="sphere-black-rear-top-rust" data-sphere="rear-top-rust" data-stack="1" cx="715" cy="185" r="115" fill="#000000"/>
+  <circle id="sphere-black-back-left-rust" data-sphere="back-left-rust" data-stack="2" cx="278" cy="557" r="194" fill="#000000"/>
+  <circle id="sphere-black-back-right-sage" data-sphere="back-right-sage" data-stack="3" cx="819" cy="707" r="196" fill="#000000"/>
+  <circle id="sphere-black-upper-forest" data-sphere="upper-forest" data-stack="4" cx="440" cy="299" r="231" fill="#000000"/>
+  <circle id="sphere-black-right-rust" data-sphere="right-rust" data-stack="5" cx="823" cy="419" r="197" fill="#000000"/>
+  <circle id="sphere-black-small-left-sage" data-sphere="small-left-sage" data-stack="6" cx="224" cy="756" r="95" fill="#000000"/>
+  <circle id="sphere-black-front-ink" data-sphere="front-ink" data-stack="7" cx="528" cy="782" r="241" fill="#000000"/>
+  <circle id="sphere-black-front-ochre" data-sphere="front-ochre" data-stack="8" cx="628" cy="536" r="168" fill="#000000"/>
+</svg>

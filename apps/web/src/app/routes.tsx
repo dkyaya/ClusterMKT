@@ -1,0 +1,31 @@
+import { Route, Routes } from "react-router-dom";
+import { ClusterDetailPage } from "../pages/ClusterDetailPage";
+import { NotFoundPage } from "../pages/NotFoundPage";
+import { PlaceholderPage } from "../pages/PlaceholderPage";
+import { SettingsPage } from "../pages/SettingsPage";
+import { TodayPage } from "../pages/TodayPage";
+
+export function AppRoutes() {
+  return (
+    <Routes>
+      <Route path="/" element={<TodayPage />} />
+      <Route path="/clusters/:clusterId" element={<ClusterDetailPage />} />
+      {[
+        ["/watchlist", "Watchlist"],
+        ["/sectors", "Sectors"],
+        ["/saved", "Saved"],
+        ["/listen", "Listen"],
+        ["/calendar", "Calendar"],
+        ["/profile", "Profile"],
+      ].map(([path, title]) => (
+        <Route
+          key={path}
+          path={path}
+          element={<PlaceholderPage title={title ?? "Planned section"} />}
+        />
+      ))}
+      <Route path="/settings" element={<SettingsPage />} />
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
+  );
+}

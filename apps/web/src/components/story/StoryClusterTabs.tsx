@@ -1,0 +1,86 @@
+import type { StoryCluster } from "@cluster-mkt/core";
+import { Tabs } from "@cluster-mkt/ui";
+import { BriefPlayerPreview } from "../audio/BriefPlayerPreview";
+import { PodcastCard } from "./PodcastCard";
+import { SourceCard } from "./SourceCard";
+
+export function StoryClusterTabs({ cluster }: { cluster: StoryCluster }) {
+  const overview = (
+    <div className="cluster-overview">
+      {cluster.sections.map((section) => (
+        <section key={section.key}>
+          <h2>{section.title}</h2>
+          <p>{section.body}</p>
+        </section>
+      ))}
+      <section>
+        <h2>Points of agreement</h2>
+        <ul>
+          {cluster.agreementPoints.map((point) => (
+            <li key={point}>{point}</li>
+          ))}
+        </ul>
+      </section>
+      <section>
+        <h2>Competing arguments</h2>
+        {cluster.competingArguments.map((argument) => (
+          <div key={argument.id}>
+            <h3>{argument.label}</h3>
+            <p>{argument.summary}</p>
+          </div>
+        ))}
+      </section>
+      <section>
+        <h2>What remains uncertain</h2>
+        {cluster.uncertainty.map((item) => (
+          <p key={item.id}>{item.summary}</p>
+        ))}
+      </section>
+      <section>
+        <h2>What would change the picture</h2>
+        <ul>
+          {cluster.whatWouldChangeThePicture.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </section>
+      <section>
+        <h2>Related coverage</h2>
+        <p>{[...cluster.stocks, ...cluster.sectors, ...cluster.themes].join(" · ")}</p>
+      </section>
+    </div>
+  );
+  return (
+    <Tabs
+      label="Story Cluster sections"
+      items={[
+        { id: "overview", label: "Overview", panel: overview },
+        {
+          id: "read",
+          label: `Read (${cluster.readSources.length})`,
+          panel: (
+            <div className="source-grid">
+              {cluster.readSources.map((source) => (
+                <SourceCard key={source.id} source={source} />
+              ))}
+            </div>
+          ),
+        },
+        {
+          id: "listen",
+          label: `Listen (${cluster.listenSources.length})`,
+          panel: (
+            <>
+              <BriefPlayerPreview />
+              <div className="source-grid">
+                {cluster.listenSources.map((source) => (
+                  <PodcastCard key={source.id} podcast={source} />
+                ))}
+              </div>
+            </>
+          ),
+        },
+      ]}
+    />
+  );
+}

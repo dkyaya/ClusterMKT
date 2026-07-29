@@ -1,0 +1,2 @@
+# Validated brand SVG derivatives retain production-approved bytes.
+brand/**/*.svg whitespace=-trailing-space

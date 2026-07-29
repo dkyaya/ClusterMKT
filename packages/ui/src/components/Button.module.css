@@ -1,0 +1,33 @@
+.button {
+  min-height: 2.5rem;
+  padding: 0.65rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.45rem;
+  font: 600 0.875rem/1 var(--font-interface);
+  cursor: pointer;
+  transition:
+    background-color var(--motion-interface-default) var(--ease-interface),
+    border-color var(--motion-interface-default) var(--ease-interface);
+}
+
+.button:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-accent-primary) 45%, transparent);
+  outline-offset: 2px;
+}
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+.primary {
+  color: var(--color-white);
+  background: var(--color-forest-green);
+}
+.secondary {
+  color: var(--color-text-primary);
+  background: var(--color-surface-secondary);
+  border-color: var(--color-border-subtle);
+}
+.quiet {
+  color: var(--color-accent-primary);
+  background: transparent;
+}

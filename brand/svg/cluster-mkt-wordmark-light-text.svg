@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 180" role="img" aria-labelledby="cluster-mkt-light-editable-wordmark-title cluster-mkt-light-editable-wordmark-description">
+  <title id="cluster-mkt-light-editable-wordmark-title">Cluster MKT light editable wordmark</title>
+  <desc id="cluster-mkt-light-editable-wordmark-description">Editable Cluster MKT wordmark with Cluster dominant and a smaller tracked MKT.</desc>
+  <g id="wordmark-light-editable-wordmark" fill="#111210" font-family="DM Sans, Inter, Arial, sans-serif">
+    <text id="wordmark-light-editable-cluster" x="8" y="136" font-size="132" font-weight="600">Cluster</text>
+    <text id="wordmark-light-editable-mkt" x="472" y="136" font-size="58" font-weight="600" letter-spacing="14">MKT</text>
+  </g>
+</svg>

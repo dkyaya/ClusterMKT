@@ -1,0 +1,1298 @@
+{
+  "package": "Cluster MKT™ Full Brand Package",
+  "version": "1.0.0",
+  "lockedMasterHashes": {
+    "cluster-mkt-mark-dimensional-light.svg": "66496cfe8dc2d6abb51c5b5a58824ca751db2de0d9a65be621f083bc075b11a1",
+    "cluster-mkt-mark-dimensional-dark.svg": "b8c4d7a36ae24daf5bb6e785dc41d9e6c4b01649e5eb5c55959763b5faa3405b",
+    "cluster-mkt-mark-flat.svg": "2dfae7aaf3524a80fe86a56f2fb3a1fa01b866c55abf11e3faf86aa6ef8ca992",
+    "cluster-mkt-mark-monochrome-black.svg": "037232276468c91ce7bb70daac33bc615f83ee3942855d4bd7b337e074fe5850",
+    "cluster-mkt-mark-monochrome-white.svg": "b676c0856aaa5b0c2bca0a687df8519b5c2c069044fa2e40ce0605c44b703542"
+  },
+  "canonicalColors": {
+    "forest-green": "#21483A",
+    "muted-rust": "#A55D47",
+    "warm-ochre": "#C69A4A",
+    "ink-blue": "#26374A",
+    "soft-sage": "#9DAF9D",
+    "warm-ivory": "#F7F4EC",
+    "near-black": "#111210",
+    "white": "#FFFFFF"
+  },
+  "assets": [
+    {
+      "filename": "BRAND_GUIDELINES.md",
+      "assetType": "documentation",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": null,
+      "transparency": null,
+      "recommendedUsage": "Brand-system documentation.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "63e9fe5c5f704fb47a37abbce504011d32fbd93b9888334944e51c58687e52e8",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "README.md",
+      "assetType": "documentation",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": null,
+      "transparency": null,
+      "recommendedUsage": "Brand-system documentation.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "db3d7d3b2d54ee42dc39bc85fa13f42f3f2275bd66340e2e8367b28c5e7d6f91",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "brand-tokens.css",
+      "assetType": "design-tokens",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": null,
+      "transparency": null,
+      "recommendedUsage": "Implementation tokens for product interfaces.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "644a119816daaf358d52024cce901584beb02755624d9e92e09cf413ef5c6d60",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "brand-tokens.json",
+      "assetType": "manifest",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": null,
+      "transparency": null,
+      "recommendedUsage": "Cluster MKT brand-system support asset.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "856748d3865934e2de58fc5810596d7a3ae2233518b099a4e3aa67c930613e6e",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "build_brand_package.py",
+      "assetType": "tooling",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": null,
+      "transparency": null,
+      "recommendedUsage": "Cluster MKT brand-system support asset.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "7a8646b1da81b6bbbc8b8a71e534360714b04f92020b4b34809963de4962bffb",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "icons/apple-touch-icon-180.png",
+      "assetType": "raster",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "180x180",
+      "transparency": true,
+      "recommendedUsage": "Browser, operating-system, or installed-application icon.",
+      "minimumRecommendedSize": "180px",
+      "textState": "not-applicable",
+      "sha256": "0d076d4d07abe648b3fbea38e1fde0e641f7be1f222868522326c46be97fce9a",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "icons/cluster-mkt-icon-192.png",
+      "assetType": "raster",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "192x192",
+      "transparency": true,
+      "recommendedUsage": "Browser, operating-system, or installed-application icon.",
+      "minimumRecommendedSize": "192px",
+      "textState": "not-applicable",
+      "sha256": "49d5e18d76b4f467d7dcfd257a18aa801653cd0a61531a3f69dc13021cd2196c",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "icons/cluster-mkt-icon-512.png",
+      "assetType": "raster",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "512x512",
+      "transparency": true,
+      "recommendedUsage": "Browser, operating-system, or installed-application icon.",
+      "minimumRecommendedSize": "512px",
+      "textState": "not-applicable",
+      "sha256": "588bb901651eca77dd409fcfc22fa61651e6d4ef3075e49a4f0227dbd9ceaa8e",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "icons/cluster-mkt-icon-maskable-192.png",
+      "assetType": "raster",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "192x192",
+      "transparency": false,
+      "recommendedUsage": "Browser, operating-system, or installed-application icon.",
+      "minimumRecommendedSize": "192px",
+      "textState": "not-applicable",
+      "sha256": "70a2751f6647f0a922ce1b4ccf941cf67b0d62fe6810ca2feb389e62f30774e2",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "icons/cluster-mkt-icon-maskable-512.png",
+      "assetType": "raster",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "512x512",
+      "transparency": false,
+      "recommendedUsage": "Browser, operating-system, or installed-application icon.",
+      "minimumRecommendedSize": "512px",
+      "textState": "not-applicable",
+      "sha256": "622c4d49ec99962ca7d31fe41388b3876d302930eef00134d169f3e81ffc4419",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "icons/cluster-mkt-safari-pinned-tab.svg",
+      "assetType": "svg",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "0 0 1100 1100",
+      "transparency": true,
+      "recommendedUsage": "Browser, operating-system, or installed-application icon.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "9c2c6964844d393129e16d496e3e8be5a87186b7092c80b3380d7dd8cb6fa24e",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "icons/favicon-16.png",
+      "assetType": "raster",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "16x16",
+      "transparency": true,
+      "recommendedUsage": "Browser, operating-system, or installed-application icon.",
+      "minimumRecommendedSize": "16px",
+      "textState": "not-applicable",
+      "sha256": "6340367a87a3fff829a041b6fe4a839e7be8e3f0b6a79cee15d1d381d39f8f4b",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "icons/favicon-32.png",
+      "assetType": "raster",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "32x32",
+      "transparency": true,
+      "recommendedUsage": "Browser, operating-system, or installed-application icon.",
+      "minimumRecommendedSize": "32px",
+      "textState": "not-applicable",
+      "sha256": "5e1ca4dc659e3239d3126ad20a0bcb1e6dd5e70e07184ec595450115cf6879cc",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "icons/favicon-48.png",
+      "assetType": "raster",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "48x48",
+      "transparency": true,
+      "recommendedUsage": "Browser, operating-system, or installed-application icon.",
+      "minimumRecommendedSize": "48px",
+      "textState": "not-applicable",
+      "sha256": "a3183bed154254e425b5929b5a52a3438bb213d06b03ef0bd392c43fc630d01b",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "icons/favicon-64.png",
+      "assetType": "raster",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "64x64",
+      "transparency": true,
+      "recommendedUsage": "Browser, operating-system, or installed-application icon.",
+      "minimumRecommendedSize": "64px",
+      "textState": "not-applicable",
+      "sha256": "673beceb02cfe3c4d43dc60c63b3056fb9696cff9d0dce6d1a849c91b0e655c2",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "icons/favicon.ico",
+      "assetType": "raster",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "64x64",
+      "transparency": null,
+      "recommendedUsage": "Browser, operating-system, or installed-application icon.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "a8c2b785008c49498294b5d10d848b737e4d6a0943141aa769aca669ce9c5590",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "icons/site.webmanifest",
+      "assetType": "manifest",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": null,
+      "transparency": null,
+      "recommendedUsage": "Cluster MKT brand-system support asset.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "9bca92f518f393c81c558caf6d19a8f9e3601725b648a379b8b9f7aafc23a761",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "motion/cluster-mkt-logo-convergence-demo.html",
+      "assetType": "prototype",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": null,
+      "transparency": null,
+      "recommendedUsage": "Cluster MKT brand-system support asset.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "1ac38d07293282892a7de15ff109da738f4746e77b21ed427225cc283cad9c25",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "motion/cluster-mkt-motion-spec.md",
+      "assetType": "documentation",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": null,
+      "transparency": null,
+      "recommendedUsage": "Brand-system documentation.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "69b804ba7ec1f050c3d22f61f510890584e5e65ed8bbf2e7e9eac69db34e83cf",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "motion/cluster-mkt-motion-tokens.css",
+      "assetType": "design-tokens",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": null,
+      "transparency": null,
+      "recommendedUsage": "Implementation tokens for product interfaces.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "7ea764f8e483f934e51de14305ba40b3d6de0d6ed8b36a4775132dd860c458e6",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "png/cluster-mkt-lockup-horizontal-dark-2048.png",
+      "assetType": "raster",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "2048x683",
+      "transparency": true,
+      "recommendedUsage": "Primary navigation, masthead, partnership, and wide-format branding.",
+      "minimumRecommendedSize": "140px width",
+      "textState": "outlined",
+      "sha256": "60731656aee8bfed0e34e458e24db34750e15d54d7db564a6d030b4958557931",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "png/cluster-mkt-lockup-horizontal-dark-tm-2048.png",
+      "assetType": "raster",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "2048x683",
+      "transparency": true,
+      "recommendedUsage": "Primary navigation, masthead, partnership, and wide-format branding.",
+      "minimumRecommendedSize": "140px width",
+      "textState": "outlined",
+      "sha256": "9b0fccab8061cc340df46768ec9bca845d0740deef704f70b647fd5c105864f4",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "png/cluster-mkt-lockup-horizontal-light-2048.png",
+      "assetType": "raster",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "2048x683",
+      "transparency": true,
+      "recommendedUsage": "Primary navigation, masthead, partnership, and wide-format branding.",
+      "minimumRecommendedSize": "140px width",
+      "textState": "outlined",
+      "sha256": "dfabb60c2b172669db95b1eb0a8457bc2d938d0da1ea8877142a112cffd07d28",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "png/cluster-mkt-lockup-horizontal-light-tm-2048.png",
+      "assetType": "raster",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "2048x683",
+      "transparency": true,
+      "recommendedUsage": "Primary navigation, masthead, partnership, and wide-format branding.",
+      "minimumRecommendedSize": "140px width",
+      "textState": "outlined",
+      "sha256": "1f06ad2dfce2e5f9225f2bd4e9c493b879b9059d763ca59b2c463fa948d4ac94",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "png/cluster-mkt-lockup-stacked-dark-2048.png",
+      "assetType": "raster",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "2048x2048",
+      "transparency": true,
+      "recommendedUsage": "Login, splash, onboarding, and square-format branding.",
+      "minimumRecommendedSize": null,
+      "textState": "outlined",
+      "sha256": "5033760aac08e4253189a484ade262c37de3348932018726e6f1c2293bbe1436",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "png/cluster-mkt-lockup-stacked-light-2048.png",
+      "assetType": "raster",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "2048x2048",
+      "transparency": true,
+      "recommendedUsage": "Login, splash, onboarding, and square-format branding.",
+      "minimumRecommendedSize": null,
+      "textState": "outlined",
+      "sha256": "caf04864b4ed5f75d52e6b12db39d12cae911792d4269cbacc91f710b0d6689f",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "png/cluster-mkt-tagline-lockup-horizontal-dark-2048.png",
+      "assetType": "raster",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "2048x652",
+      "transparency": true,
+      "recommendedUsage": "Marketing placement where the brand promise should be stated.",
+      "minimumRecommendedSize": "280px width",
+      "textState": "outlined",
+      "sha256": "2f85332530322696b0f75695a9e67cd88c01e988859065727a6e2bb6057a2b52",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "png/cluster-mkt-tagline-lockup-horizontal-light-2048.png",
+      "assetType": "raster",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "2048x652",
+      "transparency": true,
+      "recommendedUsage": "Marketing placement where the brand promise should be stated.",
+      "minimumRecommendedSize": "280px width",
+      "textState": "outlined",
+      "sha256": "22f6174910a446979a3eb5e703418052262a71a17464a7e55d833c1c6bd0ba7e",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "png/cluster-mkt-tagline-lockup-stacked-dark-2048.png",
+      "assetType": "raster",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "2048x2048",
+      "transparency": true,
+      "recommendedUsage": "Marketing placement where the brand promise should be stated.",
+      "minimumRecommendedSize": "280px width",
+      "textState": "outlined",
+      "sha256": "3e2d37c73e19f94694eb4e36e45535065a762f9cc61c392f96e460e258c0a1db",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "png/cluster-mkt-tagline-lockup-stacked-light-2048.png",
+      "assetType": "raster",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "2048x2048",
+      "transparency": true,
+      "recommendedUsage": "Marketing placement where the brand promise should be stated.",
+      "minimumRecommendedSize": "280px width",
+      "textState": "outlined",
+      "sha256": "1fa81069a1b594e48ed4752df71b46599e050437aab3b5af1dab7cfb4924919e",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "previews/cluster-mkt-brand-sheet-dark.png",
+      "assetType": "raster",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "1600x1200",
+      "transparency": false,
+      "recommendedUsage": "Validation-only visual regression preview; not a production logo asset.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "3bf2b0c3911922145186f912966e996eb6110734b4c2a2d614bded58fe52ebf6",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "previews/cluster-mkt-brand-sheet-light.png",
+      "assetType": "raster",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "1600x1200",
+      "transparency": false,
+      "recommendedUsage": "Validation-only visual regression preview; not a production logo asset.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "f8edab644fc7e378b5ff8ee550a220292456154028e90b1324d1cd03ad204374",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "previews/cluster-mkt-edition-palette-preview.png",
+      "assetType": "raster",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "1600x1000",
+      "transparency": false,
+      "recommendedUsage": "Validation-only visual regression preview; not a production logo asset.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "ba5edc725e4c34e3723ffec414f20f7fa60f2c1437d3fe9d138a85c061f894e8",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "previews/cluster-mkt-icon-size-test.png",
+      "assetType": "raster",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "1600x720",
+      "transparency": false,
+      "recommendedUsage": "Browser, operating-system, or installed-application icon.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "cc1ef2ef5559a3bd5d460dc55c89d0898cb70be4c8352f48473bee9a5dd611a1",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "previews/cluster-mkt-lockup-preview.png",
+      "assetType": "raster",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "1800x1400",
+      "transparency": false,
+      "recommendedUsage": "Validation-only visual regression preview; not a production logo asset.",
+      "minimumRecommendedSize": null,
+      "textState": "outlined",
+      "sha256": "48cef6ead62f09204f4df0d10be7a173e7b21314b931a7ea8aec9b8b05858a0b",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "social/cluster-mkt-og-dark-1200x630.png",
+      "assetType": "raster",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "1200x630",
+      "transparency": false,
+      "recommendedUsage": "Social profile, sharing, or banner placement.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "12ca923a77dae151270f9ef09d94a73a1cb39d2fa17681f59568fb0e38648ae7",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "social/cluster-mkt-og-default-1200x630.png",
+      "assetType": "raster",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "1200x630",
+      "transparency": false,
+      "recommendedUsage": "Social profile, sharing, or banner placement.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "3efaf81513e15a9ffac5c1261f860a1e0a6625d283e518e0c029275b9c1ccddf",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "social/cluster-mkt-og-light-1200x630.png",
+      "assetType": "raster",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "1200x630",
+      "transparency": false,
+      "recommendedUsage": "Social profile, sharing, or banner placement.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "1811165f77be804adb3a9be6ccbd4835ed7cf3afb05e0a97dfd53354b9d9bd3b",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "social/cluster-mkt-profile-dark-1080.png",
+      "assetType": "raster",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "1080x1080",
+      "transparency": false,
+      "recommendedUsage": "Social profile, sharing, or banner placement.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "0849bc1718f59e0091f8fe0bf4b87d4de5ab9725a4132968dacddcc40a03a8bb",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "social/cluster-mkt-profile-light-1080.png",
+      "assetType": "raster",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "1080x1080",
+      "transparency": false,
+      "recommendedUsage": "Social profile, sharing, or banner placement.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "a137bb681628762228b259d6aa0cbd01166f231ba10be833d2d44df3f5dc91bc",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "social/cluster-mkt-social-banner-dark-1500x500.png",
+      "assetType": "raster",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "1500x500",
+      "transparency": false,
+      "recommendedUsage": "Social profile, sharing, or banner placement.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "94026e08a09b0579a6a8ce2ab7f724fff19dc5ddfa2f104518cee7c0da329bc0",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "social/cluster-mkt-social-banner-light-1500x500.png",
+      "assetType": "raster",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "1500x500",
+      "transparency": false,
+      "recommendedUsage": "Social profile, sharing, or banner placement.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "af8e1e75657cea4ed8a509f3b7eaf78966dcd70f2ab1fd6691afe2e56aa4925c",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "source/README.md",
+      "assetType": "documentation",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": null,
+      "transparency": null,
+      "recommendedUsage": "Brand-system documentation.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "da1e7bf85a47c56dc31e15a2e8eab6f34c341f9be51f4d1b07b990b0bf1d766f",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "source/locked-masters/cluster-mkt-mark-dimensional-dark.svg",
+      "assetType": "svg",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "0 0 1100 1100",
+      "transparency": true,
+      "recommendedUsage": "Cluster MKT brand-system support asset.",
+      "minimumRecommendedSize": "48px",
+      "textState": "not-applicable",
+      "sha256": "b8c4d7a36ae24daf5bb6e785dc41d9e6c4b01649e5eb5c55959763b5faa3405b",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "source/locked-masters/cluster-mkt-mark-dimensional-light.svg",
+      "assetType": "svg",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "0 0 1100 1100",
+      "transparency": true,
+      "recommendedUsage": "Cluster MKT brand-system support asset.",
+      "minimumRecommendedSize": "48px",
+      "textState": "not-applicable",
+      "sha256": "66496cfe8dc2d6abb51c5b5a58824ca751db2de0d9a65be621f083bc075b11a1",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "source/locked-masters/cluster-mkt-mark-flat.svg",
+      "assetType": "svg",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "0 0 1100 1100",
+      "transparency": true,
+      "recommendedUsage": "Cluster MKT brand-system support asset.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "2dfae7aaf3524a80fe86a56f2fb3a1fa01b866c55abf11e3faf86aa6ef8ca992",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "source/locked-masters/cluster-mkt-mark-monochrome-black.svg",
+      "assetType": "svg",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "0 0 1100 1100",
+      "transparency": true,
+      "recommendedUsage": "Cluster MKT brand-system support asset.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "037232276468c91ce7bb70daac33bc615f83ee3942855d4bd7b337e074fe5850",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "source/locked-masters/cluster-mkt-mark-monochrome-white.svg",
+      "assetType": "svg",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "0 0 1100 1100",
+      "transparency": true,
+      "recommendedUsage": "Cluster MKT brand-system support asset.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "b676c0856aaa5b0c2bca0a687df8519b5c2c069044fa2e40ce0605c44b703542",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "source/original-validation/cluster-mkt-asset-validation-report.json",
+      "assetType": "manifest",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": null,
+      "transparency": null,
+      "recommendedUsage": "Cluster MKT brand-system support asset.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "696007a93601a45030a5b406c93a3ad5104510cdceb03c9b7635f98b00894b1e",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "source/original-validation/cluster-mkt-assets-manifest.md",
+      "assetType": "documentation",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": null,
+      "transparency": null,
+      "recommendedUsage": "Brand-system documentation.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "098a4ae50236adde3a60993ad8d091df8213191579c022201b50cced9a238b64",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "source/original-validation/export_and_validate_cluster_mkt_assets.py",
+      "assetType": "tooling",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": null,
+      "transparency": null,
+      "recommendedUsage": "Cluster MKT brand-system support asset.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "64755961072e1aaaece1de65963878318b9b27a1dd87b4c1006709b3d7100c63",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "source/reference-exports/cluster-mkt-mark-dimensional-dark-2048.png",
+      "assetType": "raster",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "2048x2048",
+      "transparency": true,
+      "recommendedUsage": "Cluster MKT brand-system support asset.",
+      "minimumRecommendedSize": "48px",
+      "textState": "not-applicable",
+      "sha256": "f233ecfc084197078b6567b40c10eac29a6519cb17cfaaa7bacb5e7fa311c356",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "source/reference-exports/cluster-mkt-mark-dimensional-light-2048.png",
+      "assetType": "raster",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "2048x2048",
+      "transparency": true,
+      "recommendedUsage": "Cluster MKT brand-system support asset.",
+      "minimumRecommendedSize": "48px",
+      "textState": "not-applicable",
+      "sha256": "9ba153c47a30b8d47191accb3c89fbc35ea86b50a32ea397a1ac565e276cb6ea",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "source/reference-exports/cluster-mkt-mark-flat-1024.png",
+      "assetType": "raster",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "1024x1024",
+      "transparency": true,
+      "recommendedUsage": "Cluster MKT brand-system support asset.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "cb1a17d1cb7a5f3a0ef84e191868607b1fe6d8e191bef007bb711c5a608e9cea",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "source/reference-exports/cluster-mkt-mark-monochrome-black-1024.png",
+      "assetType": "raster",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "1024x1024",
+      "transparency": true,
+      "recommendedUsage": "Cluster MKT brand-system support asset.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "90cb5423e0eee69b618351ea0d0ed6a781cd5ab817191879423ea15b6d6fc14a",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "source/reference-exports/cluster-mkt-mark-monochrome-white-1024.png",
+      "assetType": "raster",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": "1024x1024",
+      "transparency": true,
+      "recommendedUsage": "Cluster MKT brand-system support asset.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "d564b61e87d8d5afdddb6b2969391aba858a7b0dd2e20226568fd8ab51367bc8",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "svg/cluster-mkt-lockup-horizontal-dark-tm.svg",
+      "assetType": "svg",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "0 0 1800 600",
+      "transparency": true,
+      "recommendedUsage": "Primary navigation, masthead, partnership, and wide-format branding.",
+      "minimumRecommendedSize": "140px width",
+      "textState": "outlined",
+      "sha256": "49a3711e74914ff743edb13874240ec3f951c0018db093d7efbdc0b42524837b",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "svg/cluster-mkt-lockup-horizontal-dark.svg",
+      "assetType": "svg",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "0 0 1800 600",
+      "transparency": true,
+      "recommendedUsage": "Primary navigation, masthead, partnership, and wide-format branding.",
+      "minimumRecommendedSize": "140px width",
+      "textState": "outlined",
+      "sha256": "b8705cd0d6a37b523b8dce55132fd0bc82f09f4a8617c5740698bcdcb6772fc7",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "svg/cluster-mkt-lockup-horizontal-light-tm.svg",
+      "assetType": "svg",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "0 0 1800 600",
+      "transparency": true,
+      "recommendedUsage": "Primary navigation, masthead, partnership, and wide-format branding.",
+      "minimumRecommendedSize": "140px width",
+      "textState": "outlined",
+      "sha256": "4ae9efc22c327a3e28debcd5a5188fdec4613dda4bec97e0a2740595ee54e52c",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "svg/cluster-mkt-lockup-horizontal-light.svg",
+      "assetType": "svg",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "0 0 1800 600",
+      "transparency": true,
+      "recommendedUsage": "Primary navigation, masthead, partnership, and wide-format branding.",
+      "minimumRecommendedSize": "140px width",
+      "textState": "outlined",
+      "sha256": "e7aed412d01e9e92117eb6c5ea6ff9f1e438369832075985ca5882b450b1a76c",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "svg/cluster-mkt-lockup-stacked-dark-tm.svg",
+      "assetType": "svg",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "0 0 1200 1200",
+      "transparency": true,
+      "recommendedUsage": "Login, splash, onboarding, and square-format branding.",
+      "minimumRecommendedSize": null,
+      "textState": "outlined",
+      "sha256": "fc610fb59129e99f7fb444a9c49776e7da3152ea79e9a4feaa0ede91f532e570",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "svg/cluster-mkt-lockup-stacked-dark.svg",
+      "assetType": "svg",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "0 0 1200 1200",
+      "transparency": true,
+      "recommendedUsage": "Login, splash, onboarding, and square-format branding.",
+      "minimumRecommendedSize": null,
+      "textState": "outlined",
+      "sha256": "a7939c2c6abb9c23a0bda285a6a95d2c3b7cb95c6f01d3509dbd2f3190941221",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "svg/cluster-mkt-lockup-stacked-light-tm.svg",
+      "assetType": "svg",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "0 0 1200 1200",
+      "transparency": true,
+      "recommendedUsage": "Login, splash, onboarding, and square-format branding.",
+      "minimumRecommendedSize": null,
+      "textState": "outlined",
+      "sha256": "d452302f1ca6d0707574ff7cf9408e6666c8c4ac488dbe6a73c0721ff08d6a25",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "svg/cluster-mkt-lockup-stacked-light.svg",
+      "assetType": "svg",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "0 0 1200 1200",
+      "transparency": true,
+      "recommendedUsage": "Login, splash, onboarding, and square-format branding.",
+      "minimumRecommendedSize": null,
+      "textState": "outlined",
+      "sha256": "6c91a794a02a63a0119c477790815627ccd72608718ffbcffe9d95fcc04fc77e",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "svg/cluster-mkt-tagline-lockup-horizontal-dark.svg",
+      "assetType": "svg",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "0 0 2200 700",
+      "transparency": true,
+      "recommendedUsage": "Marketing placement where the brand promise should be stated.",
+      "minimumRecommendedSize": "280px width",
+      "textState": "outlined",
+      "sha256": "f6477d8e20606bf5ba68286c04dd2041dc3eed5b607706bff875c98b4c4ef197",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "svg/cluster-mkt-tagline-lockup-horizontal-light.svg",
+      "assetType": "svg",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "0 0 2200 700",
+      "transparency": true,
+      "recommendedUsage": "Marketing placement where the brand promise should be stated.",
+      "minimumRecommendedSize": "280px width",
+      "textState": "outlined",
+      "sha256": "1fde8f84b5a2320fd4e6bd8a97041bb653b137d6d019df3af84eb69cfe2f7e95",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "svg/cluster-mkt-tagline-lockup-stacked-dark.svg",
+      "assetType": "svg",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "0 0 1200 1400",
+      "transparency": true,
+      "recommendedUsage": "Marketing placement where the brand promise should be stated.",
+      "minimumRecommendedSize": "280px width",
+      "textState": "outlined",
+      "sha256": "8b4d078713072f84c432ce4c637d8bcc9bc7446a853a9c5e2d3f35f2141b0c92",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "svg/cluster-mkt-tagline-lockup-stacked-light.svg",
+      "assetType": "svg",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "0 0 1200 1400",
+      "transparency": true,
+      "recommendedUsage": "Marketing placement where the brand promise should be stated.",
+      "minimumRecommendedSize": "280px width",
+      "textState": "outlined",
+      "sha256": "eabe7cb3d4a255c892698e63242718c683b6bb45edd8f62ecdb30d0eaf6475b3",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "svg/cluster-mkt-wordmark-dark-outlined.svg",
+      "assetType": "svg",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "0 0 900 180",
+      "transparency": true,
+      "recommendedUsage": "Standalone Cluster MKT wordmark.",
+      "minimumRecommendedSize": "120px width",
+      "textState": "outlined",
+      "sha256": "e794a4e23015a1c918f0a5814b4cfc62a65d0934493e0671520b5810ffd3691d",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "svg/cluster-mkt-wordmark-dark-text.svg",
+      "assetType": "svg",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "0 0 900 180",
+      "transparency": true,
+      "recommendedUsage": "Standalone Cluster MKT wordmark.",
+      "minimumRecommendedSize": "120px width",
+      "textState": "editable",
+      "sha256": "10e6db4a1465d0dd79d1e0a1b8f2928e4a1c19fe248918b7c5cc115b0aeed4bb",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "svg/cluster-mkt-wordmark-dark-tm-outlined.svg",
+      "assetType": "svg",
+      "variant": "dark",
+      "intendedBackground": "dark",
+      "dimensionsOrViewBox": "0 0 900 180",
+      "transparency": true,
+      "recommendedUsage": "Standalone Cluster MKT wordmark.",
+      "minimumRecommendedSize": "120px width",
+      "textState": "outlined",
+      "sha256": "1229401b6a21dd70209bc375069e25b306e3d393e7d2b747f3a1360af9044af0",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "svg/cluster-mkt-wordmark-light-outlined.svg",
+      "assetType": "svg",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "0 0 900 180",
+      "transparency": true,
+      "recommendedUsage": "Standalone Cluster MKT wordmark.",
+      "minimumRecommendedSize": "120px width",
+      "textState": "outlined",
+      "sha256": "cdf60b0b5c0a2425fdf2519add625c79495e99a5193ad01ed0cd39cf7afd2d42",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "svg/cluster-mkt-wordmark-light-text.svg",
+      "assetType": "svg",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "0 0 900 180",
+      "transparency": true,
+      "recommendedUsage": "Standalone Cluster MKT wordmark.",
+      "minimumRecommendedSize": "120px width",
+      "textState": "editable",
+      "sha256": "6f2bb12a90cfdc103f1150d4cf18121830bbd8249f3baf164971706a912e886e",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "svg/cluster-mkt-wordmark-light-tm-outlined.svg",
+      "assetType": "svg",
+      "variant": "light",
+      "intendedBackground": "light",
+      "dimensionsOrViewBox": "0 0 900 180",
+      "transparency": true,
+      "recommendedUsage": "Standalone Cluster MKT wordmark.",
+      "minimumRecommendedSize": "120px width",
+      "textState": "outlined",
+      "sha256": "231fa62afe4bd96fafc432534cf2a463c0d56c0a5af543ae2a360e4c93109a0d",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    },
+    {
+      "filename": "validation/validate_cluster_mkt_brand_package.py",
+      "assetType": "tooling",
+      "variant": "neutral",
+      "intendedBackground": "context-dependent",
+      "dimensionsOrViewBox": null,
+      "transparency": null,
+      "recommendedUsage": "Cluster MKT brand-system support asset.",
+      "minimumRecommendedSize": null,
+      "textState": "not-applicable",
+      "sha256": "53741783fca0ebf2349a46bf3c91839041618ee4bcfcfceea31281e9e862fca1",
+      "validationRequirements": [
+        "filename and dimensions match manifest",
+        "no raster embedding in production SVG",
+        "contrast and transparency appropriate to intended background"
+      ]
+    }
+  ]
+}

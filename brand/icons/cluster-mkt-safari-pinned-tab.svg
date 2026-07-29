@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100" role="img" aria-labelledby="cluster-mkt-safari-pinned-tab-icon-title cluster-mkt-safari-pinned-tab-icon-description">
+  <title id="cluster-mkt-safari-pinned-tab-icon-title">Cluster MKT Safari pinned tab icon</title>
+  <desc id="cluster-mkt-safari-pinned-tab-icon-description">Solid monochrome Cluster MKT silhouette for Safari pinned tabs.</desc>
+  <circle id="safari-pinned-sphere-rear-top-rust" cx="715" cy="185" r="115" fill="#000000"/>
+  <circle id="safari-pinned-sphere-back-left-rust" cx="278" cy="557" r="194" fill="#000000"/>
+  <circle id="safari-pinned-sphere-back-right-sage" cx="819" cy="707" r="196" fill="#000000"/>
+  <circle id="safari-pinned-sphere-upper-forest" cx="440" cy="299" r="231" fill="#000000"/>
+  <circle id="safari-pinned-sphere-right-rust" cx="823" cy="419" r="197" fill="#000000"/>
+  <circle id="safari-pinned-sphere-small-left-sage" cx="224" cy="756" r="95" fill="#000000"/>
+  <circle id="safari-pinned-sphere-front-ink" cx="528" cy="782" r="241" fill="#000000"/>
+  <circle id="safari-pinned-sphere-front-ochre" cx="628" cy="536" r="168" fill="#000000"/>
+</svg>

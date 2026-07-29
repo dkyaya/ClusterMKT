@@ -1,0 +1,73 @@
+{
+  "package": "Cluster MKT™ Full Brand Package",
+  "status": "PASS",
+  "summary": {
+    "checks": 11,
+    "passed": 11,
+    "failed": 0
+  },
+  "lockedMasterHashes": {
+    "cluster-mkt-mark-dimensional-light.svg": "66496cfe8dc2d6abb51c5b5a58824ca751db2de0d9a65be621f083bc075b11a1",
+    "cluster-mkt-mark-dimensional-dark.svg": "b8c4d7a36ae24daf5bb6e785dc41d9e6c4b01649e5eb5c55959763b5faa3405b",
+    "cluster-mkt-mark-flat.svg": "2dfae7aaf3524a80fe86a56f2fb3a1fa01b866c55abf11e3faf86aa6ef8ca992",
+    "cluster-mkt-mark-monochrome-black.svg": "037232276468c91ce7bb70daac33bc615f83ee3942855d4bd7b337e074fe5850",
+    "cluster-mkt-mark-monochrome-white.svg": "b676c0856aaa5b0c2bca0a687df8519b5c2c069044fa2e40ce0605c44b703542"
+  },
+  "checks": [
+    {
+      "name": "Required filenames",
+      "status": "PASS",
+      "detail": "All required files exist."
+    },
+    {
+      "name": "Locked master integrity",
+      "status": "PASS",
+      "detail": "All five masters retain their original SHA-256 hashes."
+    },
+    {
+      "name": "SVG safety and structure",
+      "status": "PASS",
+      "detail": "Validated 19 production SVGs."
+    },
+    {
+      "name": "Shared locked sphere geometry",
+      "status": "PASS",
+      "detail": "Every logo lockup and Safari derivative preserves the eight-sphere geometry and order."
+    },
+    {
+      "name": "Wordmark and trademark variants",
+      "status": "PASS",
+      "detail": "Editable and outlined wordmarks exist; trademark outlines occur only in designated SVG variants; no registered-mark glyph appears."
+    },
+    {
+      "name": "PNG dimensions, modes, transparency, and cropping",
+      "status": "PASS",
+      "detail": "Validated 31 PNG files."
+    },
+    {
+      "name": "Icon sizes, legibility, centering, and maskable safe area",
+      "status": "PASS",
+      "detail": "All requested icon sizes are centered consistently; maskable marks remain inside the safe area; favicon bundle is complete."
+    },
+    {
+      "name": "Semantic tokens and WCAG contrast",
+      "status": "PASS",
+      "detail": "Validated semantic and edition tokens; lowest tested contrast 3.15:1 at the appropriate 3:1 or 4.5:1 threshold."
+    },
+    {
+      "name": "Validated minimum-size renders",
+      "status": "PASS",
+      "detail": "Dimensional 48px, flat 16px, horizontal 140px, and tagline 280px minimums render with opaque interiors, antialiased edges, and no cropping."
+    },
+    {
+      "name": "Motion accessibility and visual regression previews",
+      "status": "PASS",
+      "detail": "Reduced-motion support exists; no autoplay media exists; all five required previews exist, with checkerboard use confined to validation previews."
+    },
+    {
+      "name": "Machine-readable asset manifest",
+      "status": "PASS",
+      "detail": "Validated 75 manifest entries and SHA-256 checksums."
+    }
+  ]
+}

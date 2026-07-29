@@ -1,0 +1,19 @@
+{
+  "name": "@cluster-mkt/worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "WRANGLER_SEND_METRICS=false wrangler dev",
+    "build": "WRANGLER_SEND_METRICS=false wrangler deploy --dry-run --outdir dist",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "@cluster-mkt/config": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.18",
+    "wrangler": "^4.59.1"
+  }
+}

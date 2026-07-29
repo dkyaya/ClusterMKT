@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100" role="img" aria-labelledby="cluster-mkt-flat-title cluster-mkt-flat-description">
+  <title id="cluster-mkt-flat-title">Cluster MKT flat mark</title>
+  <desc id="cluster-mkt-flat-description">Eight solid overlapping spheres in forest green, muted rust, warm ochre, dark ink blue, and soft sage.</desc>
+  <circle id="sphere-flat-rear-top-rust" data-sphere="rear-top-rust" data-stack="1" cx="715" cy="185" r="115" fill="#9F5948"/>
+  <circle id="sphere-flat-back-left-rust" data-sphere="back-left-rust" data-stack="2" cx="278" cy="557" r="194" fill="#934733"/>
+  <circle id="sphere-flat-back-right-sage" data-sphere="back-right-sage" data-stack="3" cx="819" cy="707" r="196" fill="#AAB8A3"/>
+  <circle id="sphere-flat-upper-forest" data-sphere="upper-forest" data-stack="4" cx="440" cy="299" r="231" fill="#244E3F"/>
+  <circle id="sphere-flat-right-rust" data-sphere="right-rust" data-stack="5" cx="823" cy="419" r="197" fill="#AD5946"/>
+  <circle id="sphere-flat-small-left-sage" data-sphere="small-left-sage" data-stack="6" cx="224" cy="756" r="95" fill="#96A992"/>
+  <circle id="sphere-flat-front-ink" data-sphere="front-ink" data-stack="7" cx="528" cy="782" r="241" fill="#303D57"/>
+  <circle id="sphere-flat-front-ochre" data-sphere="front-ochre" data-stack="8" cx="628" cy="536" r="168" fill="#D09A47"/>
+</svg>

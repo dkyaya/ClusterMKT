@@ -1,0 +1,33 @@
+/* Cluster MKT motion tokens */
+:root {
+  --motion-interface-fast: 180ms;
+  --motion-interface-default: 220ms;
+  --motion-interface-slow: 260ms;
+  --motion-logo-convergence: 420ms;
+  --motion-edition-transition: 600ms;
+  --ease-cluster-settle: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-interface: cubic-bezier(0.2, 0, 0, 1);
+}
+
+.edition-transition {
+  transition-duration: var(--motion-edition-transition);
+  transition-property: background-color, border-color, color;
+  transition-timing-function: var(--ease-interface);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-interface-fast: 1ms;
+    --motion-interface-default: 1ms;
+    --motion-interface-slow: 1ms;
+    --motion-logo-convergence: 1ms;
+    --motion-edition-transition: 1ms;
+  }
+
+  *, *::before, *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+}

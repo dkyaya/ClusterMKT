@@ -1,0 +1,194 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "name": "Cluster MKT brand tokens",
+  "core": {
+    "color": {
+      "forest-green": {
+        "value": "#21483A",
+        "type": "color"
+      },
+      "muted-rust": {
+        "value": "#A55D47",
+        "type": "color"
+      },
+      "warm-ochre": {
+        "value": "#C69A4A",
+        "type": "color"
+      },
+      "ink-blue": {
+        "value": "#26374A",
+        "type": "color"
+      },
+      "soft-sage": {
+        "value": "#9DAF9D",
+        "type": "color"
+      },
+      "warm-ivory": {
+        "value": "#F7F4EC",
+        "type": "color"
+      },
+      "near-black": {
+        "value": "#111210",
+        "type": "color"
+      },
+      "white": {
+        "value": "#FFFFFF",
+        "type": "color"
+      }
+    },
+    "supporting": {
+      "ivory-raised": {
+        "value": "#FBFAF6",
+        "type": "color"
+      },
+      "ivory-muted": {
+        "value": "#EEEAE0",
+        "type": "color"
+      },
+      "border-warm": {
+        "value": "#D7D1C5",
+        "type": "color"
+      },
+      "text-muted-light": {
+        "value": "#51544E",
+        "type": "color"
+      },
+      "text-muted-dark": {
+        "value": "#C9C6BD",
+        "type": "color"
+      },
+      "forest-lift": {
+        "value": "#789689",
+        "type": "color"
+      },
+      "rust-light": {
+        "value": "#D08A72",
+        "type": "color"
+      },
+      "ink-light": {
+        "value": "#9AA9BD",
+        "type": "color"
+      },
+      "ochre-dim": {
+        "value": "#9F7C3D",
+        "type": "color"
+      },
+      "dusky-neutral": {
+        "value": "#202629",
+        "type": "color"
+      }
+    }
+  },
+  "typography": {
+    "font-editorial": {
+      "value": "\"Newsreader\", \"Source Serif 4\", Georgia, serif",
+      "type": "fontFamily",
+      "status": "provisional"
+    },
+    "font-interface": {
+      "value": "\"DM Sans\", Inter, Arial, sans-serif",
+      "type": "fontFamily"
+    },
+    "font-numeric": {
+      "value": "\"DM Sans\", Inter, Arial, sans-serif",
+      "type": "fontFamily",
+      "features": [
+        "tabular-nums"
+      ]
+    }
+  },
+  "semantic": {
+    "light": {
+      "color-page-background": "#F7F4EC",
+      "color-surface-primary": "#FFFFFF",
+      "color-surface-secondary": "#EEEAE0",
+      "color-text-primary": "#111210",
+      "color-text-secondary": "#51544E",
+      "color-border-subtle": "#D7D1C5",
+      "color-accent-primary": "#21483A",
+      "color-accent-secondary": "#A55D47",
+      "color-edition-wash": "#E4ECE6",
+      "color-audio-progress": "#21483A",
+      "color-positive": "#2F6A4F",
+      "color-negative": "#98483D",
+      "color-caution": "#76561C"
+    },
+    "dark": {
+      "color-page-background": "#111210",
+      "color-surface-primary": "#1B1D1A",
+      "color-surface-secondary": "#252925",
+      "color-text-primary": "#F7F4EC",
+      "color-text-secondary": "#C9C6BD",
+      "color-border-subtle": "#3D423C",
+      "color-accent-primary": "#9DAF9D",
+      "color-accent-secondary": "#D08A72",
+      "color-edition-wash": "#1B2925",
+      "color-audio-progress": "#C69A4A",
+      "color-positive": "#8FC3A3",
+      "color-negative": "#E0A095",
+      "color-caution": "#DAB66A"
+    }
+  },
+  "editions": {
+    "morning": {
+      "period-et": "06:00–11:59",
+      "mood": [
+        "warm",
+        "fresh",
+        "anticipatory"
+      ],
+      "light": {
+        "color-edition-wash": "#F3E7C8",
+        "color-accent-primary": "#21483A",
+        "color-accent-secondary": "#9F7C3D",
+        "color-audio-progress": "#A55D47"
+      },
+      "dark": {
+        "color-edition-wash": "#2B261D",
+        "color-accent-primary": "#C6A85E",
+        "color-accent-secondary": "#D08A72",
+        "color-audio-progress": "#C6A85E"
+      }
+    },
+    "midday": {
+      "period-et": "12:00–17:59",
+      "mood": [
+        "clear",
+        "bright",
+        "active"
+      ],
+      "light": {
+        "color-edition-wash": "#E4ECE6",
+        "color-accent-primary": "#21483A",
+        "color-accent-secondary": "#26374A",
+        "color-audio-progress": "#21483A"
+      },
+      "dark": {
+        "color-edition-wash": "#1B2925",
+        "color-accent-primary": "#9DAF9D",
+        "color-accent-secondary": "#9AA9BD",
+        "color-audio-progress": "#9DAF9D"
+      }
+    },
+    "closing": {
+      "period-et": "18:00–05:59",
+      "mood": [
+        "reflective",
+        "settled",
+        "analytical"
+      ],
+      "light": {
+        "color-edition-wash": "#E5E1DC",
+        "color-accent-primary": "#26374A",
+        "color-accent-secondary": "#A55D47",
+        "color-audio-progress": "#9F7C3D"
+      },
+      "dark": {
+        "color-edition-wash": "#20242B",
+        "color-accent-primary": "#9AA9BD",
+        "color-accent-secondary": "#D08A72",
+        "color-audio-progress": "#B18C48"
+      }
+    }
+  }
+}

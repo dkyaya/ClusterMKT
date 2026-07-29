@@ -1,0 +1,29 @@
+.app-shell[data-edition="morning"] {
+  --edition-detail: var(--color-warm-ochre);
+}
+.app-shell[data-edition="midday"] {
+  --edition-detail: var(--color-forest-green);
+}
+.app-shell[data-edition="closing"] {
+  --edition-detail: var(--color-ink-blue);
+}
+.app-shell[data-edition] .edition-header {
+  border-top: 3px solid var(--edition-detail);
+}
+@media (prefers-color-scheme: dark) {
+  .app-shell[data-edition="morning"] {
+    --color-edition-wash: #2b261d;
+    --color-accent-primary: #c6a85e;
+    --color-audio-progress: #c6a85e;
+  }
+  .app-shell[data-edition="midday"] {
+    --color-edition-wash: #1b2925;
+    --color-accent-primary: #9daf9d;
+    --color-audio-progress: #9daf9d;
+  }
+  .app-shell[data-edition="closing"] {
+    --color-edition-wash: #20242b;
+    --color-accent-primary: #9aa9bd;
+    --color-audio-progress: #b18c48;
+  }
+}

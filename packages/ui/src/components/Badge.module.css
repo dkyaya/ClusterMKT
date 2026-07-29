@@ -1,0 +1,22 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  font: 700 0.7rem/1 var(--font-interface);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.neutral {
+  color: var(--color-text-secondary);
+  background: var(--color-surface-secondary);
+}
+.accent {
+  color: var(--color-accent-primary);
+  background: color-mix(in srgb, var(--color-accent-primary) 11%, transparent);
+}
+.caution {
+  color: var(--color-caution);
+  background: color-mix(in srgb, var(--color-warm-ochre) 14%, transparent);
+}

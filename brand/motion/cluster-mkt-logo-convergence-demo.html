@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cluster MKT logo convergence prototype</title>
+<link rel="stylesheet" href="cluster-mkt-motion-tokens.css">
+<style>
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #F7F4EC; color: #111210; font-family: "DM Sans", Inter, Arial, sans-serif; }
+  main { display: grid; justify-items: center; gap: 1.5rem; }
+  svg { width: min(68vw, 420px); height: auto; }
+  .sphere { transform: translate(var(--dx), var(--dy)); opacity: .72; transition: transform var(--motion-logo-convergence) var(--ease-cluster-settle), opacity var(--motion-logo-convergence) ease-out; }
+  .settled .sphere { transform: translate(0, 0); opacity: 1; }
+  button { border: 1px solid #21483A; border-radius: 999px; padding: .75rem 1.1rem; background: #21483A; color: #F7F4EC; font: inherit; cursor: pointer; }
+  @media (prefers-reduced-motion: reduce) { .sphere { transform: none; opacity: 1; } }
+</style>
+</head>
+<body>
+<main>
+  <svg id="cluster-demo" class="settled" viewBox="0 0 1100 1100" role="img" aria-label="Cluster MKT sphere convergence demonstration"><circle id="demo-rear-top-rust" class="sphere" cx="715" cy="185" r="115" fill="#9F5948" style="--dx:-120px;--dy:-80px"/><circle id="demo-back-left-rust" class="sphere" cx="278" cy="557" r="194" fill="#934733" style="--dx:-40px;--dy:-120px"/><circle id="demo-back-right-sage" class="sphere" cx="819" cy="707" r="196" fill="#AAB8A3" style="--dx:110px;--dy:70px"/><circle id="demo-upper-forest" class="sphere" cx="440" cy="299" r="231" fill="#244E3F" style="--dx:-90px;--dy:-100px"/><circle id="demo-right-rust" class="sphere" cx="823" cy="419" r="197" fill="#AD5946" style="--dx:120px;--dy:-40px"/><circle id="demo-small-left-sage" class="sphere" cx="224" cy="756" r="95" fill="#96A992" style="--dx:-110px;--dy:60px"/><circle id="demo-front-ink" class="sphere" cx="528" cy="782" r="241" fill="#303D57" style="--dx:-50px;--dy:120px"/><circle id="demo-front-ochre" class="sphere" cx="628" cy="536" r="168" fill="#D09A47" style="--dx:70px;--dy:70px"/></svg>
+  <button id="replay" type="button">Replay convergence</button>
+</main>
+<script>
+  const mark = document.querySelector('#cluster-demo');
+  document.querySelector('#replay').addEventListener('click', () => {
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    mark.classList.remove('settled');
+    requestAnimationFrame(() => requestAnimationFrame(() => mark.classList.add('settled')));
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{
+  "name": "cluster-mkt",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.26.2",
+  "engines": {
+    "node": ">=22 <26",
+    "pnpm": ">=10 <11"
+  },
+  "scripts": {
+    "predev": "pnpm assets:sync",
+    "dev": "pnpm --parallel --filter @cluster-mkt/web --filter @cluster-mkt/worker run dev",
+    "predev:web": "pnpm assets:sync",
+    "dev:web": "pnpm --filter @cluster-mkt/web dev",
+    "dev:worker": "pnpm --filter @cluster-mkt/worker dev",
+    "prebuild": "pnpm assets:sync",
+    "build": "pnpm build:web && pnpm build:worker",
+    "prebuild:web": "pnpm assets:sync",
+    "build:web": "pnpm --filter @cluster-mkt/web build",
+    "build:worker": "pnpm --filter @cluster-mkt/worker build",
+    "lint": "eslint . --max-warnings 0",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "test": "vitest --config vitest.workspace.ts",
+    "test:run": "vitest --run --config vitest.workspace.ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "brand:validate": "python brand/validation/validate_cluster_mkt_brand_package.py",
+    "assets:sync": "node scripts/sync-web-brand-assets.mjs",
+    "foundation:validate": "node scripts/validate-application-foundation.mjs",
+    "validate": "pnpm assets:sync && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test:run && pnpm build && pnpm brand:validate && pnpm foundation:validate",
+    "clean": "node scripts/clean-generated.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "^16.3.1",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.2",
+    "eslint": "^9.39.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "jsdom": "^27.3.0",
+    "prettier": "^3.7.4",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.50.1",
+    "vite": "^7.3.0",
+    "vitest": "^4.0.18",
+    "wrangler": "^4.59.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "workerd"
+    ]
+  }
+}

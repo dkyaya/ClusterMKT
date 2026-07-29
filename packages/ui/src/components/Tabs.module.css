@@ -1,0 +1,25 @@
+.list {
+  display: flex;
+  gap: 1.25rem;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+.tab {
+  padding: 0.75rem 0;
+  color: var(--color-text-secondary);
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  font: 600 0.875rem/1 var(--font-interface);
+  cursor: pointer;
+}
+.tab[aria-selected="true"] {
+  color: var(--color-text-primary);
+  border-color: var(--color-accent-primary);
+}
+.tab:focus-visible {
+  outline: 2px solid var(--color-accent-primary);
+  outline-offset: 4px;
+}
+.panel {
+  padding-top: 1.25rem;
+}

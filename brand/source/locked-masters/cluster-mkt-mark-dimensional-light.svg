@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1100" role="img" aria-labelledby="cluster-mkt-title cluster-mkt-description">
+  <title id="cluster-mkt-title">Cluster MKT dimensional light mark</title>
+  <desc id="cluster-mkt-description">Eight overlapping matte spheres in forest green, muted rust, warm ochre, dark ink blue, and soft sage.</desc>
+  <defs>
+    <radialGradient id="gradient-rear-top-rust-sphere" cx="31%" cy="25%" r="76%">
+      <stop offset="0" stop-color="#C78370"/>
+      <stop offset="0.52" stop-color="#A85F4D"/>
+      <stop offset="1" stop-color="#784033"/>
+    </radialGradient>
+    <radialGradient id="gradient-back-left-rust-sphere" cx="33%" cy="27%" r="78%">
+      <stop offset="0" stop-color="#B96B56"/>
+      <stop offset="0.56" stop-color="#954834"/>
+      <stop offset="1" stop-color="#6C3025"/>
+    </radialGradient>
+    <radialGradient id="gradient-back-right-sage-sphere" cx="32%" cy="25%" r="78%">
+      <stop offset="0" stop-color="#CBD4C2"/>
+      <stop offset="0.56" stop-color="#AAB8A3"/>
+      <stop offset="1" stop-color="#7F8E7B"/>
+    </radialGradient>
+    <radialGradient id="gradient-upper-forest-sphere" cx="32%" cy="25%" r="79%">
+      <stop offset="0" stop-color="#466B5C"/>
+      <stop offset="0.52" stop-color="#244E3F"/>
+      <stop offset="1" stop-color="#12372D"/>
+    </radialGradient>
+    <radialGradient id="gradient-right-rust-sphere" cx="33%" cy="27%" r="78%">
+      <stop offset="0" stop-color="#CA7763"/>
+      <stop offset="0.55" stop-color="#AD5946"/>
+      <stop offset="1" stop-color="#7E3E30"/>
+    </radialGradient>
+    <radialGradient id="gradient-small-left-sage-sphere" cx="31%" cy="24%" r="79%">
+      <stop offset="0" stop-color="#BCC8B7"/>
+      <stop offset="0.55" stop-color="#96A992"/>
+      <stop offset="1" stop-color="#6E806D"/>
+    </radialGradient>
+    <radialGradient id="gradient-front-ink-sphere" cx="32%" cy="25%" r="80%">
+      <stop offset="0" stop-color="#52617B"/>
+      <stop offset="0.54" stop-color="#303D57"/>
+      <stop offset="1" stop-color="#1C263A"/>
+    </radialGradient>
+    <radialGradient id="gradient-front-ochre-sphere" cx="32%" cy="24%" r="78%">
+      <stop offset="0" stop-color="#E4B76B"/>
+      <stop offset="0.55" stop-color="#D09A47"/>
+      <stop offset="1" stop-color="#9A6526"/>
+    </radialGradient>
+
+    <linearGradient id="gradient-matte-ambient-light" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.12"/>
+      <stop offset="0.46" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="1" stop-color="#07110D" stop-opacity="0.12"/>
+    </linearGradient>
+    <radialGradient id="gradient-upper-forest-matte-mask" cx="30%" cy="23%" r="68%">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.84"/>
+      <stop offset="0.58" stop-color="#FFFFFF" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gradient-front-ink-matte-mask" cx="31%" cy="24%" r="70%">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
+      <stop offset="0.6" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <mask id="mask-upper-forest-matte-light" maskUnits="userSpaceOnUse" x="209" y="68" width="462" height="462">
+      <circle cx="440" cy="299" r="231" fill="url(#gradient-upper-forest-matte-mask)"/>
+    </mask>
+    <mask id="mask-front-ink-matte-light" maskUnits="userSpaceOnUse" x="287" y="541" width="482" height="482">
+      <circle cx="528" cy="782" r="241" fill="url(#gradient-front-ink-matte-mask)"/>
+    </mask>
+
+    <clipPath id="clip-back-left-rust-contact-shadow">
+      <circle cx="278" cy="557" r="194"/>
+    </clipPath>
+    <clipPath id="clip-back-right-sage-contact-shadow">
+      <circle cx="819" cy="707" r="196"/>
+    </clipPath>
+    <clipPath id="clip-upper-forest-contact-shadow">
+      <circle cx="440" cy="299" r="231"/>
+    </clipPath>
+    <clipPath id="clip-right-rust-contact-shadow">
+      <circle cx="823" cy="419" r="197"/>
+    </clipPath>
+    <clipPath id="clip-front-ink-contact-shadow">
+      <circle cx="528" cy="782" r="241"/>
+    </clipPath>
+
+    <filter id="filter-cluster-ground-shadow-light" x="-30%" y="-50%" width="160%" height="210%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="26"/>
+    </filter>
+    <filter id="filter-sphere-contact-shadow-light" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="filter-sphere-edge-softness-light" x="-4%" y="-4%" width="108%" height="108%" color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="0.45" result="softAlpha"/>
+      <feComposite in="SourceGraphic" in2="softAlpha" operator="in"/>
+    </filter>
+  </defs>
+
+  <ellipse id="cluster-ground-shadow-light" cx="574" cy="1009" rx="379" ry="39" fill="#15221C" opacity="0.22" filter="url(#filter-cluster-ground-shadow-light)"/>
+
+  <g id="sphere-layer-rear-top-rust">
+    <circle id="sphere-rear-top-rust" data-sphere="rear-top-rust" data-stack="1" cx="715" cy="185" r="115" fill="url(#gradient-rear-top-rust-sphere)"/>
+    <circle id="sphere-rear-top-rust-ambient" cx="715" cy="185" r="115" fill="url(#gradient-matte-ambient-light)" opacity="0.32"/>
+  </g>
+
+  <g id="sphere-layer-back-left-rust">
+    <circle id="sphere-back-left-rust" data-sphere="back-left-rust" data-stack="2" cx="278" cy="557" r="194" fill="url(#gradient-back-left-rust-sphere)"/>
+    <circle id="sphere-back-left-rust-ambient" cx="278" cy="557" r="194" fill="url(#gradient-matte-ambient-light)" opacity="0.25"/>
+  </g>
+
+  <g id="sphere-layer-back-right-sage">
+    <circle id="sphere-back-right-sage" data-sphere="back-right-sage" data-stack="3" cx="819" cy="707" r="196" fill="url(#gradient-back-right-sage-sphere)"/>
+    <circle id="sphere-back-right-sage-ambient" cx="819" cy="707" r="196" fill="url(#gradient-matte-ambient-light)" opacity="0.25"/>
+  </g>
+
+  <ellipse id="contact-shadow-upper-forest-on-back-left-rust" cx="442" cy="459" rx="91" ry="56" transform="rotate(31 442 459)" fill="#101C16" opacity="0.26" clip-path="url(#clip-back-left-rust-contact-shadow)" filter="url(#filter-sphere-contact-shadow-light)"/>
+  <g id="sphere-layer-upper-forest" filter="url(#filter-sphere-edge-softness-light)">
+    <circle id="sphere-upper-forest" data-sphere="upper-forest" data-stack="4" cx="440" cy="299" r="231" fill="url(#gradient-upper-forest-sphere)"/>
+    <circle id="sphere-upper-forest-ambient" cx="440" cy="299" r="231" fill="url(#gradient-matte-ambient-light)" opacity="0.44" mask="url(#mask-upper-forest-matte-light)"/>
+  </g>
+
+  <ellipse id="contact-shadow-right-rust-on-back-right-sage" cx="813" cy="584" rx="118" ry="50" transform="rotate(3 813 584)" fill="#1B1712" opacity="0.20" clip-path="url(#clip-back-right-sage-contact-shadow)" filter="url(#filter-sphere-contact-shadow-light)"/>
+  <ellipse id="contact-shadow-right-rust-on-upper-forest" cx="677" cy="359" rx="54" ry="93" transform="rotate(-27 677 359)" fill="#111815" opacity="0.14" clip-path="url(#clip-upper-forest-contact-shadow)" filter="url(#filter-sphere-contact-shadow-light)"/>
+  <g id="sphere-layer-right-rust">
+    <circle id="sphere-right-rust" data-sphere="right-rust" data-stack="5" cx="823" cy="419" r="197" fill="url(#gradient-right-rust-sphere)"/>
+    <circle id="sphere-right-rust-ambient" cx="823" cy="419" r="197" fill="url(#gradient-matte-ambient-light)" opacity="0.28"/>
+  </g>
+
+  <g id="sphere-layer-small-left-sage">
+    <circle id="sphere-small-left-sage" data-sphere="small-left-sage" data-stack="6" cx="224" cy="756" r="95" fill="url(#gradient-small-left-sage-sphere)"/>
+    <circle id="sphere-small-left-sage-ambient" cx="224" cy="756" r="95" fill="url(#gradient-matte-ambient-light)" opacity="0.28"/>
+  </g>
+
+  <ellipse id="contact-shadow-front-ink-on-back-left-rust" cx="405" cy="703" rx="118" ry="58" transform="rotate(35 405 703)" fill="#15191D" opacity="0.24" clip-path="url(#clip-back-left-rust-contact-shadow)" filter="url(#filter-sphere-contact-shadow-light)"/>
+  <ellipse id="contact-shadow-front-ink-on-back-right-sage" cx="690" cy="806" rx="101" ry="63" transform="rotate(-20 690 806)" fill="#161C20" opacity="0.20" clip-path="url(#clip-back-right-sage-contact-shadow)" filter="url(#filter-sphere-contact-shadow-light)"/>
+  <g id="sphere-layer-front-ink" filter="url(#filter-sphere-edge-softness-light)">
+    <circle id="sphere-front-ink" data-sphere="front-ink" data-stack="7" cx="528" cy="782" r="241" fill="url(#gradient-front-ink-sphere)"/>
+    <circle id="sphere-front-ink-ambient" cx="528" cy="782" r="241" fill="url(#gradient-matte-ambient-light)" opacity="0.42" mask="url(#mask-front-ink-matte-light)"/>
+  </g>
+
+  <ellipse id="contact-shadow-front-ochre-on-upper-forest" cx="563" cy="432" rx="104" ry="52" transform="rotate(44 563 432)" fill="#161812" opacity="0.17" clip-path="url(#clip-upper-forest-contact-shadow)" filter="url(#filter-sphere-contact-shadow-light)"/>
+  <ellipse id="contact-shadow-front-ochre-on-right-rust" cx="706" cy="497" rx="104" ry="48" transform="rotate(-28 706 497)" fill="#241A12" opacity="0.17" clip-path="url(#clip-right-rust-contact-shadow)" filter="url(#filter-sphere-contact-shadow-light)"/>
+  <ellipse id="contact-shadow-front-ochre-on-front-ink" cx="589" cy="671" rx="118" ry="51" transform="rotate(4 589 671)" fill="#13161A" opacity="0.23" clip-path="url(#clip-front-ink-contact-shadow)" filter="url(#filter-sphere-contact-shadow-light)"/>
+  <g id="sphere-layer-front-ochre">
+    <circle id="sphere-front-ochre" data-sphere="front-ochre" data-stack="8" cx="628" cy="536" r="168" fill="url(#gradient-front-ochre-sphere)"/>
+    <circle id="sphere-front-ochre-ambient" cx="628" cy="536" r="168" fill="url(#gradient-matte-ambient-light)" opacity="0.28"/>
+  </g>
+</svg>

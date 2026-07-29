@@ -1,0 +1,457 @@
+{
+  "status": "PASS",
+  "structure": {
+    "svg_count": 5,
+    "sphere_count_per_svg": 8,
+    "shared_view_box": "0 0 1100 1100",
+    "shared_geometry": true,
+    "embedded_images": 0,
+    "rectangles": 0,
+    "patterns": 0
+  },
+  "exports": {
+    "cluster-mkt-mark-dimensional-light-2048.png": {
+      "size": 2048,
+      "corners_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_bounds": [
+        156,
+        126,
+        1900,
+        2039
+      ],
+      "fractional_alpha_pixels": 357135,
+      "opaque_pixels": 2326321
+    },
+    "cluster-mkt-mark-dimensional-dark-2048.png": {
+      "size": 2048,
+      "corners_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_bounds": [
+        156,
+        123,
+        1900,
+        2039
+      ],
+      "fractional_alpha_pixels": 369533,
+      "opaque_pixels": 2331416
+    },
+    "cluster-mkt-mark-flat-1024.png": {
+      "size": 1024,
+      "corners_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_bounds": [
+        78,
+        63,
+        950,
+        953
+      ],
+      "fractional_alpha_pixels": 3615,
+      "opaque_pixels": 581873
+    },
+    "cluster-mkt-mark-monochrome-black-1024.png": {
+      "size": 1024,
+      "corners_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_bounds": [
+        78,
+        63,
+        950,
+        953
+      ],
+      "fractional_alpha_pixels": 3615,
+      "opaque_pixels": 581873
+    },
+    "cluster-mkt-mark-monochrome-white-1024.png": {
+      "size": 1024,
+      "corners_alpha": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "alpha_bounds": [
+        78,
+        63,
+        950,
+        953
+      ],
+      "fractional_alpha_pixels": 3615,
+      "opaque_pixels": 581873
+    }
+  },
+  "sharpness_sizes": [
+    32,
+    128,
+    512,
+    2048
+  ],
+  "sharpness": {
+    "cluster-mkt-mark-dimensional-light.svg": {
+      "32": {
+        "size": 32,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          2,
+          2,
+          30,
+          31
+        ],
+        "fractional_alpha_pixels": 161,
+        "opaque_pixels": 505
+      },
+      "128": {
+        "size": 128,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          9,
+          8,
+          119,
+          128
+        ],
+        "fractional_alpha_pixels": 1854,
+        "opaque_pixels": 8855
+      },
+      "512": {
+        "size": 512,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          39,
+          31,
+          475,
+          510
+        ],
+        "fractional_alpha_pixels": 23393,
+        "opaque_pixels": 144936
+      },
+      "2048": {
+        "size": 2048,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          156,
+          126,
+          1900,
+          2039
+        ],
+        "fractional_alpha_pixels": 357135,
+        "opaque_pixels": 2326321
+      }
+    },
+    "cluster-mkt-mark-dimensional-dark.svg": {
+      "32": {
+        "size": 32,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          2,
+          2,
+          30,
+          31
+        ],
+        "fractional_alpha_pixels": 161,
+        "opaque_pixels": 505
+      },
+      "128": {
+        "size": 128,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          9,
+          7,
+          119,
+          128
+        ],
+        "fractional_alpha_pixels": 1901,
+        "opaque_pixels": 8855
+      },
+      "512": {
+        "size": 512,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          39,
+          30,
+          475,
+          510
+        ],
+        "fractional_alpha_pixels": 24581,
+        "opaque_pixels": 144936
+      },
+      "2048": {
+        "size": 2048,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          156,
+          123,
+          1900,
+          2039
+        ],
+        "fractional_alpha_pixels": 369533,
+        "opaque_pixels": 2331416
+      }
+    },
+    "cluster-mkt-mark-flat.svg": {
+      "32": {
+        "size": 32,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          2,
+          2,
+          30,
+          30
+        ],
+        "fractional_alpha_pixels": 116,
+        "opaque_pixels": 505
+      },
+      "128": {
+        "size": 128,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          9,
+          8,
+          119,
+          119
+        ],
+        "fractional_alpha_pixels": 451,
+        "opaque_pixels": 8854
+      },
+      "512": {
+        "size": 512,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          39,
+          31,
+          475,
+          477
+        ],
+        "fractional_alpha_pixels": 1786,
+        "opaque_pixels": 144938
+      },
+      "2048": {
+        "size": 2048,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          156,
+          126,
+          1900,
+          1905
+        ],
+        "fractional_alpha_pixels": 7185,
+        "opaque_pixels": 2331420
+      }
+    },
+    "cluster-mkt-mark-monochrome-black.svg": {
+      "32": {
+        "size": 32,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          2,
+          2,
+          30,
+          30
+        ],
+        "fractional_alpha_pixels": 116,
+        "opaque_pixels": 505
+      },
+      "128": {
+        "size": 128,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          9,
+          8,
+          119,
+          119
+        ],
+        "fractional_alpha_pixels": 451,
+        "opaque_pixels": 8856
+      },
+      "512": {
+        "size": 512,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          39,
+          31,
+          475,
+          477
+        ],
+        "fractional_alpha_pixels": 1795,
+        "opaque_pixels": 144938
+      },
+      "2048": {
+        "size": 2048,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          156,
+          126,
+          1900,
+          1905
+        ],
+        "fractional_alpha_pixels": 7185,
+        "opaque_pixels": 2331420
+      }
+    },
+    "cluster-mkt-mark-monochrome-white.svg": {
+      "32": {
+        "size": 32,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          2,
+          2,
+          30,
+          30
+        ],
+        "fractional_alpha_pixels": 116,
+        "opaque_pixels": 505
+      },
+      "128": {
+        "size": 128,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          9,
+          8,
+          119,
+          119
+        ],
+        "fractional_alpha_pixels": 451,
+        "opaque_pixels": 8854
+      },
+      "512": {
+        "size": 512,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          39,
+          31,
+          475,
+          477
+        ],
+        "fractional_alpha_pixels": 1786,
+        "opaque_pixels": 144938
+      },
+      "2048": {
+        "size": 2048,
+        "corners_alpha": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "alpha_bounds": [
+          156,
+          126,
+          1900,
+          1905
+        ],
+        "fractional_alpha_pixels": 7185,
+        "opaque_pixels": 2331420
+      }
+    }
+  }
+}

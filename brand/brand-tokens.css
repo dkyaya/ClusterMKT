@@ -1,0 +1,109 @@
+/* Cluster MKT brand tokens. The editorial face remains provisional by design. */
+
+:root {
+
+  --font-editorial: "Newsreader", "Source Serif 4", Georgia, serif;
+
+  --font-interface: "DM Sans", Inter, Arial, sans-serif;
+
+  --font-numeric: "DM Sans", Inter, Arial, sans-serif;
+
+  --color-forest-green: #21483A;
+
+  --color-muted-rust: #A55D47;
+
+  --color-warm-ochre: #C69A4A;
+
+  --color-ink-blue: #26374A;
+
+  --color-soft-sage: #9DAF9D;
+
+  --color-warm-ivory: #F7F4EC;
+
+  --color-near-black: #111210;
+
+  --color-white: #FFFFFF;
+
+  font-variant-numeric: tabular-nums;
+
+}
+
+:root, [data-theme="light"] {
+  --color-page-background: #F7F4EC;
+  --color-surface-primary: #FFFFFF;
+  --color-surface-secondary: #EEEAE0;
+  --color-text-primary: #111210;
+  --color-text-secondary: #51544E;
+  --color-border-subtle: #D7D1C5;
+  --color-accent-primary: #21483A;
+  --color-accent-secondary: #A55D47;
+  --color-edition-wash: #E4ECE6;
+  --color-audio-progress: #21483A;
+  --color-positive: #2F6A4F;
+  --color-negative: #98483D;
+  --color-caution: #76561C;
+}
+
+[data-theme="dark"] {
+  --color-page-background: #111210;
+  --color-surface-primary: #1B1D1A;
+  --color-surface-secondary: #252925;
+  --color-text-primary: #F7F4EC;
+  --color-text-secondary: #C9C6BD;
+  --color-border-subtle: #3D423C;
+  --color-accent-primary: #9DAF9D;
+  --color-accent-secondary: #D08A72;
+  --color-edition-wash: #1B2925;
+  --color-audio-progress: #C69A4A;
+  --color-positive: #8FC3A3;
+  --color-negative: #E0A095;
+  --color-caution: #DAB66A;
+}
+
+[data-theme="light"][data-edition="morning"] {
+  --color-edition-wash: #F3E7C8;
+  --color-accent-primary: #21483A;
+  --color-accent-secondary: #9F7C3D;
+  --color-audio-progress: #A55D47;
+}
+
+[data-theme="dark"][data-edition="morning"] {
+  --color-edition-wash: #2B261D;
+  --color-accent-primary: #C6A85E;
+  --color-accent-secondary: #D08A72;
+  --color-audio-progress: #C6A85E;
+}
+
+[data-theme="light"][data-edition="midday"] {
+  --color-edition-wash: #E4ECE6;
+  --color-accent-primary: #21483A;
+  --color-accent-secondary: #26374A;
+  --color-audio-progress: #21483A;
+}
+
+[data-theme="dark"][data-edition="midday"] {
+  --color-edition-wash: #1B2925;
+  --color-accent-primary: #9DAF9D;
+  --color-accent-secondary: #9AA9BD;
+  --color-audio-progress: #9DAF9D;
+}
+
+[data-theme="light"][data-edition="closing"] {
+  --color-edition-wash: #E5E1DC;
+  --color-accent-primary: #26374A;
+  --color-accent-secondary: #A55D47;
+  --color-audio-progress: #9F7C3D;
+}
+
+[data-theme="dark"][data-edition="closing"] {
+  --color-edition-wash: #20242B;
+  --color-accent-primary: #9AA9BD;
+  --color-accent-secondary: #D08A72;
+  --color-audio-progress: #B18C48;
+}
+
+.numeric, time, [data-numeric] {
+  font-family: var(--font-numeric);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}

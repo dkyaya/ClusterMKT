@@ -18,19 +18,37 @@ export function useCollapsibleSearchHeader({
 
   useEffect(() => {
     const media = window.matchMedia(MOBILE_QUERY);
+    const isMobileViewport = () => media.matches || window.innerWidth <= 800;
     let lastY = window.scrollY;
     let downDistance = 0;
     let upDistance = 0;
+    let suppressLayoutShiftUntil = 0;
+    const suppressAnimatedLayoutShift = () => {
+      if (document.querySelector(".header-search-row")) {
+        suppressLayoutShiftUntil = performance.now() + 240;
+      }
+    };
 
-    const forceVisible = searchFocused || profileMenuOpen;
+    const shouldForceVisible = () => {
+      const searchRow = document.querySelector(".header-search-row");
+      if (!searchRow) return searchFocused || profileMenuOpen;
+      return (
+        searchRow.contains(document.activeElement) ||
+        document.querySelector(".profile-menu__popover") !== null
+      );
+    };
     const evaluate = () => {
       const currentY = window.scrollY;
-      if (!media.matches) {
+      if (performance.now() < suppressLayoutShiftUntil) {
+        lastY = currentY;
+        return;
+      }
+      if (!isMobileViewport()) {
         setVisible(true);
         lastY = currentY;
         return;
       }
-      if (currentY <= TOP_THRESHOLD || forceVisible) {
+      if (currentY <= TOP_THRESHOLD || shouldForceVisible()) {
         setVisible(true);
         downDistance = 0;
         upDistance = 0;
@@ -45,6 +63,7 @@ export function useCollapsibleSearchHeader({
         upDistance = 0;
         if (downDistance >= DOWN_THRESHOLD) {
           setVisible(false);
+          suppressAnimatedLayoutShift();
           downDistance = 0;
         }
       } else if (delta < 0) {
@@ -52,6 +71,7 @@ export function useCollapsibleSearchHeader({
         downDistance = 0;
         if (upDistance >= UP_THRESHOLD) {
           setVisible(true);
+          suppressAnimatedLayoutShift();
           upDistance = 0;
         }
       }
@@ -61,7 +81,7 @@ export function useCollapsibleSearchHeader({
       lastY = window.scrollY;
       downDistance = 0;
       upDistance = 0;
-      setVisible(!media.matches || window.scrollY <= TOP_THRESHOLD || forceVisible);
+      setVisible(!isMobileViewport() || window.scrollY <= TOP_THRESHOLD || shouldForceVisible());
     };
 
     window.addEventListener("scroll", evaluate, { passive: true });

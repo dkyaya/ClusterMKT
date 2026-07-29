@@ -7,9 +7,10 @@
 3. ESLint.
 4. Strict TypeScript checking across workspaces.
 5. All Vitest behavior tests once.
-6. Web production build and Worker Wrangler dry-run bundle.
-7. Python brand validation.
-8. Application-foundation validation.
+6. Offline sector-coverage evaluation, after its exact-case test project.
+7. Web production build and Worker Wrangler dry-run bundle.
+8. Python brand validation.
+9. Application-foundation validation.
 
 The brand gate checks production vectors, geometry, transparency, image dimensions, icons, contrast, minimum sizes, motion, and its manifest. The application gate checks required files and scripts, one pnpm lockfile, private package identities, prohibited dependencies, environment/secret hygiene, generated asset hashes, route boundaries, honest demonstration labeling, CI, and the five locked-master hashes.
 
@@ -35,3 +36,9 @@ Nested controls inside draggable or swipeable surfaces require real-browser regr
 Playwright MCP remains a local developer and agent tool rather than a workspace dependency. Claude Code and Codex require separate local MCP registration. For Codex local stdio servers, `Auth: Unsupported` can be expected; enabled registration plus successful discovery and invocation in a new session are the relevant signals. Do not commit user-specific MCP configuration or profile paths. Put screenshots, console and network logs, and supported traces under the current phase's `relays/tmp/` staging directory.
 
 Generated reports are written beneath ignored `relays/tmp/application-foundation/` for relay construction.
+
+## Sector source intelligence
+
+`pnpm sector:validate` reruns the source-intelligence test project and writes JSON and Markdown evaluation reports under `relays/tmp/sector-source-intelligence/`. Its gates expose exact failed cases for scope promotion, ticker collisions, podcast transcript rules, provenance, source-family deduplication, brief references, issuer concentration, and coverage gaps. Current results are deterministic fixtures; source capability records do not establish legal authorization unless their review status says so.
+
+Real-browser inspection is required for the sector pages. Verify scope labels, gaps, Story Cluster links, edition and theme behavior, responsive layout, console output, and failed requests. Unit acceptance alone is insufficient.

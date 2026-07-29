@@ -53,4 +53,6 @@ Vitest workspaces cover domain validation, evidence flags, edition boundaries, a
 
 ## Current limitations and next phase
 
+The application now includes offline sector-source-intelligence contracts, deterministic fixture evaluation, shared Sector Brief assembly from accepted Story Clusters, and a responsive Semiconductors demonstration with visible scope labels. Live source ingestion and inference remain outside the foundation.
+
 All market stories and controls are static demonstrations. There is no ingestion, live data, account system, persistence, external AI, podcast processing, TTS, or production infrastructure. The next bounded architecture phase should design source metadata, capability matrices, entity dictionaries, relevance fixtures, and adversarial clustering cases without connecting live ingestion.

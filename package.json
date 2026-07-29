@@ -28,7 +28,8 @@
     "brand:validate": "python brand/validation/validate_cluster_mkt_brand_package.py",
     "assets:sync": "node scripts/sync-web-brand-assets.mjs",
     "foundation:validate": "node scripts/validate-application-foundation.mjs",
-    "validate": "pnpm assets:sync && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test:run && pnpm build && pnpm brand:validate && pnpm foundation:validate",
+    "sector:validate": "vitest --run --config vitest.workspace.ts --project source-intelligence && node scripts/evaluate-sector-coverage.mjs",
+    "validate": "pnpm assets:sync && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test:run && pnpm sector:validate && pnpm build && pnpm brand:validate && pnpm foundation:validate",
     "clean": "node scripts/clean-generated.mjs"
   },
   "devDependencies": {

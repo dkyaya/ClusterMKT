@@ -28,6 +28,8 @@ None of the upstream collection or generation stages is connected. Current fixtu
 
 ## Implemented boundaries
 
+The offline source-intelligence foundation now defines validated entities, a project-owned Semiconductors taxonomy, source capability records, deterministic sector materiality, scope-aware feeds, shared Sector Briefs, and adversarial fixtures. Live ingestion, AI inference, persistence, and private-market coverage remain planned or explicitly deferred.
+
 - `apps/web`: accessible routes, Today and cluster-detail demonstrations, settings placeholders, responsive navigation, appearance-aware edition accents, and generated runtime icons.
 - `apps/worker`: `GET /health`, `GET /api/status`, and explicit 404/method handling without databases or service bindings.
 - `packages/core`: Zod schemas for Story Clusters, source evidence, podcasts, and deterministic helpers.

@@ -1,0 +1,438 @@
+[
+  {
+    "id": "broad-export-restrictions",
+    "title": "Broad semiconductor export restrictions",
+    "expectedScope": "sector_wide",
+    "expectedIncluded": true,
+    "input": {
+      "directSectorNaming": 1,
+      "affectedConstituentCount": 5,
+      "affectedSubindustryCount": 4,
+      "regulatoryBreadth": 1,
+      "supplyChainPropagation": 0.8,
+      "primarySourceEvidence": 1
+    }
+  },
+  {
+    "id": "memory-pricing-multiple-producers",
+    "title": "Memory pricing changes across producers",
+    "expectedScope": "sector_wide",
+    "expectedIncluded": true,
+    "input": {
+      "affectedConstituentCount": 4,
+      "affectedSubindustryCount": 2,
+      "pricingImplications": 1,
+      "demandPropagation": 0.8
+    }
+  },
+  {
+    "id": "major-foundry-capex",
+    "title": "Major foundry increases capital expenditures",
+    "expectedScope": "company_led_sector_impact",
+    "expectedIncluded": true,
+    "input": {
+      "companyLed": true,
+      "issuerId": "company-tsmc",
+      "affectedConstituentCount": 2,
+      "affectedSubindustryCount": 3,
+      "capacityImplications": 1,
+      "supplyChainPropagation": 1,
+      "constituentImportance": 1
+    }
+  },
+  {
+    "id": "accelerator-demand-guidance",
+    "title": "Accelerator designer changes demand guidance",
+    "expectedScope": "company_led_sector_impact",
+    "expectedIncluded": true,
+    "input": {
+      "companyLed": true,
+      "issuerId": "company-nvidia",
+      "affectedConstituentCount": 2,
+      "affectedSubindustryCount": 3,
+      "demandPropagation": 1,
+      "supplyChainPropagation": 0.8,
+      "constituentImportance": 1
+    }
+  },
+  {
+    "id": "small-company-hr-appointment",
+    "title": "Small chip company appoints HR executive",
+    "expectedScope": "company_specific",
+    "expectedIncluded": false,
+    "input": {
+      "companyLed": true,
+      "affectedConstituentCount": 1,
+      "affectedSubindustryCount": 1,
+      "directSectorNaming": 0.2,
+      "sectorSpecificity": 0.1,
+      "independentSourceCount": 1
+    }
+  },
+  {
+    "id": "fed-growth-tech-financing",
+    "title": "Federal Reserve changes growth-technology financing conditions",
+    "expectedScope": "macro_to_sector",
+    "expectedIncluded": true,
+    "input": {
+      "macroBreadth": 1,
+      "sectorSpecificity": 1,
+      "affectedConstituentCount": 3,
+      "affectedSubindustryCount": 2,
+      "demandPropagation": 0.7,
+      "primarySourceEvidence": 1
+    }
+  },
+  {
+    "id": "generic-rates-no-chip-link",
+    "title": "Generic rates article",
+    "expectedScope": "company_specific",
+    "expectedIncluded": false,
+    "input": {
+      "macroBreadth": 0.8,
+      "sectorSpecificity": 0,
+      "directSectorNaming": 0,
+      "affectedConstituentCount": 0,
+      "affectedSubindustryCount": 0
+    }
+  },
+  {
+    "id": "incidental-nvidia-mention",
+    "title": "Nvidia mentioned incidentally",
+    "expectedScope": "company_specific",
+    "expectedIncluded": false,
+    "tickerCollision": true,
+    "input": { "incidentalMention": true, "companyLed": true, "issuerId": "company-nvidia" }
+  },
+  {
+    "id": "duplicate-syndicated-articles",
+    "title": "Syndicated copies of one report",
+    "expectedScope": "company_specific",
+    "expectedIncluded": false,
+    "syndicationFamily": "wire-family-a",
+    "input": {
+      "independentSourceCount": 1,
+      "affectedConstituentCount": 1,
+      "affectedSubindustryCount": 1
+    }
+  },
+  {
+    "id": "nvidia-event-demand",
+    "title": "Nvidia demand event",
+    "expectedScope": "company_led_sector_impact",
+    "expectedIncluded": true,
+    "distinctEventGroups": ["nvidia-demand", "nvidia-packaging"],
+    "input": {
+      "companyLed": true,
+      "issuerId": "company-nvidia",
+      "affectedConstituentCount": 2,
+      "affectedSubindustryCount": 3,
+      "demandPropagation": 1,
+      "supplyChainPropagation": 0.8
+    }
+  },
+  {
+    "id": "foundry-equipment-event",
+    "title": "Event affects foundries and equipment",
+    "expectedScope": "sector_wide",
+    "expectedIncluded": true,
+    "input": {
+      "affectedConstituentCount": 3,
+      "affectedSubindustryCount": 2,
+      "capacityImplications": 1,
+      "supplyChainPropagation": 1
+    }
+  },
+  {
+    "id": "on-monday-collision",
+    "title": "Production resumed on Monday",
+    "expectedScope": "company_specific",
+    "expectedIncluded": false,
+    "tickerCollision": true,
+    "input": { "incidentalMention": true, "directSectorNaming": 0 }
+  },
+  {
+    "id": "generic-ai-collision",
+    "title": "AI used as a generic term",
+    "expectedScope": "company_specific",
+    "expectedIncluded": false,
+    "tickerCollision": true,
+    "input": { "incidentalMention": true, "directSectorNaming": 0 }
+  },
+  {
+    "id": "cat-word-collision",
+    "title": "A cat appears in ordinary prose",
+    "expectedScope": "company_specific",
+    "expectedIncluded": false,
+    "tickerCollision": true,
+    "input": { "incidentalMention": true, "directSectorNaming": 0 }
+  },
+  {
+    "id": "now-word-collision",
+    "title": "Now used as ordinary prose",
+    "expectedScope": "company_specific",
+    "expectedIncluded": false,
+    "tickerCollision": true,
+    "input": { "incidentalMention": true, "directSectorNaming": 0 }
+  },
+  {
+    "id": "meta-adjective-collision",
+    "title": "Meta used as research adjective",
+    "expectedScope": "company_specific",
+    "expectedIncluded": false,
+    "tickerCollision": true,
+    "input": { "incidentalMention": true, "directSectorNaming": 0 }
+  },
+  {
+    "id": "contradictory-demand-reporting",
+    "title": "Sources disagree on semiconductor demand",
+    "expectedScope": "sector_wide",
+    "expectedIncluded": true,
+    "preserveCompetingArguments": true,
+    "input": {
+      "affectedConstituentCount": 4,
+      "affectedSubindustryCount": 3,
+      "demandPropagation": 1,
+      "contradictoryEvidence": 0.5
+    }
+  },
+  {
+    "id": "one-source-exclusive",
+    "title": "One-source exclusive",
+    "expectedScope": "company_led_sector_impact",
+    "expectedIncluded": true,
+    "expectedReviewRequired": true,
+    "input": {
+      "companyLed": true,
+      "explicitRelationship": false,
+      "independentSourceCount": 1,
+      "affectedConstituentCount": 2,
+      "affectedSubindustryCount": 3,
+      "supplyChainPropagation": 1,
+      "demandPropagation": 1
+    }
+  },
+  {
+    "id": "paywalled-headline-only",
+    "title": "Paywalled headline without abstract",
+    "expectedScope": "company_specific",
+    "expectedIncluded": false,
+    "headlineOnly": true,
+    "input": { "headlineOnly": true, "affectedConstituentCount": 4, "affectedSubindustryCount": 3 }
+  },
+  {
+    "id": "podcast-metadata-no-transcript",
+    "title": "Podcast metadata without transcript",
+    "expectedScope": "company_specific",
+    "expectedIncluded": false,
+    "podcastWithoutTranscript": true,
+    "input": {
+      "podcastMetadataOnly": true,
+      "affectedConstituentCount": 4,
+      "affectedSubindustryCount": 3
+    }
+  },
+  {
+    "id": "podcast-reviewed-transcript",
+    "title": "Podcast with reviewed permitted transcript",
+    "expectedScope": "company_led_sector_impact",
+    "expectedIncluded": true,
+    "transcriptReviewed": true,
+    "input": {
+      "companyLed": true,
+      "affectedConstituentCount": 2,
+      "affectedSubindustryCount": 3,
+      "supplyChainPropagation": 1,
+      "demandPropagation": 1
+    }
+  },
+  {
+    "id": "nvidia-heavy-feed",
+    "title": "Many Nvidia fixtures with qualifying competitors",
+    "expectedScope": "company_led_sector_impact",
+    "expectedIncluded": true,
+    "antiConcentrationFixture": true,
+    "input": {
+      "companyLed": true,
+      "issuerId": "company-nvidia",
+      "affectedConstituentCount": 2,
+      "affectedSubindustryCount": 3,
+      "demandPropagation": 1,
+      "supplyChainPropagation": 1
+    }
+  },
+  {
+    "id": "single-material-issuer",
+    "title": "Only one genuinely material issuer",
+    "expectedScope": "company_led_sector_impact",
+    "expectedIncluded": true,
+    "singleIssuerFixture": true,
+    "input": {
+      "companyLed": true,
+      "issuerId": "company-tsmc",
+      "affectedConstituentCount": 2,
+      "affectedSubindustryCount": 3,
+      "capacityImplications": 1,
+      "supplyChainPropagation": 1
+    }
+  },
+  {
+    "id": "broad-event-no-major-headline",
+    "title": "Broad sector event without major-company headline",
+    "expectedScope": "sector_wide",
+    "expectedIncluded": true,
+    "input": {
+      "affectedConstituentCount": 4,
+      "affectedSubindustryCount": 4,
+      "directSectorNaming": 1,
+      "supplyChainPropagation": 0.8
+    }
+  },
+  {
+    "id": "major-company-no-propagation",
+    "title": "Major company event without demonstrated propagation",
+    "expectedScope": "company_specific",
+    "expectedIncluded": false,
+    "input": {
+      "companyLed": true,
+      "issuerId": "company-nvidia",
+      "constituentImportance": 1,
+      "affectedConstituentCount": 1,
+      "affectedSubindustryCount": 1,
+      "supplyChainPropagation": 0,
+      "demandPropagation": 0
+    }
+  },
+  {
+    "id": "global-foundry-capacity-shortage",
+    "title": "Foundry-capacity shortage across geographies",
+    "expectedScope": "sector_wide",
+    "expectedIncluded": true,
+    "input": {
+      "affectedConstituentCount": 5,
+      "affectedSubindustryCount": 3,
+      "capacityImplications": 1,
+      "supplyChainPropagation": 1
+    }
+  },
+  {
+    "id": "one-time-tax-earnings-beat",
+    "title": "Earnings beat from one-time tax item",
+    "expectedScope": "company_specific",
+    "expectedIncluded": false,
+    "input": {
+      "companyLed": true,
+      "affectedConstituentCount": 1,
+      "affectedSubindustryCount": 1,
+      "constituentImportance": 0.8,
+      "sectorSpecificity": 0.1
+    }
+  },
+  {
+    "id": "category-based-export-rule",
+    "title": "Government export-control categories",
+    "expectedScope": "sector_wide",
+    "expectedIncluded": true,
+    "input": {
+      "affectedConstituentCount": 6,
+      "affectedSubindustryCount": 4,
+      "regulatoryBreadth": 1,
+      "primarySourceEvidence": 1,
+      "directSectorNaming": 1
+    }
+  },
+  {
+    "id": "uncorroborated-rumor",
+    "title": "Rumor without corroboration",
+    "expectedScope": "company_specific",
+    "expectedIncluded": false,
+    "expectedReviewRequired": true,
+    "input": {
+      "confidence": "low",
+      "explicitRelationship": false,
+      "independentSourceCount": 1,
+      "affectedConstituentCount": 1
+    }
+  },
+  {
+    "id": "unnamed-source-analysis",
+    "title": "Trade analysis using unnamed sources",
+    "expectedScope": "company_led_sector_impact",
+    "expectedIncluded": true,
+    "expectedReviewRequired": true,
+    "input": {
+      "companyLed": true,
+      "explicitRelationship": false,
+      "independentSourceCount": 1,
+      "affectedConstituentCount": 2,
+      "affectedSubindustryCount": 3,
+      "supplyChainPropagation": 1,
+      "demandPropagation": 1
+    }
+  },
+  {
+    "id": "unsupported-company-sector-claim",
+    "title": "Company release makes unsupported sector claim",
+    "expectedScope": "company_specific",
+    "expectedIncluded": false,
+    "input": {
+      "companyLed": true,
+      "independentSourceCount": 1,
+      "affectedConstituentCount": 1,
+      "affectedSubindustryCount": 1,
+      "primarySourceEvidence": 1,
+      "supplyChainPropagation": 0
+    }
+  },
+  {
+    "id": "selective-leveraged-macro-impact",
+    "title": "Macro event affects leveraged chip firms",
+    "expectedScope": "macro_to_sector",
+    "expectedIncluded": true,
+    "input": {
+      "macroBreadth": 1,
+      "sectorSpecificity": 1,
+      "affectedConstituentCount": 2,
+      "affectedSubindustryCount": 1,
+      "demandPropagation": 0.7
+    }
+  },
+  {
+    "id": "packaging-supply-disruption",
+    "title": "Supply disruption limited to packaging and testing",
+    "expectedScope": "sector_wide",
+    "expectedIncluded": true,
+    "expectedSubindustrySpecific": true,
+    "input": {
+      "affectedConstituentCount": 3,
+      "affectedSubindustryCount": 2,
+      "supplyChainPropagation": 1,
+      "capacityImplications": 1
+    }
+  },
+  {
+    "id": "syndicated-company-copies",
+    "title": "One issuer in syndicated copies",
+    "expectedScope": "company_specific",
+    "expectedIncluded": false,
+    "syndicationFamily": "wire-family-b",
+    "input": {
+      "companyLed": true,
+      "independentSourceCount": 1,
+      "affectedConstituentCount": 1,
+      "affectedSubindustryCount": 1
+    }
+  },
+  {
+    "id": "updated-headline-same-story",
+    "title": "Publisher updates one headline",
+    "expectedScope": "company_specific",
+    "expectedIncluded": false,
+    "versionFamily": "publisher-story-42",
+    "input": {
+      "independentSourceCount": 1,
+      "affectedConstituentCount": 1,
+      "affectedSubindustryCount": 1
+    }
+  }
+]

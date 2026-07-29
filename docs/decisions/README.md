@@ -6,3 +6,5 @@ Architecture decision records capture durable repository and product-engineering
 - [0002 — Shared agent guidance](0002-shared-agent-guidance.md)
 - [0003 — Brand assets are locked](0003-brand-assets-are-locked.md)
 - [0004 — Application foundation stack](0004-application-foundation-stack.md)
+- [0005 — Sector-native coverage](0005-sector-native-coverage.md)
+- [0006 — Offline source-intelligence foundation](0006-offline-source-intelligence-foundation.md)

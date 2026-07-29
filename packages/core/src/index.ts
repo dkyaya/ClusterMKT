@@ -1,7 +1,17 @@
 export * from "./lib/cluster-status";
+export * from "./lib/coverage-diversity";
 export * from "./lib/relevance-label";
+export * from "./lib/sector-brief";
+export * from "./lib/sector-feed";
+export * from "./lib/sector-materiality";
+export * from "./schemas/cluster-entity-relation";
 export * from "./schemas/edition";
+export * from "./schemas/entity";
 export * from "./schemas/podcast";
+export * from "./schemas/sector";
+export * from "./schemas/sector-brief";
 export * from "./schemas/source";
+export * from "./schemas/source-registry";
 export * from "./schemas/story-cluster";
+export type * from "./types/coverage";
 export type * from "./types/evidence";

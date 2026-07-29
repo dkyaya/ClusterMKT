@@ -57,8 +57,12 @@ No Worker deployment is configured or claimed.
 ## Documentation
 
 - [Product foundation](docs/product/PRODUCT_FOUNDATION.md)
+- [Sector coverage model](docs/product/SECTOR_COVERAGE_MODEL.md)
+- [Source intelligence foundation](docs/architecture/SOURCE_INTELLIGENCE_FOUNDATION.md)
 - [Application foundation](docs/architecture/APPLICATION_FOUNDATION.md)
 - [Planned architecture](docs/architecture/PLANNED_ARCHITECTURE.md)
 - [Architecture decisions](docs/decisions/README.md)
 - [Brand package](brand/README.md)
 - [Shared agent guidance](AGENTS.md)
+
+The current Semiconductors experience at `/sectors/semiconductors` is an offline, deterministic demonstration. `pnpm sector:validate` runs its 35-case adversarial coverage evaluation; it does not contact publishers or external services.

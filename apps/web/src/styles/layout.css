@@ -292,6 +292,117 @@
 .placeholder {
   padding: 2rem;
 }
+.sector-index-card,
+.sector-brief-card,
+.coverage-gap-notice {
+  padding: 2rem;
+}
+.sector-index-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: end;
+}
+.sector-index-card > a {
+  grid-column: 1 / -1;
+  font-weight: 700;
+}
+.sector-heading-badges,
+.sector-card-heading,
+.sector-cluster-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+.sector-detail-intro > a {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+.sector-heading-badges {
+  justify-content: flex-start;
+}
+.sector-metrics {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(5rem, 1fr));
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+.sector-metrics > div {
+  padding: 0.8rem;
+  background: var(--color-surface-secondary);
+  border-radius: 0.45rem;
+}
+.sector-metrics dt,
+.sector-cluster-meta {
+  color: var(--color-text-secondary);
+  font-size: 0.72rem;
+}
+.sector-metrics dd {
+  margin: 0.35rem 0 0;
+  font-size: 1.3rem;
+  font-variant-numeric: tabular-nums;
+  font-weight: 750;
+}
+.sector-brief-grid,
+.sector-cluster-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+.sector-brief-grid section {
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border-subtle);
+}
+.subindustry-coverage,
+.sector-cluster-section,
+.coverage-gap-notice,
+.sector-method {
+  margin-top: 3.5rem;
+}
+.sector-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0;
+  list-style: none;
+}
+.sector-tag-list li {
+  padding: 0.4rem 0.6rem;
+  background: var(--color-surface-secondary);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  text-transform: capitalize;
+}
+.sector-tag-list li.is-covered {
+  border-color: var(--color-accent-primary);
+}
+.sector-tag-list li.is-gap {
+  border-style: dashed;
+  color: var(--color-text-secondary);
+}
+.sector-cluster-card {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+.sector-cluster-card h3,
+.sector-cluster-card p {
+  margin: 0;
+}
+.sector-scope-badge {
+  display: grid;
+  gap: 0.45rem;
+  justify-items: start;
+}
+.sector-scope-badge__explanation {
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+}
+.coverage-gap-notice {
+  border-left: 4px solid var(--color-accent-primary);
+}
 .mobile-nav {
   display: none;
 }
@@ -366,6 +477,18 @@
     bottom: 4.8rem;
     left: 1rem;
     width: auto;
+  }
+  .sector-index-card,
+  .sector-brief-grid,
+  .sector-cluster-grid {
+    grid-template-columns: 1fr;
+  }
+  .sector-card-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .sector-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .mobile-nav {
     position: fixed;

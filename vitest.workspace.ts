@@ -22,6 +22,13 @@ export default defineConfig({
         },
       },
       { test: { name: "worker", root: "apps/worker", environment: "node" } },
+      {
+        test: {
+          name: "source-intelligence",
+          root: "tests/source-intelligence",
+          environment: "node",
+        },
+      },
     ],
   },
 });

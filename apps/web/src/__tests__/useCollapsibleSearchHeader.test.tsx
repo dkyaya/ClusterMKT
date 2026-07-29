@@ -52,6 +52,29 @@ describe("useCollapsibleSearchHeader", () => {
     expect(result.current).toBe(true);
   });
 
+  it("does not treat the animated header layout shift as an upward gesture", () => {
+    installMatchMedia(true);
+    const searchRow = document.createElement("div");
+    searchRow.className = "header-search-row";
+    document.body.append(searchRow);
+    let now = 0;
+    const clock = vi.spyOn(performance, "now").mockImplementation(() => now);
+    const { result, unmount } = renderHook(() =>
+      useCollapsibleSearchHeader({ profileMenuOpen: false, searchFocused: false }),
+    );
+    act(() => scrollTo(40));
+    expect(result.current).toBe(false);
+    now = 100;
+    act(() => scrollTo(20));
+    expect(result.current).toBe(false);
+    now = 300;
+    act(() => scrollTo(5));
+    expect(result.current).toBe(true);
+    unmount();
+    clock.mockRestore();
+    searchRow.remove();
+  });
+
   it("ignores tiny directional changes until thresholds accumulate", () => {
     installMatchMedia(true);
     const { result } = renderHook(() =>

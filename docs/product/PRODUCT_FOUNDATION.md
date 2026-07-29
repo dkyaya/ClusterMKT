@@ -44,4 +44,6 @@ Cluster summaries and audio are planned as reusable modules that can be assemble
 
 ## Product boundary
 
+Sector following is not constituent mirroring. It combines a shared sector/date/edition brief with genuinely sector-wide clusters, visibly company-led sector impacts, defensible macro-to-sector links, and only threshold-qualified company-specific context. Private-market coverage remains deferred.
+
 The initial product will not generate automatic price predictions, buy/sell/hold signals, or price targets. Cluster MKT provides information organization rather than investment advice. The intended outcome is better-informed human judgment, not automated investment decisions.

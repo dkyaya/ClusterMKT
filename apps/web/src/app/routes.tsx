@@ -3,6 +3,8 @@ import { ClusterDetailPage } from "../pages/ClusterDetailPage";
 import { NotFoundPage } from "../pages/NotFoundPage";
 import { PlaceholderPage } from "../pages/PlaceholderPage";
 import { SettingsPage } from "../pages/SettingsPage";
+import { SectorDetailPage } from "../pages/SectorDetailPage";
+import { SectorsPage } from "../pages/SectorsPage";
 import { TodayPage } from "../pages/TodayPage";
 
 export function AppRoutes() {
@@ -10,9 +12,10 @@ export function AppRoutes() {
     <Routes>
       <Route path="/" element={<TodayPage />} />
       <Route path="/clusters/:clusterId" element={<ClusterDetailPage />} />
+      <Route path="/sectors" element={<SectorsPage />} />
+      <Route path="/sectors/:sectorId" element={<SectorDetailPage />} />
       {[
         ["/watchlist", "Watchlist"],
-        ["/sectors", "Sectors"],
         ["/saved", "Saved"],
         ["/listen", "Listen"],
         ["/calendar", "Calendar"],

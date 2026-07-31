@@ -13,3 +13,5 @@ Sector Briefs consume only accepted, display-eligible, sector-brief-eligible clu
 All current behavior is deterministic and fixture-driven. Live ingestion, model inference, private-market coverage, recommendations, and price predictions remain outside this foundation.
 
 The ingestion dry run routes only validated, policy-eligible fixture records into this evidence model. Quarantined records and unresolved review items are isolated before claims; reconciliation accounts for their existence without promoting them. Accepted fixture clusters and briefs retain the complete retrieval-to-claim provenance chain.
+
+Calibration examples for these decisions live in `gold-corpus-v1`. Human reviewers label visible evidence without pipeline predictions or peer decisions. Agreement, disagreement, review routing, claim support, and sector scope thresholds may change only after adjudicated calibration labels and held-out evaluation; current candidate fixtures are not themselves gold truth.

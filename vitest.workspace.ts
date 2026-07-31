@@ -115,6 +115,13 @@ export default defineConfig({
           environment: "node",
         },
       },
+      {
+        test: {
+          name: "gold-calibration",
+          root: "tests/gold-calibration",
+          environment: "node",
+        },
+      },
     ],
   },
 });

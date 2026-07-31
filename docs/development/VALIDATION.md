@@ -15,9 +15,11 @@
 11. Offline claim and evidence-depth evaluation.
 12. Offline agreement and disagreement evaluation.
 13. Offline claim-provenance graph evaluation.
-14. Web production build and Worker Wrangler dry-run bundle.
-15. Python brand validation.
-16. Application-foundation validation.
+14. Offline source-registry, adapter, idempotency, retry, reconciliation, resume, and ingestion-simulation gates.
+15. Gold-corpus generation, focused tests, coverage, agreement, calibration, replay, and regression-promotion gates.
+16. Web production build and Worker Wrangler dry-run bundle.
+17. Python brand validation.
+18. Application-foundation validation.
 
 The brand gate checks production vectors, geometry, transparency, image dimensions, icons, contrast, minimum sizes, motion, and its manifest. The application gate checks required files and scripts, one pnpm lockfile, private package identities, prohibited dependencies, environment/secret hygiene, generated asset hashes, route boundaries, honest demonstration labeling, CI, and the five locked-master hashes.
 
@@ -69,3 +71,9 @@ Real-browser acceptance of `/dev/clusters` must verify membership decisions, evi
 `pnpm ingestion:validate` runs seven fixture projects and evaluation reports: source registry, adapter contract, idempotency, retries, reconciliation, resume, and end-to-end simulation. Critical gates require zero live-ready sources, real network calls, unreviewed or prohibited retrieval, infinite retry, unexplained loss, duplicate accepted output, quarantine leakage, podcast-metadata claims, syndication inflation, and broken provenance.
 
 Browser acceptance of `/dev/ingestion` must inspect source selection, adapter results, retrieval provenance, rate-limit and circuit state, quarantine, ledger, checkpoints, resume, reconciliation, status counts, and offline boundary labels at desktop and mobile sizes. It remains absent from consumer navigation.
+
+## Gold calibration corpus
+
+`pnpm corpus:validate` regenerates the deterministic candidate corpus, runs its focused tests, and writes coverage, partition, and regression-promotion reports. `pnpm corpus:agreement`, `pnpm corpus:calibrate`, and `pnpm corpus:replay` emit explicit pending states until real independent reviewer decisions exist. This is a successful safety behavior, not a claim that agreement or held-out accuracy passed.
+
+The corpus gate requires at least 300 items, every task and adversarial stratum minimum, no prediction leakage, event/underlying-work-safe partitions, no automated gold label, and no issuer overconcentration. Browser acceptance must verify blinded evidence, controls, cannot-determine, confidence, local submission, adjudication gating, coverage, pending metrics, responsive layout, absence from consumer navigation, and zero unexpected console/network failures.

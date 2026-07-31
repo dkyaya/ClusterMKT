@@ -62,3 +62,16 @@ node scripts/cluster-mkt-ingestion.mjs list-sources
 ```
 
 The CLI accepts fixtures only, refuses live mode and credential arguments, and writes only beneath ignored `.tmp/ingestion-dry-run/`. `pnpm ingestion:validate` exercises registry, adapter, idempotency, retry, reconciliation, resume, and end-to-end gates. `/dev/ingestion` is a direct-only developer inspector.
+
+## Gold corpus workflow
+
+```sh
+pnpm corpus:validate
+pnpm corpus:agreement
+pnpm corpus:calibrate
+pnpm corpus:replay
+pnpm corpus:list
+pnpm corpus:inspect -- --item-id gold-item-0001
+```
+
+The 345-item candidate corpus is offline and synthetic. `/dev/review`, `/dev/review/gold-item-0001`, and `/dev/adjudication` demonstrate the blinded workflow without authentication or persistent decisions. Automated commands never assign gold labels. Local CLI draft submissions write only below ignored `.tmp/gold-corpus-workflow/`.

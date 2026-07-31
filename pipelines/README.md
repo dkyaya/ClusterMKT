@@ -23,3 +23,5 @@ Framework-independent offline normalization primitives now exist in `@cluster-mk
 Offline cluster primitives now define the next boundary: normalized records and event signatures become reviewed candidates, claims retain evidence-depth-qualified provenance, and accepted clusters become the only ordinary Sector Brief input. This directory still implements none of those production orchestration steps.
 
 The dry-run now orchestrates those contracts locally: mock adapters emit raw records, retrieval provenance and ledger entries remain auditable, retries are bounded, bad records are isolated, scheduled edition fixtures are idempotent, resumes do not duplicate output, and reconciliation accounts for every item. It includes no network client, production scheduler, credential, database, or live-ready source.
+
+Pipeline thresholds now have a human-review calibration boundary. Candidate examples are partitioned by event/underlying work, predictions remain hidden during initial review, and no proposed threshold is applied without adjudicated calibration labels plus held-out gates. This adds no live collector or model labeling step.

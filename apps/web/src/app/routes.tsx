@@ -4,11 +4,14 @@ import { ClusterInspectorPage } from "../pages/ClusterInspectorPage";
 import { NotFoundPage } from "../pages/NotFoundPage";
 import { NormalizationInspectorPage } from "../pages/NormalizationInspectorPage";
 import { IngestionInspectorPage } from "../pages/IngestionInspectorPage";
+import { AdjudicationPage } from "../pages/AdjudicationPage";
 import { PlaceholderPage } from "../pages/PlaceholderPage";
 import { SettingsPage } from "../pages/SettingsPage";
 import { SectorDetailPage } from "../pages/SectorDetailPage";
 import { SectorsPage } from "../pages/SectorsPage";
 import { TodayPage } from "../pages/TodayPage";
+import { ReviewerItemPage } from "../pages/ReviewerItemPage";
+import { ReviewerWorkbenchPage } from "../pages/ReviewerWorkbenchPage";
 
 export function AppRoutes() {
   return (
@@ -20,6 +23,9 @@ export function AppRoutes() {
       <Route path="/dev/normalization" element={<NormalizationInspectorPage />} />
       <Route path="/dev/clusters" element={<ClusterInspectorPage />} />
       <Route path="/dev/ingestion" element={<IngestionInspectorPage />} />
+      <Route path="/dev/review" element={<ReviewerWorkbenchPage />} />
+      <Route path="/dev/review/:itemId" element={<ReviewerItemPage />} />
+      <Route path="/dev/adjudication" element={<AdjudicationPage />} />
       {[
         ["/watchlist", "Watchlist"],
         ["/saved", "Saved"],

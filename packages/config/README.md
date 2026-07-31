@@ -11,3 +11,5 @@ It includes the Cluster MKT-owned Semiconductors editorial taxonomy, public-comp
 The same stable rules version is attached to downstream Story Cluster, claim, discourse, and provenance decisions. Configuration supplies transparent policy inputs; it does not contain source credentials, generated conclusions, or runtime network behavior.
 
 `src/sources/` now contains the operational fixture registry, source families, and retrieval policies; `src/ingestion/` contains retry and edition-schedule fixtures. Every source is `fixture_only`, future live eligibility is false, and no endpoint or credential is configured.
+
+`src/calibration/` defines the 345-item sampling plan, eight annotation-task contracts, leakage-safe partition policy, and unapproved `calibration-v1` threshold candidates. `src/sources/credential-requirements.ts` documents future credential classes and the onboarding gate; all live flags remain false and no secret value belongs here.

@@ -707,6 +707,156 @@
 .ingestion-intro {
   max-width: 58rem;
 }
+.reviewer-intro {
+  max-width: 58rem;
+}
+.reviewer-card {
+  margin-top: 1rem;
+  padding: 1.5rem;
+}
+.reviewer-heading,
+.reviewer-status-strip {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.reviewer-heading h2,
+.reviewer-card h2 {
+  margin-top: 0;
+}
+.reviewer-status-strip {
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--color-edition-wash);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 0.55rem;
+  font-size: 0.82rem;
+  font-variant-numeric: tabular-nums;
+}
+.reviewer-primary-link {
+  display: inline-block;
+  margin-top: 1.2rem;
+  font-weight: 700;
+}
+.reviewer-coverage-grid,
+.reviewer-metrics,
+.adjudication-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+.reviewer-coverage-grid > div,
+.reviewer-metrics > div,
+.adjudication-grid article {
+  min-width: 0;
+  padding: 0.9rem;
+  background: var(--color-surface-secondary);
+  border-radius: 0.45rem;
+}
+.reviewer-coverage-grid strong,
+.reviewer-coverage-grid span {
+  display: block;
+}
+.reviewer-coverage-grid strong,
+.reviewer-metrics dd {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+.reviewer-coverage-grid span,
+.reviewer-metrics dt {
+  margin-top: 0.3rem;
+  color: var(--color-text-secondary);
+  font-size: 0.72rem;
+}
+.reviewer-metrics dd {
+  margin: 0.35rem 0 0;
+  overflow-wrap: anywhere;
+}
+.reviewer-evidence-label {
+  margin-bottom: 0.2rem;
+  color: var(--color-text-secondary);
+  font-size: 0.68rem;
+  font-weight: 750;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.reviewer-card blockquote {
+  margin: 0.5rem 0 1.5rem;
+  padding: 1rem;
+  background: var(--color-edition-wash);
+  border-left: 3px solid var(--color-accent-primary);
+}
+.reviewer-card code {
+  overflow-wrap: anywhere;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.75rem;
+}
+.reviewer-evidence-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+.reviewer-evidence-meta > div {
+  min-width: 0;
+  padding: 0.8rem;
+  background: var(--color-surface-secondary);
+  border-radius: 0.45rem;
+}
+.reviewer-evidence-meta dt {
+  color: var(--color-text-secondary);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.reviewer-evidence-meta dd {
+  margin: 0.35rem 0 0;
+  overflow-wrap: anywhere;
+}
+.reviewer-form {
+  display: grid;
+  gap: 1rem;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 0.6rem;
+}
+.reviewer-fieldset {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 0.45rem;
+}
+.reviewer-fieldset legend,
+.reviewer-notes {
+  font-weight: 700;
+}
+.reviewer-notes {
+  display: grid;
+  gap: 0.45rem;
+}
+.reviewer-notes textarea {
+  min-height: 7rem;
+  padding: 0.75rem;
+  color: var(--color-text-primary);
+  background: var(--color-surface-primary);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 0.4rem;
+  resize: vertical;
+}
+.reviewer-boundary-note,
+.reviewer-submission-status {
+  padding: 0.9rem;
+  background: var(--color-edition-wash);
+  border-left: 3px solid var(--color-caution);
+  font-size: 0.82rem;
+}
+.adjudication-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 .ingestion-card,
 .ingestion-section {
   padding: 1.5rem;
@@ -926,6 +1076,16 @@
   .ingestion-grid,
   .ingestion-table-row {
     grid-template-columns: 1fr;
+  }
+  .reviewer-coverage-grid,
+  .reviewer-metrics,
+  .adjudication-grid,
+  .reviewer-evidence-meta {
+    grid-template-columns: 1fr;
+  }
+  .reviewer-heading {
+    align-items: flex-start;
+    flex-direction: column;
   }
   .sector-card-heading {
     align-items: flex-start;

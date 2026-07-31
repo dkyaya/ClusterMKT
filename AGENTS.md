@@ -94,6 +94,8 @@ Workspace packages are `@cluster-mkt/web`, `@cluster-mkt/worker`, `@cluster-mkt/
 - No live source may be activated without explicit terms, legal, and capability review.
 - Every retrieval attempt must preserve provenance; ingestion must be idempotent, resumable, and fully reconciled.
 - Quarantine, review, retry, and dead-letter states must remain distinct and cannot silently enter accepted output.
+- Gold labels require blinded independent human review; never substitute pipeline or model output for reviewer decisions.
+- Preserve reviewer disagreement and amendment history. Threshold changes require leakage-safe calibration and held-out evaluation.
 - Do not claim completion while required validation fails.
 
 ## Relay requirement

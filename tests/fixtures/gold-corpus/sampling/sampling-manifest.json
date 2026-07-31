@@ -1,0 +1,17 @@
+{
+  "corpusVersion": "gold-corpus-v1",
+  "itemCount": 345,
+  "taskCounts": {
+    "source_normalization": 45,
+    "entity_resolution": 60,
+    "event_boundaries": 45,
+    "story_cluster_membership": 45,
+    "claims": 55,
+    "agreement_disagreement": 35,
+    "sector_coverage": 30,
+    "review_routing": 30
+  },
+  "deterministicSeed": "cluster-mkt-gold-v1-seed",
+  "humanReviewStatus": "pending",
+  "goldLabelsGeneratedByAutomation": false
+}

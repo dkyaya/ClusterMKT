@@ -7,3 +7,5 @@ Morning, Midday, and Closing fixtures are scheduled at 6:07 a.m., 12:07 p.m., an
 Interruption fixtures cover adapter pages, raw persistence, normalization, clustering, Sector Brief assembly, and reconciliation. Resume reuses the run identity and last safe checkpoint; completed output is deduplicated. Resumed and uninterrupted accepted outputs must be semantically equivalent.
 
 All current results are deterministic fixtures. No publisher, API, government service, podcast platform, Cloudflare service, database, credential, AI system, or production scheduler is connected.
+
+Before any fixture adapter becomes a bounded live pilot, its downstream decisions must be evaluated against the human-reviewed calibration corpus. The current corpus workflow preserves independent review, adjudication, held-out evaluation, and critical evidence gates. Source onboarding separately requires terms, capability, cost, credential, smoke-test, and reconciliation approval.

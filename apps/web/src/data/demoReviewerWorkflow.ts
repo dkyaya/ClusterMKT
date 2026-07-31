@@ -1,0 +1,72 @@
+export const demoReviewerWorkflow = {
+  corpus: {
+    version: "gold-corpus-v1",
+    itemCount: 345,
+    status: "Ready for independent human review",
+    goldLabels: 0,
+    automatedLabels: 0,
+  },
+  tasks: [
+    ["Source normalization", 45],
+    ["Entity resolution", 60],
+    ["Event boundaries", 45],
+    ["Cluster membership", 45],
+    ["Claim evidence", 55],
+    ["Agreement / disagreement", 35],
+    ["Sector coverage", 30],
+    ["Review routing", 30],
+  ] as const,
+  strata: [
+    ["Ambiguous ticker traps", 40],
+    ["Duplicate / syndication", 30],
+    ["Article versions", 30],
+    ["Metadata-limited", 35],
+    ["Podcast evidence", 25],
+    ["Quantitative claims", 30],
+  ] as const,
+  partition: {
+    training: "60% target",
+    calibration: "20% target",
+    heldOut: "20% reserved",
+    leakage: "0 event groups",
+  },
+  agreement: { status: "Pending human review", raw: null, kappa: null, fabricated: 0 },
+  calibration: {
+    version: "calibration-v1",
+    status: "Blocked pending adjudicated labels",
+    thresholdChanges: 0,
+  },
+  sample: {
+    id: "gold-item-0001",
+    task: "Source normalization",
+    difficulty: "Adversarial",
+    evidenceDepth: "Full synthetic fixture text",
+    sourceCategory: "Project synthetic + existing fixture reference",
+    copyrightClassification: "Project-owned synthetic evidence",
+    partition: "Training / development",
+    regressionStatus: "Not reviewed for promotion",
+    instructions:
+      "Decide the relationship between source records. Similar event coverage does not establish duplicate work or syndication.",
+    headline: "Print and web URLs share a publisher work identifier · case 0001",
+    abstract:
+      "Compare canonical hints, significant query parameters, timestamps, and visible content identity.",
+    excerpt:
+      "The print record attributes the same publisher and work ID; the web record adds only a configured campaign parameter.",
+    provenance: ["fixture-source-01", "raw-gold-0001", "normalized-gold-0001"],
+    labels: [
+      "Exact duplicate",
+      "Format variant",
+      "Syndicated copy",
+      "Independent report",
+      "Article update",
+      "Quarantine eligible",
+    ],
+  },
+  adjudication: {
+    state: "Not available yet",
+    reason: "At least two independent reviewer submissions are required.",
+    reviewerA: "Awaiting review",
+    reviewerB: "Awaiting review",
+    finalLabel: "Not assigned",
+  },
+} as const;

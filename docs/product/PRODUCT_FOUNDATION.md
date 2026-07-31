@@ -59,3 +59,7 @@ Story Cluster membership is an explicit, reviewable event decision. Claims are s
 ## Offline ingestion boundary
 
 The operational source registry does not authorize live access. Current adapters load reviewed repository fixtures only and emit raw records with retrieval provenance. Deterministic edition runs are idempotent, bounded in retry, resumable from checkpoints, and fully reconciled. Quarantine, review, retry, and dead-letter states remain separate and cannot support accepted product output. No credential, network collector, database, production scheduler, or live-ready source exists.
+
+## Calibration boundary
+
+The initial gold corpus is a human-review workflow, not a generated answer key. Initial reviews are blinded, at least two independent people are required, disagreements remain visible and are adjudicated, and corrections append amendments. Thresholds use event-group-safe training, calibration, and held-out partitions. No API key or live source is authorized until critical held-out gates and formal source onboarding pass.

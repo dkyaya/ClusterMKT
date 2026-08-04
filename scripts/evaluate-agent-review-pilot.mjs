@@ -22,6 +22,13 @@ if (!results || !manifest || !selection) {
 }
 
 const mainResults = results.mainResults;
+// Mirrors the non-promotable state set in scripts/validate-agent-review.mjs.
+const nonPromotableProvisionalStates = new Set([
+  "unresolved",
+  "owner_review_required",
+  "owner_overridden",
+  "agent_panel_disputed",
+]);
 const decisionCount = mainResults.reduce((sum, r) => sum + r.decisions.length, 0);
 const validDecisionCount = mainResults.reduce((sum, r) => sum + r.panel.validDecisionCount, 0);
 const invalidDecisionCount = mainResults.reduce((sum, r) => sum + r.panel.invalidDecisionCount, 0);
@@ -103,9 +110,14 @@ const report = {
   criticalGates: {
     zeroReviewerPacketAnswerLeakage: manifest.leakageReport.leakageFound === 0,
     zeroMalformedSubmissionsAccepted: invalidDecisionCount === 0,
+    // A high-risk item is safe when it either has an adjudication, or its provisional state is a
+    // non-promotable holding state; only unsafe if it reached a promotable state without
+    // adjudication ever running. Mirrors the gate in scripts/validate-agent-review.mjs.
     everyHighRiskItemAdjudicatedOrUnresolved: mainResults
       .filter((r) => r.riskClass === "high")
-      .every((r) => r.adjudication !== null || r.provisionalState === "unresolved"),
+      .every(
+        (r) => r.adjudication !== null || nonPromotableProvisionalStates.has(r.provisionalState),
+      ),
     everyItemHasTerminalPanelState: mainResults.every((r) => Boolean(r.panel.outcome)),
     everyOwnerEscalationHasReason: mainResults
       .filter((r) => r.ownerEscalation.status !== "not_required")

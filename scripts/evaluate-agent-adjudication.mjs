@@ -25,8 +25,15 @@ const unresolvedCount = adjudicated.filter((r) =>
 ).length;
 
 const highRiskItems = results.mainResults.filter((r) => r.riskClass === "high");
+// Mirrors the non-promotable state set in scripts/validate-agent-review.mjs.
+const nonPromotableProvisionalStates = new Set([
+  "unresolved",
+  "owner_review_required",
+  "owner_overridden",
+  "agent_panel_disputed",
+]);
 const highRiskAdjudicatedOrUnresolved = highRiskItems.filter(
-  (r) => r.adjudication !== null || r.provisionalState === "unresolved",
+  (r) => r.adjudication !== null || nonPromotableProvisionalStates.has(r.provisionalState),
 ).length;
 
 const anonymizedReferenceViolations = adjudicated.filter((r) => {

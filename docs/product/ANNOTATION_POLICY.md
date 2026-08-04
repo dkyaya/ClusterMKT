@@ -11,3 +11,5 @@ The corpus excludes private markets, investment attractiveness, recommendations,
 Corrections create amendments and retain prior labels. Difficult or low-agreement examples remain in the corpus. Items may be excluded only for documented rights, corruption, duplicate-identity, or scope reasons—not to improve metrics.
 
 Agreement and system evaluation are reported by task and risk class. Critical evidence failures cannot be hidden by aggregate accuracy. Threshold selection uses separate calibration data; held-out human gold controls approval. No source becomes live merely because a threshold proposal passes. Formal source terms, capabilities, cost, credentials, adapter dry run, bounded smoke-test authorization, and reconciliation remain separate gates.
+
+Where independent human reviewers are unavailable, blinded multi-agent panels may generate provisional `agent-calibration-v1` labels under the same evidentiary discipline — see [BLIND_MULTI_AGENT_REVIEW](../architecture/BLIND_MULTI_AGENT_REVIEW.md). Agent agreement is never described as human inter-rater agreement, and an agent panel can never itself finalize a human gold label.

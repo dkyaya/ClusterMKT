@@ -5,6 +5,8 @@ import { NotFoundPage } from "../pages/NotFoundPage";
 import { NormalizationInspectorPage } from "../pages/NormalizationInspectorPage";
 import { IngestionInspectorPage } from "../pages/IngestionInspectorPage";
 import { AdjudicationPage } from "../pages/AdjudicationPage";
+import { AgentPanelDashboardPage } from "../pages/AgentPanelDashboardPage";
+import { AgentPanelItemPage } from "../pages/AgentPanelItemPage";
 import { PlaceholderPage } from "../pages/PlaceholderPage";
 import { SettingsPage } from "../pages/SettingsPage";
 import { SectorDetailPage } from "../pages/SectorDetailPage";
@@ -26,6 +28,8 @@ export function AppRoutes() {
       <Route path="/dev/review" element={<ReviewerWorkbenchPage />} />
       <Route path="/dev/review/:itemId" element={<ReviewerItemPage />} />
       <Route path="/dev/adjudication" element={<AdjudicationPage />} />
+      <Route path="/dev/agent-panels" element={<AgentPanelDashboardPage />} />
+      <Route path="/dev/agent-panels/:itemId" element={<AgentPanelItemPage />} />
       {[
         ["/watchlist", "Watchlist"],
         ["/saved", "Saved"],

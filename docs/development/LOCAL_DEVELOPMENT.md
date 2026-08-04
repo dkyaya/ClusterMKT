@@ -75,3 +75,14 @@ pnpm corpus:inspect -- --item-id gold-item-0001
 ```
 
 The 345-item candidate corpus is offline and synthetic. `/dev/review`, `/dev/review/gold-item-0001`, and `/dev/adjudication` demonstrate the blinded workflow without authentication or persistent decisions. Automated commands never assign gold labels. Local CLI draft submissions write only below ignored `.tmp/gold-corpus-workflow/`.
+
+## Blind multi-agent calibration pilot
+
+```sh
+node scripts/select-agent-review-pilot.mjs
+node scripts/build-agent-review-packets.mjs
+pnpm agent-review:validate
+pnpm agent-review:report
+```
+
+`select-agent-review-pilot.mjs` deterministically selects the 52-item pilot from the existing gold corpus and writes `tests/fixtures/agent-review-pilot/pilot-selection.json`. `build-agent-review-packets.mjs` builds blinded packets for every panel member (writing an auditable coordinator manifest and a lean workflow-args manifest under ignored `.tmp/agent-review-pilot/`) and validates zero answer leakage. The pilot itself runs through isolated subagent calls orchestrated by a Workflow script, not through this repository's own process boundary; `/dev/agent-panels` demonstrates the resulting provisional labels without live model calls.

@@ -59,7 +59,14 @@
     "corpus:partition": "node scripts/cluster-mkt-corpus.mjs partition",
     "corpus:promote": "node scripts/cluster-mkt-corpus.mjs promote",
     "corpus:report": "node scripts/cluster-mkt-corpus.mjs report",
-    "validate": "pnpm assets:sync && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test:run && pnpm sector:validate && pnpm source:validate && pnpm entities:validate && pnpm events:validate && pnpm clusters:validate && pnpm claims:validate && pnpm discourse:validate && pnpm provenance:validate && pnpm ingestion:validate && pnpm corpus:validate && pnpm corpus:agreement && pnpm corpus:calibrate && pnpm corpus:replay && pnpm build && pnpm brand:validate && pnpm foundation:validate",
+    "agent-review:validate": "node scripts/validate-agent-review.mjs",
+    "agent-review:pilot": "node scripts/evaluate-agent-review-pilot.mjs",
+    "agent-review:agreement": "node scripts/evaluate-agent-panel-agreement.mjs",
+    "agent-review:adjudication": "node scripts/evaluate-agent-adjudication.mjs",
+    "agent-review:stability": "node scripts/evaluate-agent-repeat-stability.mjs",
+    "agent-review:owner-escalation": "node scripts/evaluate-owner-escalation.mjs",
+    "agent-review:report": "pnpm agent-review:pilot && pnpm agent-review:agreement && pnpm agent-review:adjudication && pnpm agent-review:stability && pnpm agent-review:owner-escalation",
+    "validate": "pnpm assets:sync && pnpm format:check && pnpm lint && pnpm typecheck && pnpm test:run && pnpm sector:validate && pnpm source:validate && pnpm entities:validate && pnpm events:validate && pnpm clusters:validate && pnpm claims:validate && pnpm discourse:validate && pnpm provenance:validate && pnpm ingestion:validate && pnpm corpus:validate && pnpm corpus:agreement && pnpm corpus:calibrate && pnpm corpus:replay && pnpm build && pnpm brand:validate && pnpm agent-review:validate && pnpm foundation:validate",
     "clean": "node scripts/clean-generated.mjs"
   },
   "devDependencies": {

@@ -19,7 +19,8 @@
 15. Gold-corpus generation, focused tests, coverage, agreement, calibration, replay, and regression-promotion gates.
 16. Web production build and Worker Wrangler dry-run bundle.
 17. Python brand validation.
-18. Application-foundation validation.
+18. Blind multi-agent calibration pilot validation.
+19. Application-foundation validation.
 
 The brand gate checks production vectors, geometry, transparency, image dimensions, icons, contrast, minimum sizes, motion, and its manifest. The application gate checks required files and scripts, one pnpm lockfile, private package identities, prohibited dependencies, environment/secret hygiene, generated asset hashes, route boundaries, honest demonstration labeling, CI, and the five locked-master hashes.
 
@@ -77,3 +78,9 @@ Browser acceptance of `/dev/ingestion` must inspect source selection, adapter re
 `pnpm corpus:validate` regenerates the deterministic candidate corpus, runs its focused tests, and writes coverage, partition, and regression-promotion reports. `pnpm corpus:agreement`, `pnpm corpus:calibrate`, and `pnpm corpus:replay` emit explicit pending states until real independent reviewer decisions exist. This is a successful safety behavior, not a claim that agreement or held-out accuracy passed.
 
 The corpus gate requires at least 300 items, every task and adversarial stratum minimum, no prediction leakage, event/underlying-work-safe partitions, no automated gold label, and no issuer overconcentration. Browser acceptance must verify blinded evidence, controls, cannot-determine, confidence, local submission, adjudication gating, coverage, pending metrics, responsive layout, absence from consumer navigation, and zero unexpected console/network failures.
+
+## Blind multi-agent calibration pilot
+
+`pnpm agent-review:validate` (run inside `pnpm validate` before `foundation:validate`) checks the deterministic 52-item pilot selection, zero packet answer-leakage, every item's terminal panel state, every high-risk item's adjudicated-or-unresolved status, every owner escalation's recorded reason, and that no disputed panel is marked unanimous. `pnpm agent-review:pilot`, `pnpm agent-review:agreement`, `pnpm agent-review:adjudication`, `pnpm agent-review:stability`, and `pnpm agent-review:owner-escalation` report metrics from the saved pilot results; `pnpm agent-review:report` runs them together. Reports are written under `relays/tmp/blind-multi-agent-calibration-pilot/validation/`.
+
+Real-browser acceptance of `/dev/agent-panels` and `/dev/agent-panels/:itemId` must verify the agent disclosure and provisional-status labeling, reviewer roles, dissent, adjudication with anonymized panel-member ids only (no reviewer identity leakage), owner escalation with reasons, packet hash and prompt/role versions, repeat-run stability, absence from consumer navigation, responsive layout, and zero unexpected console/network failures.

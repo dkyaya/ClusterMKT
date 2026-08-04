@@ -39,6 +39,18 @@ See [product foundation](docs/product/PRODUCT_FOUNDATION.md), [planned architect
 - Distinguish sources used in summaries from related reading or listening.
 - Aggressively stress-test relevance and clustering. Turn failed edge cases into permanent regression tests where practical.
 
+## Blind multi-agent calibration review
+
+- Independent human review of the gold calibration corpus is unavailable in this phase; blinded multi-agent panels are the interim substitute, never a claimed equivalent.
+- A coordinator builds isolated, blinded evidence packets and assigns them to independent agent reviewer workers that cannot see pipeline predictions, existing gold labels, each other's decisions, adjudication outcomes, consensus statistics, coordinator preferences, or prior answers for the same item.
+- Panel size and required roles scale with risk class: 3 reviewers for low risk, 5 for standard, 7 for high risk. Quantitative claims, ambiguous tickers, event merges, sector-wide promotion, rumors, corrections, metadata-limited or podcast-only evidence, and syndication disputes are high risk.
+- Multi-agent agreement is a reliability signal, not human inter-rater agreement. Never call it that, and never call provisional agent labels independently validated gold.
+- A simple majority is never sufficient for a high-risk case. Disputed panels are never marked unanimous, and dissent is never hidden.
+- Disputed or high-risk panels route to a separate isolated adjudicator that does not know reviewer identities and cannot be silently overridden by the coordinator.
+- Provisional agent-panel labels live in the `agent-calibration-v1` family and never overwrite `calibration-v1`, `owner-calibration-v1`, or human-gold labels. Agent panels cannot promote a case to final human-validated gold on their own.
+- High-risk and disputed cases remain eligible for owner review; the existing owner-review workflow is the optional final confirmation layer and is not replaced.
+- See `docs/architecture/BLIND_MULTI_AGENT_REVIEW.md` and `docs/product/AGENT_REVIEW_DISCLOSURE.md` for the full mechanism and disclosure rules.
+
 ## Planned architecture
 
 Planned choices are React, Vite, TypeScript, Cloudflare Pages and Workers, Supabase authentication and PostgreSQL, scheduled collection workflows, shared Story Cluster generation, Kokoro for initial TTS experimentation, and user-specific assembly from reusable summary and audio modules.

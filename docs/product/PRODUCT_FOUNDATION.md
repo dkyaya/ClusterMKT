@@ -63,3 +63,5 @@ The operational source registry does not authorize live access. Current adapters
 ## Calibration boundary
 
 The initial gold corpus is a human-review workflow, not a generated answer key. Initial reviews are blinded, at least two independent people are required, disagreements remain visible and are adjudicated, and corrections append amendments. Thresholds use event-group-safe training, calibration, and held-out partitions. No API key or live source is authorized until critical held-out gates and formal source onboarding pass.
+
+While independent multi-human review capacity is unavailable, blind multi-agent review supplements the same workflow: isolated agent reviewers label blinded evidence packets without seeing predictions, gold labels, or each other's answers, and disputed or high-risk cases route to isolated adjudication and, when warranted, owner review. Agent agreement is a reliability signal, not human inter-rater agreement, and provisional agent-panel labels can never substitute for the held-out human-gold gate above.

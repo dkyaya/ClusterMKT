@@ -72,3 +72,7 @@ A bounded pilot remains blocked until:
 - source terms, capabilities, costs, credentials, dry-run adapter, smoke-test authority, and reconciliation pass the separate source-onboarding gate.
 
 Until then, everything remains offline.
+
+## Blind multi-agent calibration pilot
+
+Independent multi-human review of `gold-corpus-v1` is unavailable in this phase. A bounded 52-item pilot, deterministically stratified-selected from the existing 345-item corpus, is reviewed by blinded isolated agent panels instead — see [BLIND_MULTI_AGENT_REVIEW](BLIND_MULTI_AGENT_REVIEW.md). The resulting `agent-calibration-v1` labels are provisional, never described as independent human review, and never overwrite `calibration-v1`, `owner-calibration-v1`, or any human-gold label recorded above.

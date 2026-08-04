@@ -65,6 +65,8 @@ No Worker deployment is configured or claimed.
 - [Source intelligence foundation](docs/architecture/SOURCE_INTELLIGENCE_FOUNDATION.md)
 - [Application foundation](docs/architecture/APPLICATION_FOUNDATION.md)
 - [Planned architecture](docs/architecture/PLANNED_ARCHITECTURE.md)
+- [Blind multi-agent review](docs/architecture/BLIND_MULTI_AGENT_REVIEW.md)
+- [Agent review disclosure](docs/product/AGENT_REVIEW_DISCLOSURE.md)
 - [Architecture decisions](docs/decisions/README.md)
 - [Brand package](brand/README.md)
 - [Shared agent guidance](AGENTS.md)
@@ -78,3 +80,5 @@ The Story Cluster foundation adds a 62-case claim and provenance corpus. `pnpm c
 The ingestion foundation adds a 50-case dry-run corpus and `pnpm ingestion:validate`. No registry source is live-ready; all adapters load local fixtures and return raw records; exact replay, version updates, retry, circuit breaking, quarantine, reconciliation, and resume remain deterministic. Use `pnpm ingestion:simulate` or the direct-only `/dev/ingestion` inspector. `.tmp/ingestion-dry-run/` is disposable local output.
 
 The gold-calibration foundation adds 345 offline annotation candidates, blinded assignment and submission contracts, adjudication, agreement metrics, leakage-safe partitioning, fail-closed threshold calibration, regression promotion, and the direct-only `/dev/review` workbench. Candidate generation is deterministic, but gold labels must come from independent humans. Until those reviews exist, agreement, held-out accuracy, and threshold changes are reported as pending—not invented. See [the gold corpus architecture](docs/architecture/GOLD_CALIBRATION_CORPUS.md) and [annotation policy](docs/product/ANNOTATION_POLICY.md).
+
+While independent multi-human review capacity is unavailable, a bounded blind multi-agent calibration pilot supplements it: a coordinator builds isolated, blinded evidence packets and assigns them to independent agent reviewer workers with panel sizes and roles scaled to risk class, dissent detection, isolated adjudication, and risk-based owner escalation. Multi-agent agreement is a reliability signal, not human inter-rater agreement, and provisional `agent-calibration-v1` labels never overwrite `calibration-v1`, `owner-calibration-v1`, or human-gold labels. See [blind multi-agent review](docs/architecture/BLIND_MULTI_AGENT_REVIEW.md), [agent review disclosure](docs/product/AGENT_REVIEW_DISCLOSURE.md), and the direct-only `/dev/agent-panels` dashboard.

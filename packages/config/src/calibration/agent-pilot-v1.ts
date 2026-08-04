@@ -1,0 +1,55 @@
+export const agentReviewPilotPlan = {
+  pilotVersion: "agent-review-pilot-v1",
+  corpusVersion: "gold-corpus-v1",
+  deterministicSeed: "cluster-mkt-agent-pilot-v1-seed",
+  targetItemCount: 52,
+  taskMinimums: {
+    source_normalization: 10,
+    entity_resolution: 10,
+    event_boundaries: 8,
+    claims: 8,
+    agreement_disagreement: 6,
+    sector_coverage: 5,
+    review_routing: 5,
+  },
+  crossCuttingMinimums: [
+    {
+      dimension: "tickerAmbiguity",
+      value: "ordinary_language_trap",
+      minimum: 8,
+      label: "ticker traps",
+    },
+    {
+      dimension: "duplicateClass",
+      value: "duplicate_or_syndication",
+      minimum: 6,
+      label: "duplicate or syndication cases",
+    },
+    {
+      dimension: "articleVersionClass",
+      value: "version_chain",
+      minimum: 5,
+      label: "article-version cases",
+    },
+    {
+      dimension: "evidenceDepth",
+      value: "metadata_limited",
+      minimum: 6,
+      label: "metadata-limited cases",
+    },
+    { dimension: "contentType", value: "podcast", minimum: 4, label: "podcast cases" },
+    { dimension: "claimType", value: "quantitative_fact", minimum: 6, label: "quantitative cases" },
+    {
+      dimension: "discourseClass",
+      value: "apparent_disagreement",
+      minimum: 5,
+      label: "apparent-disagreement cases",
+    },
+    {
+      dimension: "timeSensitivity",
+      value: "evolving_or_corrected",
+      minimum: 5,
+      label: "rumor, correction, or evolving-event cases",
+    },
+  ],
+} as const;

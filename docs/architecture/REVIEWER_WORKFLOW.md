@@ -50,3 +50,7 @@ All metrics are disaggregated by task, label where gold comparisons exist, diffi
 `/dev/review`, `/dev/review/:itemId`, and `/dev/adjudication` are direct-only developer views backed by local demonstration state. They are absent from consumer navigation, make no network calls, expose no real personal data, and do not claim authentication or a production reviewer service.
 
 `scripts/cluster-mkt-corpus.mjs` provides offline list, inspect, assign, submit, adjudicate, agreement, partition, calibrate, replay, promote, and report commands. Local workflow writes go only to ignored `.tmp/gold-corpus-workflow/` state. Assignment is required before submission, promotion needs an explicit confirmation flag, and `--live` is refused with a stable nonzero exit code. Repository fixture promotion remains a separate reviewed operation.
+
+## Relationship to blind multi-agent review
+
+This human reviewer workflow is unmodified and remains the primary path to final gold. The [blind multi-agent calibration pilot](BLIND_MULTI_AGENT_REVIEW.md) is additive: it runs a separate, smaller, deterministically selected pilot through isolated agent panels while human review capacity is unavailable, using its own `agent-calibration-v1` label family, its own packet/decision/adjudication schemas, and its own `/dev/agent-panels` developer surface. Nothing here changes because that pilot exists.

@@ -13,3 +13,5 @@ The same stable rules version is attached to downstream Story Cluster, claim, di
 `src/sources/` now contains the operational fixture registry, source families, and retrieval policies; `src/ingestion/` contains retry and edition-schedule fixtures. Every source is `fixture_only`, future live eligibility is false, and no endpoint or credential is configured.
 
 `src/calibration/` defines the 345-item sampling plan, eight annotation-task contracts, leakage-safe partition policy, and unapproved `calibration-v1` threshold candidates. `src/sources/credential-requirements.ts` documents future credential classes and the onboarding gate; all live flags remain false and no secret value belongs here.
+
+`src/calibration/agent-reviewer-roles.ts` and `agent-panel-policy.ts` define the seven blind multi-agent reviewer role contracts and the risk-based panel-composition policy (3/5/7 reviewers for low/standard/high risk). `agent-pilot-v1.ts` defines the deterministic 52-item pilot sampling plan. These are policy data only; no live model call, credential, or network behavior lives here.
